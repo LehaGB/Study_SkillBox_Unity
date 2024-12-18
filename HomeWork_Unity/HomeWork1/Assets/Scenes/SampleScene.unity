@@ -8302,8 +8302,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 705507995}
-<<<<<<< HEAD
-=======
   - {fileID: 1914453784}
   - {fileID: 1891654349}
   - {fileID: 5885079}
@@ -8311,4 +8309,3 @@ SceneRoots:
   - {fileID: 2103949374}
   - {fileID: 1414105088}
   - {fileID: 41312901}
->>>>>>> homework1
