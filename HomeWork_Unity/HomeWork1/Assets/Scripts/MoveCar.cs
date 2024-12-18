@@ -8,12 +8,6 @@ public class MoveCar : MonoBehaviour
     private float maxSpeed = 6f;
     private float upperBound = 47f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {

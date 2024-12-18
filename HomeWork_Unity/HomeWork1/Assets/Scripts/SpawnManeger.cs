@@ -5,7 +5,6 @@ using UnityEngine;
 public class SpawnManeger : MonoBehaviour
 {
     [SerializeField] private GameObject[] carPrefab;
-    private float spawnRangeZ = -47f;
     private float spawnRangeX = -35.97f;
     private float spawnRangeX2 = -40f;
     private float startSpawnCar = 1f;
@@ -14,12 +13,6 @@ public class SpawnManeger : MonoBehaviour
     {
         // Через какое время спун машин.
         InvokeRepeating("SpawnCar", startSpawnCar, Random.Range(5f, 10f));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     // Спаун машин.
