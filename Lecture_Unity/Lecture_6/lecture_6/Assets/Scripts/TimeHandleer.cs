@@ -6,26 +6,42 @@ using TMPro;
 public class TimeHandleer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    public TextMeshProUGUI completedCircleText;
+    public TextMeshProUGUI lapsText;
+    public TextMeshProUGUI lapsTimeText;
+    public TextMeshProUGUI previousLapsTimeText;
 
     private float currentTime;
+    private float countLaps;
+    private float currentLapsTime;
+    private float previosLapsTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(Mathf.Round(7.7f));
-        Debug.Log(Mathf.Round(1.4f));
-        Debug.Log(Mathf.Round(5.5f));
-        Debug.Log(Mathf.Round(6.5f));
-        Debug.Log(Mathf.Round(-0.5f));
     }
 
     // Update is called once per frame
     void Update()
     {
         currentTime = Mathf.Round(Time.time);
-        completedCircleText.text = Mathf.Round((currentTime - 4) / 10).ToString();
+        
         timerText.text = currentTime.ToString();
-
+    }
+    public void LapsFinishedButtonClick()
+    {
+        CalculateRaceData();
+        DisplayRaceData();
+    }
+    private void CalculateRaceData()
+    {
+        previosLapsTime = currentLapsTime;
+        currentLapsTime = currentTime;
+        countLaps = countLaps + 1;
+    }
+    private void DisplayRaceData()
+    {
+        lapsTimeText.text = currentLapsTime.ToString();
+        previousLapsTimeText.text = previosLapsTime.ToString();
+        lapsText.text = countLaps.ToString();
     }
 }
