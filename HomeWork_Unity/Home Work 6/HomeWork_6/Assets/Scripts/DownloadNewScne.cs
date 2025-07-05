@@ -9,7 +9,7 @@ public class DownloadNewScne : MonoBehaviour
     public string sceneToLoad;  // Имя сцены.
     public int sceneIndexToLoad;  // Индекс сцены.
 
-    // Загрузка сцены(играть).
+    // Загрузка сцены(кнопка играть).
     public void LoadSceneByName()
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
