@@ -11,6 +11,8 @@ public class PausedUIGame : MonoBehaviour
     public GameObject pauseMenuUI;
     public Button hintButton;
 
+
+    #region Вызываюзий метод при нажатии.
     public void PauseButtonGame()
     {
         if (gameIsPaused)
@@ -22,6 +24,10 @@ public class PausedUIGame : MonoBehaviour
             Pause();
         }
     }
+    #endregion
+
+
+    #region Возобновляем игру.
     private void Resume()
     {
         pauseMenuUI.SetActive(true);  // Отключаем меню паузы.
@@ -30,6 +36,10 @@ public class PausedUIGame : MonoBehaviour
         pauseText.text = "Пауза";
         hintButton.gameObject.SetActive(false);
     }
+    #endregion
+
+
+    #region Пауза.
     private void Pause()
     {
         pauseMenuUI.SetActive(false);  // Включаем меню паузы.
@@ -38,4 +48,5 @@ public class PausedUIGame : MonoBehaviour
         pauseText.text = "Возобновить";
         hintButton.gameObject.SetActive(true);
     }
+    #endregion
 }

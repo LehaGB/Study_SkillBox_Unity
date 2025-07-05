@@ -631,10 +631,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 588184093}
   resulrGameText: {fileID: 1447455030}
-  resultNumberGameText: {fileID: 1883194730}
+  resulTimeGameText: {fileID: 1883194730}
+  resulMovesGameText: {fileID: 775948611}
   restartPanelGameObject: {fileID: 472785700}
-  _curentTime: 60
-  _rsultCurentTime: 0
+  resultPanelGameObject: {fileID: 1079816905}
+  handlerPanelGameObject: {fileID: 1076204082}
+  pauseButton: {fileID: 1018413156}
+  resultButton: {fileID: 1820669684}
+  gameManager: {fileID: 749262220}
+  _gameIsOver: 0
+  _curentTime: 5
 --- !u!4 &290921504
 Transform:
   m_ObjectHideFlags: 0
@@ -1790,6 +1796,8 @@ MonoBehaviour:
   winGameText: {fileID: 1447455030}
   winResultTimeGameText: {fileID: 1883194730}
   winResultNumberMovesText: {fileID: 775948611}
+  pauseButton: {fileID: 1018413156}
+  resultButton: {fileID: 1820669684}
   restartPanelGameObject: {fileID: 472785700}
   handlerPanelGameObject: {fileID: 1076204082}
   timeHandller: {fileID: 290921503}
@@ -1805,7 +1813,7 @@ GameObject:
   - component: {fileID: 775948610}
   - component: {fileID: 775948611}
   m_Layer: 5
-  m_Name: 'ResultNumberMovesGameText '
+  m_Name: 'ResultMovesGameText '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2349,8 +2357,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 749262220}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnClickButtonDrill
-        m_Mode: 1
+        m_MethodName: Tools
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3609,12 +3617,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 749262220}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnClickButtonSkeletonKey
-        m_Mode: 1
+        m_MethodName: Tools
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4278,12 +4286,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 749262220}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: OnClickButtonHammer
-        m_Mode: 1
+        m_MethodName: Tools
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4489,7 +4497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1820669683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4556,7 +4564,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 290921503}
         m_TargetAssemblyTypeName: TimeHandller, Assembly-CSharp
-        m_MethodName: CurrentTime
+        m_MethodName: OnClickButtonResult
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4565,30 +4573,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1079816905}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 749262220}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ResultTimeGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1820669685
 MonoBehaviour:
@@ -4640,7 +4624,7 @@ GameObject:
   - component: {fileID: 1883194731}
   - component: {fileID: 1883194730}
   m_Layer: 5
-  m_Name: ResultNumberGameText
+  m_Name: ResultTimeGameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
