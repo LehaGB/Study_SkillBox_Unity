@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class SoundController : MonoBehaviour
 {
-    public Button soundButton;      // Ссылка на компонент Button
+    public Button soundButton;      // Ссылка на компонент Button.
 
-    public Sprite soundOnSprite;    // Спрайт для состояния "Звук включен"
-    public Sprite soundOffSprite;   // Спрайт для состояния "Звук выключен"
-    private Image buttonImage;       // Ссылка на компонент Image кнопки
+    //public AudioClip audioGameOverClip;
 
-    private AudioSource _audio;
+    public Sprite soundOnSprite;    // Спрайт для состояния "Звук включен".
+    public Sprite soundOffSprite;   // Спрайт для состояния "Звук выключен".
+    private Image buttonImage;       // Ссылка на компонент Image кнопки.
+
+    [HideInInspector] public AudioSource _audio;
 
     private void Start()
     {
@@ -32,4 +34,8 @@ public class SoundController : MonoBehaviour
             buttonImage.sprite = soundOnSprite;
         }
     }
+    //public void ChangeSoundGameOver()
+    //{
+    //    _audio.clip = audioGameOverClip;
+    //}
 }
