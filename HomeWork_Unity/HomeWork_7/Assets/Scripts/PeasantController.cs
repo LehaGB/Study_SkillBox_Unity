@@ -11,7 +11,7 @@ public class PeasantController : MonoBehaviour
 
     public TextMeshProUGUI resourcesPeasantText;  // количество крестьян.
     
-    public Button peasantButton;
+    public Button peasantButton;  // нанять крестьянина.
 
     public int peasantCount = 3;   // количество крестьян.
     public int wheatPerPeasant = 4;  // количество крестьян.

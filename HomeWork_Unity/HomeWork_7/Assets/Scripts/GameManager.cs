@@ -11,11 +11,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI resourcesWheatText;  // количество пшеницы.
     public TextMeshProUGUI raidText;  // количество атакующих.
     public TextMeshProUGUI numberMovesAttackText;  // количество пустых рейдов.
+    public TextMeshProUGUI notEnoughWheat;  // недостаточно пшеницы.
 
     public ImageTimer harvestTimer;
     public ImageTimer eatingTimer;
     public Image raidTimerImg;
-   
+
 
     public int wheatCount;  // коичество пшеницы.
     public int numberMovesAttack = 1;
@@ -39,34 +40,36 @@ public class GameManager : MonoBehaviour
         warriorComtroller.CreateWarriorTime();
         _raidTimer -= Time.deltaTime;
         raidTimerImg.fillAmount = _raidTimer / raidMaxTime;
-        if(_raidTimer > 0 && _raidTimer < 15)
+        EnemyAttack();
+
+
+        if (harvestTimer.tick)
         {
-            StartCoroutine(CoroutineTimeRed());
-        }
-        if (_raidTimer <= 0)
-        {
-            _raidTimer = raidMaxTime;
-            if(numberMovesAttack > 0)
+            if(wheatCount > 0)
             {
-                numberMovesAttackText.text = $"Ход до атаки: {numberMovesAttack--}";
-          
-                UpdateReaidText();
+                peasantController.peasantButton.interactable = true;
+                wheatCount += peasantController.peasantCount * peasantController.wheatPerPeasant;
             }
             else
             {
-                warriorComtroller.warriorCount -= nextRaid;
-                nextRaid += raidIncrease;
-                numberMovesAttackText.text = "Наступление врагов";
+                peasantController.peasantButton.interactable = false;
+                notEnoughWheat.text = "Недостаточно пшеницы";
+                UpdateText();
             }
-            UpdateReaidText();  
-        }
-        if (harvestTimer.tick)
-        {
-            wheatCount += peasantController.peasantCount * peasantController.wheatPerPeasant;
         }
         if (eatingTimer.tick)
         {
-            wheatCount -= warriorComtroller.warriorCount * warriorComtroller.wheatToWarriors;
+            if(wheatCount > 0)
+            {
+                warriorComtroller.warriorButton.interactable = true;
+                wheatCount -= warriorComtroller.warriorCount * warriorComtroller.wheatToWarriors;
+            }
+            else
+            {
+                warriorComtroller.warriorButton.interactable = false;
+                notEnoughWheat.text = "Недостаточно пшеницы";
+                UpdateText();
+            }
         }
         UpdateText();
     }
@@ -87,5 +90,29 @@ public class GameManager : MonoBehaviour
         raidTimerImg.color = Color.red;
         yield return new WaitForSeconds(3);
         raidTimerImg.color = new Color(250, 250, 250, 250);
+    }
+    public void EnemyAttack()
+    {
+        if (_raidTimer > 0 && _raidTimer < 15)
+        {
+            StartCoroutine(CoroutineTimeRed());
+        }
+        if (_raidTimer <= 0)
+        {
+            _raidTimer = raidMaxTime;
+            if (numberMovesAttack > 0)
+            {
+                numberMovesAttackText.text = $"Ход до атаки: {numberMovesAttack--}";
+
+                UpdateReaidText();
+            }
+            else
+            {
+                warriorComtroller.warriorCount -= nextRaid;
+                nextRaid += raidIncrease;
+                numberMovesAttackText.text = "Наступление врагов";
+            }
+            UpdateReaidText();
+        }
     }
 }

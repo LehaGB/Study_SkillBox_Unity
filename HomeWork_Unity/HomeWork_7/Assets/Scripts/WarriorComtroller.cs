@@ -43,6 +43,7 @@ public class WarriorComtroller : MonoBehaviour
             soundController._audio.Stop();
             Time.timeScale = 0;
             gameManager.raidText.text = " ";
+            gameManager.numberMovesAttackText.text = " ";
             gameObjectScreen.SetActive(true);
         }
     }
