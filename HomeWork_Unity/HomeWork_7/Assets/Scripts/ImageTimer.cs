@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ImageTimer : MonoBehaviour
 {
     public float maxTime;
-    public bool tick;
+    public bool tick { get; private set; }
 
     private Image img;
     private float _currenTime;
@@ -22,6 +22,10 @@ public class ImageTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(img == null)
+        {
+            return;
+        }
         tick = false;
 
         // Уменьшаем таймер
@@ -33,5 +37,12 @@ public class ImageTimer : MonoBehaviour
             _currenTime = maxTime;
         }
         img.fillAmount = _currenTime / maxTime;
+    }
+
+    // Метод для сброса таймера.
+    public void ResetTimer()
+    {
+        _currenTime = maxTime;
+        tick = false;
     }
 }

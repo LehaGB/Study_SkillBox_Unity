@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
 {
     public PeasantController peasantController;
     public WarriorComtroller warriorComtroller;
+
     public TextMeshProUGUI resourcesWheatText;  // количество пшеницы.
     public TextMeshProUGUI raidText;  // количество атакующих.
     public TextMeshProUGUI numberMovesAttackText;  // количество пустых рейдов.
-    public TextMeshProUGUI notEnoughWheat;  // недостаточно пшеницы.
 
     public ImageTimer harvestTimer;
     public ImageTimer eatingTimer;
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public int raidIncrease;  // увеличение рейда.
     public int nextRaid;   // следующий рейд.
 
+    public int newWheatCount;
     private float _raidTimer;  // время ожидания набега.
 
     private void Start()
@@ -47,40 +48,34 @@ public class GameManager : MonoBehaviour
         {
             if(wheatCount > 0)
             {
-                peasantController.peasantButton.interactable = true;
                 wheatCount += peasantController.peasantCount * peasantController.wheatPerPeasant;
-            }
-            else
-            {
-                peasantController.peasantButton.interactable = false;
-                notEnoughWheat.text = "Недостаточно пшеницы";
-                UpdateText();
+                eatingTimer.ResetTimer();
             }
         }
         if (eatingTimer.tick)
         {
             if(wheatCount > 0)
             {
-                warriorComtroller.warriorButton.interactable = true;
                 wheatCount -= warriorComtroller.warriorCount * warriorComtroller.wheatToWarriors;
-            }
-            else
-            {
-                warriorComtroller.warriorButton.interactable = false;
-                notEnoughWheat.text = "Недостаточно пшеницы";
-                UpdateText();
+                eatingTimer.ResetTimer();
             }
         }
         UpdateText();
     }
+
+    // Количество пшеницы.
     public void UpdateText()
     {
         resourcesWheatText.text = wheatCount.ToString();
     }
+
+    // Количество врагов.
     public void UpdateReaidText()
     {
         raidText.text = $"Враг: {nextRaid}";
     }
+
+    // Кол-во ходов до атаки.
     public void NumbersMovesAttack()
     {
         numberMovesAttackText.text = $"Ход до атаки: {numberMovesAttack--}";
@@ -91,6 +86,10 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3);
         raidTimerImg.color = new Color(250, 250, 250, 250);
     }
+
+    /// <summary>
+    ///  Ататка врагов.
+    /// </summary>
     public void EnemyAttack()
     {
         if (_raidTimer > 0 && _raidTimer < 15)
