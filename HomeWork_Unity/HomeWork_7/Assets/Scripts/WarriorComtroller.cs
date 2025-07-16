@@ -103,9 +103,4 @@ public class WarriorComtroller : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         warriorNotEnoughWheat.text = " ";
     }
-    IEnumerator CoroutineWarriorTimer()
-    {
-        yield return new WaitForSeconds(3f);
-        warriorButton.interactable = true;
-    }
 }
