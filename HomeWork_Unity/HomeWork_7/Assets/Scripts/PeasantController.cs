@@ -57,16 +57,21 @@ public class PeasantController : MonoBehaviour
             peasantNotEnoughWheat.text = "Недостаточно пшеницы";
             peasantButton.interactable = false;
         }
-        StartCoroutine(CoroutinePeasantCountText());
+        StartCoroutine(CoroutinePeasantNewText());
+        StartCoroutine(CoroutinePeasantTimer());
     }
     public void UpdateText()
     {
         resourcesPeasantText.text = peasantCount.ToString();
     }
-    IEnumerator CoroutinePeasantCountText()
+    IEnumerator CoroutinePeasantNewText()
     {
         yield return new WaitForSeconds(1f);
         peasantNotEnoughWheat.text = " ";
+    }
+    IEnumerator CoroutinePeasantTimer()
+    {
+        yield return new WaitForSeconds(peasantCreateTime);
         peasantButton.interactable = true;
     }
 }

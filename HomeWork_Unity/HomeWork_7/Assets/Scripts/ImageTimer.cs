@@ -7,9 +7,11 @@ public class ImageTimer : MonoBehaviour
 {
     public float maxTime;
     public bool tick { get; private set; }
+   // public float tickTimer { get; private set; }
 
     private Image img;
     private float _currenTime;
+
     
 
 
@@ -22,7 +24,7 @@ public class ImageTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(img == null)
+        if (img == null)
         {
             return;
         }

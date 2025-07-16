@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class WarriorComtroller : MonoBehaviour
 {
     public GameManager gameManager;
-    //public ImageTimer imageTimer;
+    [HideInInspector]public ImageTimer warriorTimerTick;
 
     public SoundController soundController;
 
@@ -17,23 +17,26 @@ public class WarriorComtroller : MonoBehaviour
     public TextMeshProUGUI warriorNotEnoughWheat;  // недостаточно пшеницы.
     public TextMeshProUGUI warriorTimerText;   // Отоброжение секунд создания воина.
 
-    public Image warriorTimerImg;
-
     public Button warriorButton;  // Нанять воина.
     public int warriorCount;   // количество воинов.
     public int warriorCost;  // стоимость найма воина.
     public float warriorCreateTime;  // время создания воина.
     public int wheatToWarriors;  // потребление пшеницы воином.
 
-    private float _warriorTimer = -2;  // время ожидания создания воина.
+    private Image warriorTimerImg;
 
+    private float _warriorTimer = -2;  // время ожидания создания воина.
+    //private float a;
     private void Start()
     {
+        //a = gameManager.harvestTimer.maxTime;
         UpdateText();
     }
 
     private void Update()
     {
+        //a = warriorTimerTick.Timer();
+        //warriorTimerText.text = Mathf.Round(a).ToString();
         CreateWarriorTime();
         if (warriorCount < 0)
         {
@@ -68,6 +71,7 @@ public class WarriorComtroller : MonoBehaviour
     {
         if (gameManager.wheatCount >= warriorCost)
         {
+            warriorButton.interactable = true;
             gameManager.wheatCount -= warriorCost;
             _warriorTimer = warriorCreateTime;
             warriorNotEnoughWheat.text = "Создается...";
@@ -75,21 +79,28 @@ public class WarriorComtroller : MonoBehaviour
         }
         else if(gameManager.wheatCount < warriorCost)
         {
+            //_warriorTimer = warriorCreateTime;
+            //warriorTimerText.text = Mathf.Round(a).ToString();
             warriorNotEnoughWheat.text = "Недостаточно пшеницы";
             warriorButton.interactable = false;
             
         }
-        StartCoroutine(CoroutineWarriorCountText());
+        StartCoroutine(CoroutineWarriorNewText());
+        StartCoroutine(CoroutineWarriorTimer());
     }
 
     private void UpdateText()
     {
         resourcesWarriorText.text = warriorCount.ToString();
     }
-    IEnumerator CoroutineWarriorCountText()
+    IEnumerator CoroutineWarriorNewText()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3f);
         warriorNotEnoughWheat.text = " ";
+    }
+    IEnumerator CoroutineWarriorTimer()
+    {
+        yield return new WaitForSeconds(3f);
         warriorButton.interactable = true;
     }
 }
