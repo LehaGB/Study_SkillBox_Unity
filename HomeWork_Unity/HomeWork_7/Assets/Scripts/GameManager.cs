@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public PeasantController peasantController;
     public WarriorComtroller warriorComtroller;
+    //public PlayerPrefsManager playerPrefs;
 
     public TextMeshProUGUI resourcesWheatText;  // количество пшеницы.
     public TextMeshProUGUI raidText;  // количество атакующих.
@@ -19,54 +20,61 @@ public class GameManager : MonoBehaviour
 
 
     public int wheatCount;  // коичество пшеницы.
-    public int numberMovesAttack = 1;
+    public int numberEmptyMovesAttack = 2;  // количество пустых атак.
     public float raidMaxTime;  // время наступления рейда.
     public int raidIncrease;  // увеличение рейда.
     public int nextRaid;   // следующий рейд.
+    public int numberOfRaid = 0;  // количество набегов.
 
-    public int newWheatCount;
+    public int newWheatCount;  // Всео изготовленно пшеницы.
     private float _raidTimer;  // время ожидания набега.
+    private int saveWarriosFalleCount = 0;  // Падшие воины.
 
     private void Start()
     {
         UpdateText();
         UpdateReaidText();
-        NumbersMovesAttack();
+        NumbersMovesAttackUpdateText();
         _raidTimer = raidMaxTime;
     }
 
     private void Update()
     {
-        peasantController.CreatePeasantTime();
-        warriorComtroller.CreateWarriorTime();
+        //peasantController.IsNotEnoughWheatTimer();
+        //warriorComtroller.IsNotEnoughWheatTimer();
         _raidTimer -= Time.deltaTime;
         raidTimerImg.fillAmount = _raidTimer / raidMaxTime;
-        EnemyAttack();
-
-
+        
         if (harvestTimer.tick)
         {
             if(wheatCount > 0)
             {
                 wheatCount += peasantController.peasantCount * peasantController.wheatPerPeasant;
-                eatingTimer.ResetTimer();
             }
+            else
+            {
+                wheatCount += peasantController.wheatPerPeasant;         
+            }
+            newWheatCount = wheatCount;
+            PlayerPrefsManager.SaveWheatCount(newWheatCount);
+            harvestTimer.ResetTimer();
         }
         if (eatingTimer.tick)
         {
-            if(wheatCount > 0)
+            if (wheatCount > 0)
             {
                 wheatCount -= warriorComtroller.warriorCount * warriorComtroller.wheatToWarriors;
-                eatingTimer.ResetTimer();
             }
+            eatingTimer.ResetTimer();
         }
         UpdateText();
+        EnemyAttack();
     }
 
     // Количество пшеницы.
     public void UpdateText()
     {
-        resourcesWheatText.text = wheatCount.ToString();
+        resourcesWheatText.text = $"{Mathf.Round(wheatCount)}";
     }
 
     // Количество врагов.
@@ -76,15 +84,14 @@ public class GameManager : MonoBehaviour
     }
 
     // Кол-во ходов до атаки.
-    public void NumbersMovesAttack()
+    public void NumbersMovesAttackUpdateText()
     {
-        numberMovesAttackText.text = $"Ход до атаки: {numberMovesAttack--}";
+        numberMovesAttackText.text = $"Ход до атаки: {numberEmptyMovesAttack--}";
     }
     IEnumerator CoroutineTimeRed()
     {
         raidTimerImg.color = Color.red;
         yield return new WaitForSeconds(3);
-        raidTimerImg.color = new Color(250, 250, 250, 250);
     }
 
     /// <summary>
@@ -99,19 +106,29 @@ public class GameManager : MonoBehaviour
         if (_raidTimer <= 0)
         {
             _raidTimer = raidMaxTime;
-            if (numberMovesAttack > 0)
-            {
-                numberMovesAttackText.text = $"Ход до атаки: {numberMovesAttack--}";
 
-                UpdateReaidText();
+            if (numberEmptyMovesAttack > 0)
+            {
+                NumbersMovesAttackUpdateText();
             }
             else
             {
-                warriorComtroller.warriorCount -= nextRaid;
-                nextRaid += raidIncrease;
                 numberMovesAttackText.text = "Наступление врагов";
+                warriorComtroller.warriorCount -= nextRaid;
+                saveWarriosFalleCount = Mathf.Abs(warriorComtroller.warriorCount);
+                nextRaid += raidIncrease;
+                PlayerPrefsManager.SaveFalleWarriorsCount(saveWarriosFalleCount);
+                GameOver();
             }
-            UpdateReaidText();
         }
+        
+        UpdateReaidText();
+    }
+
+    // Сохраняем количество набегов в PlayerPrefs
+    public void GameOver()
+    { 
+        PlayerPrefsManager.SaveEnemyWaves(numberOfRaid - 1);
+        numberOfRaid++;
     }
 }

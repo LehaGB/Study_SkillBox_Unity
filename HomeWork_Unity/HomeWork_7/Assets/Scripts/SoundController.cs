@@ -15,12 +15,17 @@ public class SoundController : MonoBehaviour
 
     [HideInInspector] public AudioSource _audio;
 
+
+    // Получем компонет.
     private void Start()
     {
         buttonImage = soundButton.GetComponent<Image>();
         _audio = GetComponent<AudioSource>();
         _audio.Play();
     }
+
+
+    // Аудиопроигрыватель.(меняем спрайт при выключении музыки).
     public void ChangeSoundPlayPause()
     {
         if (_audio.isPlaying)
@@ -34,8 +39,4 @@ public class SoundController : MonoBehaviour
             buttonImage.sprite = soundOnSprite;
         }
     }
-    //public void ChangeSoundGameOver()
-    //{
-    //    _audio.clip = audioGameOverClip;
-    //}
 }
