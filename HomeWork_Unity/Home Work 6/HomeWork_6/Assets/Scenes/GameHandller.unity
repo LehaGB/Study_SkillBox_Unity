@@ -408,7 +408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &139634754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,8 +639,6 @@ MonoBehaviour:
   pauseButton: {fileID: 1018413156}
   resultButton: {fileID: 1820669684}
   gameManager: {fileID: 749262220}
-  _gameIsOver: 0
-  _curentTime: 5
 --- !u!4 &290921504
 Transform:
   m_ObjectHideFlags: 0
@@ -4897,7 +4895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2025024056
 RectTransform:
   m_ObjectHideFlags: 0
