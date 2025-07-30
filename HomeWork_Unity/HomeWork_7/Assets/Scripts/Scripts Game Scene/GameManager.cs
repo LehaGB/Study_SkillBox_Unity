@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public LoadScene LoadScene;
     public SoundController soundController;
 
+    public AudioClip attackClip;
+
     public GameObject gameVictory;
     public GameObject gameScene;
 
@@ -31,14 +33,18 @@ public class GameManager : MonoBehaviour
     public int saveWarriosFalleCount;  // Падшие воины.
     public int numberOfRaid;  // Количество рейдов.
 
+    private AudioSource audioSource;
+
     private int _warriorLostMin;  // Минимальные потери воинов.
     private int _warriorLostMax;  // Максимальные потери воинов.
     private float _raidTimer;  // время ожидания набега.
     private int _wheatCountForVictory = 500;
+    public bool isPlayStopSound = true;
 
 
     private void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
         UpdateText();
         UpdateReaidText();
         NumbersMovesAttackUpdateText();
@@ -78,13 +84,20 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EnemyAttack()
     {
+        if (warriorComtroller.warriorCount < 0)
+        {
+            isPlayStopSound = false;
+        }
+        else
+        {
+            isPlayStopSound = true;
+        }
         _warriorLostMax = warriorComtroller.AddWarriorCount();
-        if (_raidTimer <= 0)
+        if (_raidTimer <= 0 && isPlayStopSound)
         {
             _raidTimer = raidMaxTime;
             numberEmptyMovesAttack--;
-
-            if (numberEmptyMovesAttack > 0)
+            if (numberEmptyMovesAttack > 0 && isPlayStopSound)
             {
                 NumbersMovesAttackUpdateText();
             }
@@ -102,14 +115,16 @@ public class GameManager : MonoBehaviour
                     _warriorLostMax -= saveWarriosFalleCount;
                 }
                 nextRaid += raidIncrease;
+                audioSource.PlayOneShot(attackClip);
                 CountNumberFalleWarriors();
                 CountNumberOfRaid();
             }
         }
-        if (_raidTimer > 0 && _raidTimer < 15 && numberEmptyMovesAttack == 0)
+        if (_raidTimer > 0 && _raidTimer < 15 && numberEmptyMovesAttack == 0 && isPlayStopSound)
         {
             StartCoroutine(CoroutineTimeRed());
         }
+        isPlayStopSound = false;
         UpdateReaidText();
     }
 

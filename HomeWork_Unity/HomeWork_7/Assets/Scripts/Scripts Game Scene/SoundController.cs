@@ -44,8 +44,4 @@ public class SoundController : MonoBehaviour
         }
         isSoundOn = !isSoundOn;
     }
-    //private void UpdateSoundButtonIcon()
-    //{
-    //    buttonImage.sprite = isSoundOn ? soundOnSprite : soundOffSprite;
-    //}
 }
