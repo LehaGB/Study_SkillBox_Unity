@@ -8,8 +8,10 @@ public class PeasantController : MonoBehaviour
 {
     public GameManager gameManager;
     public Image peasantTimerImg;
-    public LoadScene loadScene;
+    public LoadGameScene loadScene;
     public SoundController soundController;
+
+    public AudioClip notificationClip;
 
     public GameObject gameScene;
     public GameObject gameVictory;
@@ -18,6 +20,8 @@ public class PeasantController : MonoBehaviour
     public TextMeshProUGUI peasantNotEnoughWheat;  // недостаточно пшеницы.
     public TextMeshProUGUI peasantTimerText;  // Отображение секунд создания крестьянина.
 
+    private AudioSource _audioSource;
+
     public Button peasantButton;  // нанять крестьянина.
     public int createPeasantCount { get; private set; } = 0;  // Создано крестьян.
 
@@ -25,14 +29,16 @@ public class PeasantController : MonoBehaviour
     public int wheatPerPeasant = 4;  // Увеличение сбора пшеницы.
     public int peasantCost = 4; // стоимость найма крестьянина.
     public float peasantCreateTime = 3;  // время создания крестьянина.
+    public int maxCountPeasantforVictory = 10;
 
     private float _peasantTimer = -2;  // время ожидания создания крестьянина.
     private float _peasantTimerIsNotWheat = -2;  // время ожидания когда мало пшеницы.
-    private int _maxCountPeasantforVictory = 5;
+    
 
 
     private void Start()
     {
+        _audioSource = gameObject.AddComponent<AudioSource>();
         createPeasantCount = peasantCount;
     }
 
@@ -61,9 +67,10 @@ public class PeasantController : MonoBehaviour
             _peasantTimer = -2;
             peasantTimerText.text = " ";
         }
-        if(peasantCount == _maxCountPeasantforVictory)
+        if (peasantCount == maxCountPeasantforVictory)
         {
             soundController._audio.Stop();
+            gameManager.audioSource.Pause();
             Time.timeScale = 0;
             gameScene.SetActive(false);
             gameVictory.SetActive(true);
@@ -137,9 +144,10 @@ public class PeasantController : MonoBehaviour
 
     // Активируем кнопку и обновляем текст.
     IEnumerator CoroutinePeasantTimer()
-    {
+    {     
         yield return new WaitForSeconds(_peasantTimer);
         peasantNotEnoughWheat.text = " ";
         peasantButton.interactable = true;
+        _audioSource.PlayOneShot(notificationClip);
     }
 }

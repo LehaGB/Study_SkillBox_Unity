@@ -11,6 +11,7 @@ public class WarriorComtroller : MonoBehaviour
     public GameObject gameScene;
 
     public SoundController soundController;
+    public AudioClip notificationClip;
 
     public Image warriorTimerImg;
 
@@ -29,9 +30,12 @@ public class WarriorComtroller : MonoBehaviour
     private float _warriorTimer = -2;  // врем€ ожидани€ создани€ воина.
     private float _warriorTimerIsNotWheat = -2;  // врем€ ожидани€ когда мало пшеницы.
 
+    private AudioSource _audioSource;
+
 
     private void Start()
     {
+        _audioSource = gameObject.AddComponent<AudioSource>();
         UpdateText();
     }
 
@@ -158,5 +162,6 @@ public class WarriorComtroller : MonoBehaviour
         yield return new WaitForSeconds(_warriorTimer);
         warriorNotEnoughWheat.text = " ";
         warriorButton.interactable = true;
+        _audioSource.PlayOneShot(notificationClip);
     }
 }

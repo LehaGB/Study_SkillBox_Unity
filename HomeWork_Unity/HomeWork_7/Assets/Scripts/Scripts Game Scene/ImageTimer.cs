@@ -24,7 +24,7 @@ public class ImageTimer : MonoBehaviour
     void Start()
     {
         img = GetComponent<Image>();
-        _audioSource = gameObject.AddComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         _currenTime = maxTime;
     }
 

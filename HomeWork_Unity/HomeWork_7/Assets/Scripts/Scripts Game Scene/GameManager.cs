@@ -8,8 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public PeasantController peasantController;
     public WarriorComtroller warriorComtroller;
+
     public GameOverController gameOver;
-    public LoadScene LoadScene;
+    public LoadGameScene LoadScene;
     public SoundController soundController;
 
     public AudioClip attackClip;
@@ -33,18 +34,18 @@ public class GameManager : MonoBehaviour
     public int saveWarriosFalleCount;  // Падшие воины.
     public int numberOfRaid;  // Количество рейдов.
 
-    private AudioSource audioSource;
+    [HideInInspector] public AudioSource audioSource;
 
     private int _warriorLostMin;  // Минимальные потери воинов.
     private int _warriorLostMax;  // Максимальные потери воинов.
     private float _raidTimer;  // время ожидания набега.
-    private int _wheatCountForVictory = 500;
+    private int _wheatCountForVictory = 20;
     public bool isPlayStopSound = true;
 
 
     private void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         UpdateText();
         UpdateReaidText();
         NumbersMovesAttackUpdateText();
@@ -84,14 +85,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EnemyAttack()
     {
-        if (warriorComtroller.warriorCount < 0)
-        {
-            isPlayStopSound = false;
-        }
-        else
-        {
-            isPlayStopSound = true;
-        }
+        isPlayStopSound = true;
         _warriorLostMax = warriorComtroller.AddWarriorCount();
         if (_raidTimer <= 0 && isPlayStopSound)
         {
@@ -104,7 +98,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 numberMovesAttackText.text = "Наступление врагов";
-               
+
                 _warriorLostMin = Mathf.Min(warriorComtroller.warriorCount, nextRaid);
                 Mathf.Abs(warriorComtroller.warriorCount -= nextRaid);
 
@@ -116,13 +110,19 @@ public class GameManager : MonoBehaviour
                 }
                 nextRaid += raidIncrease;
                 audioSource.PlayOneShot(attackClip);
+
                 CountNumberFalleWarriors();
                 CountNumberOfRaid();
             }
         }
-        if (_raidTimer > 0 && _raidTimer < 15 && numberEmptyMovesAttack == 0 && isPlayStopSound)
+        if (_raidTimer > 0 && numberEmptyMovesAttack == 0 && isPlayStopSound)
         {
             StartCoroutine(CoroutineTimeRed());
+            raidTimerImg.color = Color.red;
+        }
+        if (warriorComtroller.warriorCount < 0)
+        {
+            audioSource.Pause();
         }
         isPlayStopSound = false;
         UpdateReaidText();
@@ -157,9 +157,10 @@ public class GameManager : MonoBehaviour
             eatingTimer.ResetTimer();
 
         }
-        if (wheatCount == _wheatCountForVictory)
+        if (wheatCount >= _wheatCountForVictory)
         {
             soundController._audio.Stop();
+            audioSource.Pause();
             Time.timeScale = 0;
             gameScene.SetActive(false);
             gameVictory.SetActive(true);
@@ -180,7 +181,7 @@ public class GameManager : MonoBehaviour
     // Количество набегов для GameOver.
     public int ReturnCountNumberOfRaid()
     {
-        if(numberEmptyMovesAttack > 0)
+        if (numberEmptyMovesAttack > 0)
         {
             numberOfRaid = 0;
         }
@@ -212,7 +213,7 @@ public class GameManager : MonoBehaviour
         nextRaid = saveWarriosFalleCount;
         return nextRaid;
     }
-    
+
 
     // Выжившие воины.
     public int NumberSurvivingWarriors()
@@ -224,7 +225,7 @@ public class GameManager : MonoBehaviour
     // Меняю цвет часов, при атаке.
     IEnumerator CoroutineTimeRed()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0.5f);
         raidTimerImg.color = Color.red;
     }
 }

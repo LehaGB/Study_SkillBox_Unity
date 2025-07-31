@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class MouseClick : MonoBehaviour
 {
-    public AudioClip clickSound;
 
+    public AudioClip clickSound;
+    
     private AudioSource audioSource;
     void Start()
     {
@@ -25,7 +26,7 @@ public class MouseClick : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(clickSound != null)
+            if (clickSound != null)
             {
                 audioSource.PlayOneShot(clickSound);
             }

@@ -8,6 +8,7 @@ public class SoundController : MonoBehaviour
 
     public PauseController pauseController;
 
+
     public Button soundButton;      // Ссылка на компонент Button.
 
     public Sprite soundOnSprite;    // Спрайт для состояния "Звук включен".

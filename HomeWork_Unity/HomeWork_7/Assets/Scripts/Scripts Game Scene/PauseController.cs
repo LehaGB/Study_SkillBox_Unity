@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PauseController : MonoBehaviour
 {
     public SoundController soundController;
+    public WarriorComtroller warriorComtroller;
+    public PeasantController peasantController;
 
     public Button pausePlayButton;
     public Button soundButton;
@@ -29,6 +31,8 @@ public class PauseController : MonoBehaviour
             _pausePlayButtonImage.sprite = playSprite;
             soundController._audio.Play();
             soundButton.interactable = true;
+            warriorComtroller.warriorButton.interactable = true;
+            peasantController.peasantButton.interactable = true;
             
         }
         else
@@ -37,6 +41,8 @@ public class PauseController : MonoBehaviour
             _pausePlayButtonImage.sprite = pauseSprite;
             soundController._audio.Pause();
             soundButton.interactable = false;
+            warriorComtroller.warriorButton.interactable = false;
+            peasantController.peasantButton.interactable = false;
         }
         _isPaused = !_isPaused;
     }
