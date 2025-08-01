@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseClick : MonoBehaviour
+public class MouseClickMainScene : MonoBehaviour
 {
-
     public AudioClip clickSound;
-    
+
     private AudioSource audioSource;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -16,7 +16,6 @@ public class MouseClick : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
         }
     }
-
 
     void Update()
     {

@@ -17,7 +17,9 @@ public class RulesButtonScripts : MonoBehaviour
     {
         rulesText.text = rules;
     }
-    
+
+
+    // Нажали на кнопку Правила.
     public void ButtonClickRules()
     {
         if(gameObject != null)
@@ -31,6 +33,9 @@ public class RulesButtonScripts : MonoBehaviour
             gameObjectMainPanel.SetActive(true);
         }
     }
+
+
+    // // Нажали на кнопку в меню правила назад.
     public void ButtonClickRulesBack()
     {
         if (gameObject != null)

@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI resourcesWheatText;  // вывод количество пшеницы.
     public TextMeshProUGUI raidText;  // вывод количество атакующих.
     public TextMeshProUGUI numberMovesAttackText;  // вывод количество пустых рейдов.
+    public TextMeshProUGUI vuctoryText;
 
     public ImageTimer harvestTimer;
     public ImageTimer eatingTimer;
@@ -164,6 +165,8 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             gameScene.SetActive(false);
             gameVictory.SetActive(true);
+            vuctoryText.text = $"Победа!!! \n " +
+                $"Вы создали {wheatCount} пшеницы";
         }
         CountNumberWheat();
         UpdateText();

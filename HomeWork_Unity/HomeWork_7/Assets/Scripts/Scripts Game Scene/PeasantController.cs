@@ -19,6 +19,7 @@ public class PeasantController : MonoBehaviour
     public TextMeshProUGUI resourcesPeasantText;  // количество крестьян.
     public TextMeshProUGUI peasantNotEnoughWheat;  // недостаточно пшеницы.
     public TextMeshProUGUI peasantTimerText;  // Отображение секунд создания крестьянина.
+    public TextMeshProUGUI victoryText;
 
     private AudioSource _audioSource;
 
@@ -29,7 +30,7 @@ public class PeasantController : MonoBehaviour
     public int wheatPerPeasant = 4;  // Увеличение сбора пшеницы.
     public int peasantCost = 4; // стоимость найма крестьянина.
     public float peasantCreateTime = 3;  // время создания крестьянина.
-    public int maxCountPeasantforVictory = 10;
+    public int maxCountPeasantforVictory = 4;
 
     private float _peasantTimer = -2;  // время ожидания создания крестьянина.
     private float _peasantTimerIsNotWheat = -2;  // время ожидания когда мало пшеницы.
@@ -74,6 +75,8 @@ public class PeasantController : MonoBehaviour
             Time.timeScale = 0;
             gameScene.SetActive(false);
             gameVictory.SetActive(true);
+            victoryText.text = $"Победа!!! \n " +
+                $"Вы создали {peasantCount} крестьян";
         }
         UpdateText();
     }
