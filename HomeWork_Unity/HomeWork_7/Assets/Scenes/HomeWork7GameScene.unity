@@ -5772,7 +5772,7 @@ MonoBehaviour:
   raidTimerImg: {fileID: 501270414}
   wheatCount: 20
   numberEmptyMovesAttack: 2
-  raidMaxTime: 30
+  raidMaxTime: 20
   raidIncrease: 2
   nextRaid: 0
   saveWarriosFalleCount: 0

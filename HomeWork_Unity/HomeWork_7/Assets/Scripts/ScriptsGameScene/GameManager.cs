@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     private int _warriorLostMin;  // ћинимальные потери воинов.
     private int _warriorLostMax;  // ћаксимальные потери воинов.
     private float _raidTimer;  // врем€ ожидани€ набега.
-    private int _wheatCountForVictory = 3000;
+    private int _wheatCountForVictory = 100;
     public bool isPlayStopSound = true;
 
 
