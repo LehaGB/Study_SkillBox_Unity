@@ -4,31 +4,28 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-
-
-    public Vector3[] targets = new Vector3[4];
+    public Vector3[] targets;
     public float stoppingDistance = 0.1f;
 
     private int _currentPointIndex = 0;
     private bool _forward = true;
-    private int _speed = 3;
+    private int _speed = 10;
     
     void Start()
     {
-
+        if (targets == null || targets.Length == 0)
+        {
+            return;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         MoveCube();
     }
     public void MoveCube()
     {
-        if(targets == null || targets.Length == 0)
-        {
-            return;
-        }
+       
         Vector3 targetPoint = targets[_currentPointIndex];
 
         var distance = Vector3.Distance(transform.position, targetPoint);
@@ -40,7 +37,6 @@ public class Move : MonoBehaviour
         }
         else
         {
-            // Если достигли точки, выбираем следующую
             UpdateCurrentPointIndex();
         }
     }
@@ -51,7 +47,7 @@ public class Move : MonoBehaviour
             _currentPointIndex++;
             if(_currentPointIndex >= targets.Length)
             {
-                _currentPointIndex = targets.Length - 2;
+                _currentPointIndex = targets.Length - 1;
                 _forward = false;
             }
         }
