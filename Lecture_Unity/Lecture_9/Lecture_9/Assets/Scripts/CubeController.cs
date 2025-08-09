@@ -8,6 +8,8 @@ public class CubeController : MonoBehaviour
     public TextMeshProUGUI cubeText;
     public TextMeshProUGUI cubeText1;
 
+   
+
     private Rigidbody rb;
     private void Start()
     {
