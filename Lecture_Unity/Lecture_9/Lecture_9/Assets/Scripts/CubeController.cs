@@ -6,25 +6,41 @@ using TMPro;
 public class CubeController : MonoBehaviour
 {
     public TextMeshProUGUI cubeText;
-    public TextMeshProUGUI cubeText1;
+    
 
-   
+
 
     private Rigidbody rb;
+    private BoxCollider boxCollider;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
     }
 
     private void FixedUpdate()
     {
-        rb.AddForce(2, 0, 0, ForceMode.Force);
+        rb.AddForce(0, 0, 2, ForceMode.Force);
+        //if (transform.position.z > 6)
+        //{
+        //    boxCollider.isTrigger = true;
+        //}
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    cubeText.text = $"Collision detected! {collision.gameObject.name}";
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+       
+        string a = collision.gameObject.name;
+        cubeText.text = $"Collision detected! {a}";
+        if(a == "LoLo")
+        {
+            rb.isKinematic = true;
+        }
+        else
+        {
+            rb.isKinematic = false;
+        }
+    }
 
     //private void OnCollisionExit(Collision collision)
     //{
