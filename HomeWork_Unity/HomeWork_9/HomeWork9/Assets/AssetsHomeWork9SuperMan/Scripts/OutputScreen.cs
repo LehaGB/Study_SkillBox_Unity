@@ -33,7 +33,7 @@ public class OutputScreen : MonoBehaviour
     {
         if(destroyBadGuyText != null && _countDestroyBadGuy != _lastDisplayedCount)
         {
-            destroyBadGuyText.text = $"{ _countDestroyBadGuy}";
+            destroyBadGuyText.text = $"Враги: { _countDestroyBadGuy}";
             _lastDisplayedCount = _countDestroyBadGuy;
         }
     }

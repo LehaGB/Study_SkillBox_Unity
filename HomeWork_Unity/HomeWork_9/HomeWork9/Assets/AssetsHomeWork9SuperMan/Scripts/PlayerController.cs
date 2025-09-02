@@ -5,22 +5,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private Rigidbody _rbSuperMan;
+    private CameraController _cameraController;
+
     public event Action LoadScene;
     public event Action BoomBadGuysAudio;
 
-    private Rigidbody _rbSuperMan;
-    //private RigidbodyConstraints _rigidbodyConstraints;
-
     public int power = 0;
     public float randomness = 0.3f;
-    // Start is called before the first frame update
+
+    public bool isActive = true;
+
     void Start()
     {
+        _cameraController = FindObjectOfType<CameraController>();
         _rbSuperMan = GetComponent<Rigidbody>();
-       // _rigidbodyConstraints = _rbSuperMan.constraints;
     }
 
-    // Update is called once per frame
     void Update()
     {
        
@@ -47,10 +48,16 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject)
+        if (other.gameObject && isActive)
         {
             LoadScene?.Invoke();
             _rbSuperMan.isKinematic = true;
+
+            if(_cameraController != null)
+            {
+                _cameraController.StopMusic();
+            }
         }
+        isActive = false;
     }
 }

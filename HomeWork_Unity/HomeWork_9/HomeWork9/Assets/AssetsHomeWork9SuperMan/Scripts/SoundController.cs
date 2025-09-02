@@ -16,7 +16,7 @@ public class SoundController : MonoBehaviour
     {
         _boomGadBoysAudio = GetComponent<AudioSource>();
         playerController = FindObjectOfType<PlayerController>();
-        if(playerController != null)
+        if (playerController != null)
         {
             playerController.BoomBadGuysAudio += AudioGadBoys;
         }

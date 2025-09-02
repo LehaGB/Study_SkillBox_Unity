@@ -24,5 +24,6 @@ public class LoadScene : MonoBehaviour
     {
         victoryPanel.SetActive(true);
         victoryText.text = "онаедю!!!";
+        Time.timeScale = 0;
     }
 }
