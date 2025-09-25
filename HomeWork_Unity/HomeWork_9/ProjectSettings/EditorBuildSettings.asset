@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tube/Scene/Tube.unity
     guid: ff6bba0e382fbb54bbb9b45da3545a5e
+  - enabled: 1
+    path: Assets/SphereGravity/Scene/SphereGravity.unity
+    guid: 15f8edd0452c76d48a11f2f93f87e576
   m_configObjects: {}
