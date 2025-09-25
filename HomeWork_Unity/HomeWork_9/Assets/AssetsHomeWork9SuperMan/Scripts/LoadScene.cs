@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class LoadScene : MonoBehaviour
+public class LoadSceneHomeWork9 : MonoBehaviour
 {
 
     public GameObject victoryPanel;
