@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1366
     height: 685
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 90
+  controlID: 37
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -609,9 +609,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.79768926, y: 2.3749526, z: -13.593759}
+    m_Target: {x: -3.3869467, y: 6.6475134, z: 2.0154824}
     speed: 2
-    m_Value: {x: -0.79768926, y: 2.3749526, z: -13.593759}
+    m_Value: {x: -3.3869467, y: 6.6475134, z: 2.0154824}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -657,20 +657,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0047450997, y: 0.98188365, z: -0.18813245, w: -0.024745842}
+    m_Target: {x: 0.023612043, y: -0.9756687, z: 0.13282478, w: 0.17330006}
     speed: 2
-    m_Value: {x: -0.0047450997, y: 0.9818836, z: -0.18813245, w: -0.02474584}
+    m_Value: {x: 0.024129713, y: -0.9751867, z: 0.13574018, w: 0.17321439}
   m_Size:
-    m_Target: 9.530661
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 9.530661
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 1.2836007
-    m_SpeedNormalized: 0.64000034
+    m_Speed: 0.68660104
+    m_SpeedNormalized: 0.3400005
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -733,7 +733,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Materials
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -741,16 +741,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Materials
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Study_SkillBox_Unity\Lecture_Unity\Lecture_10
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 965a0000
-    m_LastClickedID: 23190
-    m_ExpandedIDs: 000000000c5d0000
+    m_SelectedIDs: 825b0000
+    m_LastClickedID: 23426
+    m_ExpandedIDs: 000000007c5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -778,7 +778,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c5d0000
+    m_ExpandedIDs: 000000007c5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -809,18 +809,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: HingleJoint
+      m_OriginalName: HingleJoint
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 23438
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -875,7 +875,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 216
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -918,9 +918,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 145d0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: daf1ffff
+      m_SelectedIDs: ccf4ffff
+      m_LastClickedID: -2868
+      m_ExpandedIDs: 6ef7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
