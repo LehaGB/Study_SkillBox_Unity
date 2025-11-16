@@ -5,6 +5,7 @@ using UnityEngine;
 public class CoinController : MonoBehaviour
 {
     private Animator anim;
+   
 
 
     private void Awake()
@@ -13,11 +14,16 @@ public class CoinController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
-        anim.SetBool("Alive", false);
+    {    
+        anim.SetBool("Alive", true);
         anim.SetTrigger("Collect");
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        anim.SetBool("Alive", false);
+        anim.SetTrigger("Enter");
+    }
     //public void DestroySomething()
     //{
     //    Destroy(FindObjectOfType<MeshFilter>().gameObject);
