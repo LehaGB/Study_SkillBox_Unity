@@ -564,7 +564,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 257019742}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1057239921}
+        m_TargetAssemblyTypeName: LoadLevelSceneManager, Assembly-CSharp
+        m_MethodName: LoadLevelButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &257019742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,7 +791,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 342274190}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1057239921}
+        m_TargetAssemblyTypeName: LoadLevelSceneManager, Assembly-CSharp
+        m_MethodName: LoadLevelButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &342274190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1582,37 +1606,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028066036}
   m_CullTransparentMesh: 1
---- !u!1 &1057239919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!114 &1057239921 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7492688535927829000, guid: 04edd300b04597a44a2835541365e031, type: 3}
+  m_PrefabInstance: {fileID: 1470162159217469929}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1057239920}
-  m_Layer: 0
-  m_Name: LoadLevel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1057239920
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057239919}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2909848a471f430438dbce626a35c1f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1094705122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,7 +2110,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1312332765}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1057239921}
+        m_TargetAssemblyTypeName: LoadLevelSceneManager, Assembly-CSharp
+        m_MethodName: LoadLevelButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1312332765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2227,7 +2243,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1331108349}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1057239921}
+        m_TargetAssemblyTypeName: LoadLevelSceneManager, Assembly-CSharp
+        m_MethodName: LoadLevelButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1331108349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2928,7 +2956,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2068976144}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1057239921}
+        m_TargetAssemblyTypeName: LoadLevelSceneManager, Assembly-CSharp
+        m_MethodName: LoadLevelButtonClicked
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2068976144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3071,6 +3111,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1470162159217469929
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6326842727831695681, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8840675098336886969, guid: 04edd300b04597a44a2835541365e031, type: 3}
+      propertyPath: m_Name
+      value: LoadLevelSceneManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04edd300b04597a44a2835541365e031, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3079,4 +3176,4 @@ SceneRoots:
   - {fileID: 272198755}
   - {fileID: 2143620728}
   - {fileID: 1194523483}
-  - {fileID: 1057239920}
+  - {fileID: 1470162159217469929}

@@ -1,26 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PausePlayGame : MonoBehaviour
+public class PausePlayGame : PlayPauseReturnToMenuManager
 {
-    public GameObject playBt;
-    public GameObject pauseBt;
-    public GameObject menuBt;
+    public LoadLevelSceneManager _scene;
 
 
-    public void Pause()
+    [SerializeField] private GameObject playBt;
+    [SerializeField] private GameObject pauseBt;
+    [SerializeField] private GameObject menuBt;
+
+
+    public override void Pause()
     {
-        if(playBt != null && pauseBt != null && menuBt != null)
+        if (playBt != null && pauseBt != null && menuBt != null)
         {
             Time.timeScale = 0f;
             playBt.SetActive(true);
             pauseBt.SetActive(false);
             menuBt.SetActive(true);
-        }
+        }      
     }
-    public void Play()
+    public override void Play()
     {
         if (playBt != null && pauseBt != null)
         {
@@ -29,5 +33,9 @@ public class PausePlayGame : MonoBehaviour
             pauseBt.SetActive(true);
             menuBt.SetActive(false);
         }
+    }
+    public override void ReturnToMenu(int indexScene)
+    {
+        _scene.LoadScene(indexScene);
     }
 }
