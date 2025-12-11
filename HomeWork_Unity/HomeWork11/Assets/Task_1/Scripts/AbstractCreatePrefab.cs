@@ -15,8 +15,8 @@ public abstract class AbstractCreatePrefab : ICreatePrefab
 
     [Header("Player Spawn Parameters")]
     public GameObject _playerPrefab;
-    protected float _posYPlayer = 0.12f;
-    protected float _posZPlayer = -49f;
+    public float _posYPlayer = 0.12f;
+    public float _posZPlayer = -49f;
 
     public abstract void CreatePrefab(Transform parentTransform);
 }

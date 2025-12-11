@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreatePLayer : MonoBehaviour 
 {
     [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private CameraFollow cameraFollow;
 
     private CreatePlayerPrefab _createPlayerPrefab;
 
@@ -16,6 +17,7 @@ public class CreatePLayer : MonoBehaviour
 
     private void Start()
     {
-        _createPlayerPrefab.CreatePrefab(transform);
+        GameObject newPlayer = _createPlayerPrefab.CreatePlayer(transform);
+        cameraFollow.SetTarget(newPlayer.transform); 
     }
 }
