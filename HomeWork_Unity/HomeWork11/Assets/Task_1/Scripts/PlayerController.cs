@@ -6,9 +6,9 @@ public class PlayerController : MonoBehaviour, IMovementController
 {
     private Animator _anim;
     private Rigidbody _rb;
-    private readonly int _animIDSpeed = Animator.StringToHash("Speed");
 
-    [SerializeField] private float _moveSpeed = 5f;
+
+    private float _moveSpeed = 5f;
 
     private void Awake()
     {
@@ -27,17 +27,29 @@ public class PlayerController : MonoBehaviour, IMovementController
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 movemenDirection = new Vector3(horizontalInput, 0, verticalInput);
+        movemenDirection.Normalize();
 
-        float currentSped = movemenDirection.magnitude > 0 ? 0 : 1;
+        bool IsMovingForward = verticalInput > 0;
+        bool IsMovingBack = verticalInput < 0;
+        bool IsMovingRight = horizontalInput > 0;
+        bool IsMovingLeft = horizontalInput < 0;
 
-        _anim.SetFloat(_animIDSpeed, currentSped);
+        //bool currentSpeed = movemenDirection.magnitude == 0 ? false : true;
+
+        _anim.SetBool("IsActive", IsMovingForward);
+        _anim.SetBool("IsMovingLeft", IsMovingLeft);
 
         if(movemenDirection.magnitude > 0)
         {
-            _rb.MovePosition(_rb.position + movemenDirection * _moveSpeed * Time.deltaTime);
+            _rb.MovePosition(_rb.position + movemenDirection * _moveSpeed * Time.deltaTime); 
         }
-
-        //transform.Translate(movemenDirection * _moveSpeed *Time.deltaTime, Space.World);
+        else
+        {
+            _anim.SetBool("IsActive", false);
+            _anim.SetBool("IsMovingLeft", false);
+            _anim.SetBool("IsMovingRight", false);
+            _anim.SetBool("IsMovingBack", false);
+        }
     }
 
     void Update()
