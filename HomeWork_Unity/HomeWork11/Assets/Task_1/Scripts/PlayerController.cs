@@ -7,13 +7,17 @@ public class PlayerController : MonoBehaviour, IMovementController
     private Animator _anim;
     private Rigidbody _rb;
 
-
     private float _moveSpeed = 5f;
 
     private void Awake()
     {
         _anim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        Move();
     }
 
     public void Jump()
@@ -34,10 +38,11 @@ public class PlayerController : MonoBehaviour, IMovementController
         bool IsMovingRight = horizontalInput > 0;
         bool IsMovingLeft = horizontalInput < 0;
 
-        //bool currentSpeed = movemenDirection.magnitude == 0 ? false : true;
 
-        _anim.SetBool("IsActive", IsMovingForward);
+        _anim.SetBool("IsMovingForward", IsMovingForward);
+        _anim.SetBool("IsMovingBack", IsMovingBack);
         _anim.SetBool("IsMovingLeft", IsMovingLeft);
+        _anim.SetBool("IsMovingRight", IsMovingRight);
 
         if(movemenDirection.magnitude > 0)
         {
@@ -50,10 +55,5 @@ public class PlayerController : MonoBehaviour, IMovementController
             _anim.SetBool("IsMovingRight", false);
             _anim.SetBool("IsMovingBack", false);
         }
-    }
-
-    void Update()
-    {
-        Move();
     }
 }
