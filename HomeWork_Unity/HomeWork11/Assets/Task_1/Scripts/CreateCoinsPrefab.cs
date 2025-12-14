@@ -10,14 +10,14 @@ public class CreateCoinsPrefab : AbstractCreatePrefab
 
         for (int i = 0; i < randomCountCoin; i++)
         {
-            float randomX = Random.Range(_posXCoin, _posX2Coin);
-            float randomY = Random.Range(_posYCoin, _posY2Coin);
+            float randomX = Random.Range(_posXCoin, -_posXCoin);
+            float randomZ = Random.Range(_posZCoin, _posZ2Coin);
 
-            Vector3 spawnPosition = new Vector3(randomX, 0.1f, randomY);
+            Vector3 spawnPosition = new Vector3(randomX, 0.1f, randomZ);
 
-            GameObject newCoin = Object.Instantiate(_coinPrefab, spawnPosition, Quaternion.identity);
+            GameObject newCoin = Object.Instantiate(_coinPrefab, parentTransform);
 
-            newCoin.transform.SetParent(parentTransform);
+            newCoin.transform.localPosition = spawnPosition;
         }
     }
 }

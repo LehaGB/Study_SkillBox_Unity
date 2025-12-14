@@ -31,7 +31,11 @@ public class PlayerController : MonoBehaviour, IMovementController
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 movemenDirection = new Vector3(horizontalInput, 0, verticalInput);
-        movemenDirection.Normalize();
+
+        if(movemenDirection.magnitude > 1f)
+        {
+            movemenDirection.Normalize();
+        }
 
         bool IsMovingForward = verticalInput > 0;
         bool IsMovingBack = verticalInput < 0;
@@ -46,11 +50,13 @@ public class PlayerController : MonoBehaviour, IMovementController
 
         if(movemenDirection.magnitude > 0)
         {
-            _rb.MovePosition(_rb.position + movemenDirection * _moveSpeed * Time.deltaTime); 
+            _rb.MovePosition(_rb.position + movemenDirection * _moveSpeed * Time.deltaTime);
+            _anim.SetBool("IsActive", false);
         }
         else
         {
-            _anim.SetBool("IsActive", false);
+            _anim.SetBool("IsActive", true);
+            _anim.SetBool("IsMovingForward", false);
             _anim.SetBool("IsMovingLeft", false);
             _anim.SetBool("IsMovingRight", false);
             _anim.SetBool("IsMovingBack", false);
