@@ -48,6 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cce15e17ae35041833dee9fa9c7f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_jumpForce: 7
+  m_groundCheckDistance: 0.2
+  m_groundMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!95 &1591404185466159810
 Animator:
   serializedVersion: 5

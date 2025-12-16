@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private AudioSource m_audioSource;
 
-    // Update is called once per frame
-    void Update()
+    public AudioClip coinClip;
+    public bool isActiveSound = true;
+
+    private void Start()
     {
-        
+        m_audioSource = GetComponent<AudioSource>();
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player")&& isActiveSound)
+        {
+            m_audioSource.PlayOneShot(coinClip);
+            Destroy(gameObject, coinClip.length);
+        }
     }
 }

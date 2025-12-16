@@ -7,9 +7,12 @@ public abstract class AbstractCreatePrefab : ICreatePrefab
     [Header("Coin Spawn Parameters")]
     public GameObject _coinPrefab;
     protected float _posXCoin = 2.3f;
-    //protected float _posX2Coin = 2.3f;
+
     protected float _posZCoin = -45f;
     protected float _posZ2Coin = -9f;
+    protected float _posYCoin = 0.1f;
+    protected float _posY2Coin = 0.3f;
+
     protected int _countCoinMax = 10;
     protected int _countCoinMin = 5;
 

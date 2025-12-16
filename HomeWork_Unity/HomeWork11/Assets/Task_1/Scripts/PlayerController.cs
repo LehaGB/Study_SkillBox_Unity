@@ -1,28 +1,59 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System.Data;
 
 public class PlayerController : MonoBehaviour, IMovementController
 {
-    private Animator _anim;
-    private Rigidbody _rb;
+    private Animator m_anim;
+    private Rigidbody m_rb;
+    private int m_countCoin;
 
-    private float _moveSpeed = 5f;
+    private float m_moveSpeed = 5f;
+    private bool m_IsGrounded;
+    public bool m_IsActive = true;
+
+    [SerializeField] private float m_jumpForce = 7f;
+    [SerializeField] private float m_groundCheckDistance = 0.2f;
+    [SerializeField] private LayerMask m_groundMask;
+
+    public int CountCoin 
+    {
+        get 
+        { 
+            return m_countCoin; 
+        }
+        set 
+        {
+            m_countCoin = value;
+        }
+    }
 
     private void Awake()
     {
-        _anim = GetComponent<Animator>();
-        _rb = GetComponent<Rigidbody>();
+        m_anim = GetComponent<Animator>();
+        m_rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         Move();
+        Checkgrounded();
+        if(m_IsGrounded && Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+    }
+
+    private void Checkgrounded()
+    {
+        m_IsGrounded = Physics.CheckSphere(transform.position, m_groundCheckDistance, m_groundMask);
     }
 
     public void Jump()
     {
-        throw new System.NotImplementedException();
+        m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
     }
 
     public void Move()
@@ -43,23 +74,32 @@ public class PlayerController : MonoBehaviour, IMovementController
         bool IsMovingLeft = horizontalInput < 0;
 
 
-        _anim.SetBool("IsMovingForward", IsMovingForward);
-        _anim.SetBool("IsMovingBack", IsMovingBack);
-        _anim.SetBool("IsMovingLeft", IsMovingLeft);
-        _anim.SetBool("IsMovingRight", IsMovingRight);
+        m_anim.SetBool("IsMovingForward", IsMovingForward);
+        m_anim.SetBool("IsMovingBack", IsMovingBack);
+        m_anim.SetBool("IsMovingLeft", IsMovingLeft);
+        m_anim.SetBool("IsMovingRight", IsMovingRight);
 
         if(movemenDirection.magnitude > 0)
         {
-            _rb.MovePosition(_rb.position + movemenDirection * _moveSpeed * Time.deltaTime);
-            _anim.SetBool("IsActive", false);
+            m_rb.MovePosition(m_rb.position + movemenDirection * m_moveSpeed * Time.deltaTime);
+            m_anim.SetBool("IsActive", false);
         }
         else
         {
-            _anim.SetBool("IsActive", true);
-            _anim.SetBool("IsMovingForward", false);
-            _anim.SetBool("IsMovingLeft", false);
-            _anim.SetBool("IsMovingRight", false);
-            _anim.SetBool("IsMovingBack", false);
+            m_anim.SetBool("IsActive", true);
+            m_anim.SetBool("IsMovingForward", false);
+            m_anim.SetBool("IsMovingLeft", false);
+            m_anim.SetBool("IsMovingRight", false);
+            m_anim.SetBool("IsMovingBack", false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Coin") && m_IsActive)
+        {
+            m_countCoin++;
+            Debug.Log(m_countCoin.ToString());
         }
     }
 }

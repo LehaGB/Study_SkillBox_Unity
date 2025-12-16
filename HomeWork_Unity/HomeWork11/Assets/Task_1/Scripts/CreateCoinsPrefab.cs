@@ -12,8 +12,9 @@ public class CreateCoinsPrefab : AbstractCreatePrefab
         {
             float randomX = Random.Range(_posXCoin, -_posXCoin);
             float randomZ = Random.Range(_posZCoin, _posZ2Coin);
+            float randomY = Random.Range(_posYCoin, _posY2Coin);
 
-            Vector3 spawnPosition = new Vector3(randomX, 0.1f, randomZ);
+            Vector3 spawnPosition = new Vector3(randomX, randomY, randomZ);
 
             GameObject newCoin = Object.Instantiate(_coinPrefab, parentTransform);
 
