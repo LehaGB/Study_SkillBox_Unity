@@ -98,8 +98,13 @@ public class PlayerController : MonoBehaviour, IMovementController
     {
         if (other.gameObject.CompareTag("Coin") && m_IsActive)
         {
-            m_countCoin++;
-            Debug.Log(m_countCoin.ToString());
+            CountCoin = UdateCountCoin();
+            //Debug.Log(m_countCoin.ToString());
         }
+    }
+    public int UdateCountCoin()
+    {
+        CountCoin++;
+        return CountCoin;
     }
 }

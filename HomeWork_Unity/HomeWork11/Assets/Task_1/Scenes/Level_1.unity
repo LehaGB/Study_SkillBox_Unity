@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countCoinText: {fileID: 2085760257}
+  m_controller: {fileID: 1399080412}
 --- !u!4 &326120670
 Transform:
   m_ObjectHideFlags: 0
@@ -627,6 +628,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ba6424143025454e85343b4c1354927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1399080412 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5548237147374880587, guid: fc62402a3afb7584395c0f1638edde09, type: 3}
+  m_PrefabInstance: {fileID: 711972262}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33cce15e17ae35041833dee9fa9c7f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1443864741
@@ -1430,6 +1442,10 @@ PrefabInstance:
     - target: {fileID: 3145643288756902642, guid: f7330893ead0b5943a6c898ef507ddf8, type: 3}
       propertyPath: m_Name
       value: CoinPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145643288756902642, guid: f7330893ead0b5943a6c898ef507ddf8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4983976346953347793, guid: f7330893ead0b5943a6c898ef507ddf8, type: 3}
       propertyPath: m_LocalPosition.x

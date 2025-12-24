@@ -7,8 +7,8 @@ public class OutputScreen : MonoBehaviour
 {
     public TextMeshProUGUI countCoinText;
 
-    private PlayerController m_controller;
-      
+    public PlayerController m_controller;
+    private int m_countCoinOutputScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +19,11 @@ public class OutputScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_controller.m_IsActive)
+        if (m_controller != null && m_controller.m_IsActive)
         {
-            countCoinText.text = $"{m_controller.CountCoin}";
+            m_countCoinOutputScreen = m_controller.CountCoin;
+            countCoinText.text = m_countCoinOutputScreen.ToString();
+            Debug.Log(m_countCoinOutputScreen.ToString());
         }
     }
 }

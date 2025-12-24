@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cce15e17ae35041833dee9fa9c7f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_IsActive: 1
   m_jumpForce: 7
   m_groundCheckDistance: 0.2
   m_groundMask:
