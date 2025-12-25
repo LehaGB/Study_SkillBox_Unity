@@ -3,47 +3,62 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Data;
+using UnityEditor;
 
 public class PlayerController : MonoBehaviour, IMovementController
 {
+    private AudioSource m_audioSource;
+    private SoundManager m_soundManager;
     private Animator m_anim;
     private Rigidbody m_rb;
     private int m_countCoin;
 
     private float m_moveSpeed = 5f;
-    private bool m_IsGrounded;
+    private bool m_IsGrounded = true;
     public bool m_IsActive = true;
 
     [SerializeField] private float m_jumpForce = 7f;
     [SerializeField] private float m_groundCheckDistance = 0.2f;
     [SerializeField] private LayerMask m_groundMask;
 
-    public int CountCoin 
-    {
-        get 
-        { 
-            return m_countCoin; 
-        }
-        set 
-        {
-            m_countCoin = value;
-        }
-    }
+    public int CountCoin { get => m_countCoin; set => m_countCoin = value; }
 
     private void Awake()
     {
         m_anim = GetComponent<Animator>();
         m_rb = GetComponent<Rigidbody>();
+        m_soundManager = SoundManager.Instance;
     }
 
     void Update()
     {
         Move();
         Checkgrounded();
-        if(m_IsGrounded && Input.GetButtonDown("Jump"))
+        CheckGroundPlayer();
+    }
+    public void CheckGroundPlayer()
+    {
+        if (m_IsGrounded && Input.GetButtonDown("Jump"))
         {
             Jump();
+            SoundJumpPlayer();
         }
+    }
+
+    private void SoundJumpPlayer()
+    {
+        if(m_soundManager != null)
+        {
+            m_soundManager.PlayJumpSound();
+        }      
+    }
+
+    private void SoundCoin()
+    {
+        if (m_soundManager != null)
+        {
+            m_soundManager.PlayCoinSound();
+        }       
     }
 
     private void Checkgrounded()
@@ -98,13 +113,14 @@ public class PlayerController : MonoBehaviour, IMovementController
     {
         if (other.gameObject.CompareTag("Coin") && m_IsActive)
         {
-            CountCoin = UdateCountCoin();
-            //Debug.Log(m_countCoin.ToString());
+            Destroy(other.gameObject);
+            CountCoin++;
+            SoundCoin();
         }
     }
-    public int UdateCountCoin()
-    {
-        CountCoin++;
-        return CountCoin;
-    }
+    //public int UdateCountCoin()
+    //{
+    //    CountCoin++;
+    //    return CountCoin;
+    //}
 }

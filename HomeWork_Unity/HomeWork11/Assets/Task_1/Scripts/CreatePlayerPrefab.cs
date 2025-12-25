@@ -12,8 +12,8 @@ public class CreatePlayerPrefab : MonoBehaviour, IPrefabFactory
     {
         Vector3 spawnPosPlayer = new Vector3(0, 0.12f, -49f);
 
-        GameObject newPlayer = Object.Instantiate(Prefab, spawnPosPlayer, Quaternion.identity);
-        //newPlayer.transform.SetParent(parentTransform);
+        GameObject newPlayer = Instantiate(Prefab, spawnPosPlayer, Quaternion.identity);
+
         return newPlayer; 
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PausePlayGame : AbstractPlayPauseReturnToMenu
+public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
 {
     public LoadLevelSceneManager _scene;
 
@@ -14,7 +14,7 @@ public class PausePlayGame : AbstractPlayPauseReturnToMenu
     [SerializeField] private GameObject menuBt;
 
 
-    public override void Pause()
+    public void Pause()
     {
         if (playBt != null && pauseBt != null && menuBt != null)
         {
@@ -24,7 +24,7 @@ public class PausePlayGame : AbstractPlayPauseReturnToMenu
             menuBt.SetActive(true);
         }      
     }
-    public override void Play()
+    public void Play()
     {
         if (playBt != null && pauseBt != null)
         {
@@ -34,7 +34,7 @@ public class PausePlayGame : AbstractPlayPauseReturnToMenu
             menuBt.SetActive(false);
         }
     }
-    public override void ReturnToMenu(int indexScene)
+    public void ReturnToMenu(int indexScene)
     {
         _scene.LoadScene(indexScene);
     }
