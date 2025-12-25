@@ -2,28 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class OutputScreen : MonoBehaviour
 {
     public TextMeshProUGUI countCoinText;
 
-    public PlayerController m_controller;
+    private PlayerController m_controller;
     private int m_countCoinOutputScreen;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        m_controller = GetComponent<PlayerController>();
+        CreatePLayer.OnPlayerCreated += HandlePlayerCreated;
+    }
+    private void OnDisable()
+    {
+        CreatePLayer.OnPlayerCreated -= HandlePlayerCreated;
     }
 
-    // Update is called once per frame
+    private void HandlePlayerCreated(PlayerController playerController)
+    {
+        m_controller = playerController;
+        UdateCoinCount();
+    }
     void Update()
     {
         if (m_controller != null && m_controller.m_IsActive)
         {
-            m_countCoinOutputScreen = m_controller.CountCoin;
-            countCoinText.text = m_countCoinOutputScreen.ToString();
-            Debug.Log(m_countCoinOutputScreen.ToString());
+            UdateCoinCount();
         }
+    }
+    private void UdateCoinCount()
+    {
+        m_countCoinOutputScreen = m_controller.CountCoin;
+        countCoinText.text = m_countCoinOutputScreen.ToString();
     }
 }

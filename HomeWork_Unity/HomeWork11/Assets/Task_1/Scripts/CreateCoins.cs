@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class CreateCoins : MonoBehaviour
 {
-    [SerializeField] private GameObject _coinPrefab;
+    [SerializeField] private GameObject m_coinPrefab;
 
-    private CreateCoinsPrefab _prefabCreator;
+    private IPrefabFactory m_prefabCreator;
 
 
     private void Awake()
     {
-        _prefabCreator = new CreateCoinsPrefab();
-        _prefabCreator._coinPrefab = _coinPrefab;
+        m_prefabCreator = GetComponent<CreateCoinsPrefab>();
+        if(m_prefabCreator == null)
+        {
+            m_prefabCreator = gameObject.AddComponent<CreateCoinsPrefab>();
+        }
+        m_prefabCreator.Prefab = m_coinPrefab;
     }
 
     private void Start()
     {
-        _prefabCreator.CreatePrefab(transform);
+        m_prefabCreator.CreatePrefab(transform);
     }
 }
