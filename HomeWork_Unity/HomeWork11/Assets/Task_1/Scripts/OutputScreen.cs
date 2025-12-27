@@ -27,7 +27,7 @@ public class OutputScreen : MonoBehaviour
     }
     void Update()
     {
-        if (m_controller != null && m_controller.m_IsActive)
+        if (m_controller != null && m_controller.IsActive)
         {
             UdateCoinCount();
         }

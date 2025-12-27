@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CreatePlayerPrefab : MonoBehaviour, IPrefabFactory
 {
-    [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject m_prefab;
 
-    public GameObject Prefab {  get => prefab; set => prefab = value; }
+    public GameObject Prefab {  get => m_prefab; set => m_prefab = value; }
 
     public GameObject CreatePrefab(Transform parentTransform)
     {

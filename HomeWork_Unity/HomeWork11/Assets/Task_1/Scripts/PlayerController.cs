@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Data;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour, IMovementController
 {
@@ -15,7 +16,7 @@ public class PlayerController : MonoBehaviour, IMovementController
 
     private float m_moveSpeed = 5f;
     private bool m_IsGrounded = true;
-    public bool m_IsActive = true;
+    public bool IsActive = true;
 
     [SerializeField] private float m_jumpForce = 7f;
     [SerializeField] private float m_groundCheckDistance = 0.2f;
@@ -34,24 +35,20 @@ public class PlayerController : MonoBehaviour, IMovementController
     {
         Move();
         Checkgrounded();
-        CheckGroundPlayer();
-    }
-    public void CheckGroundPlayer()
-    {
         if (m_IsGrounded && Input.GetButtonDown("Jump"))
         {
             Jump();
-            SoundJumpPlayer();
         }
     }
 
-    private void SoundJumpPlayer()
-    {
-        if(m_soundManager != null)
-        {
-            m_soundManager.PlayJumpSound();
-        }      
-    }
+
+    //private void SoundJumpPlayer()
+    //{
+    //    if(m_soundManager != null)
+    //    {
+    //        m_soundManager.PlayJumpSound();
+    //    }      
+    //}
 
     private void SoundCoin()
     {
@@ -69,6 +66,7 @@ public class PlayerController : MonoBehaviour, IMovementController
     public void Jump()
     {
         m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
+        m_soundManager.PlayJumpSound();
     }
 
     public void Move()
@@ -111,11 +109,15 @@ public class PlayerController : MonoBehaviour, IMovementController
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Coin") && m_IsActive)
+        if (other.gameObject.CompareTag("Coin") && IsActive)
         {
             Destroy(other.gameObject);
             CountCoin++;
-            SoundCoin();
+            m_soundManager.PlayCoinSound();
+        }
+        if(other.gameObject.CompareTag("Level") && IsActive)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     //public int UdateCountCoin()

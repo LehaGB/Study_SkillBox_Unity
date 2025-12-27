@@ -13,7 +13,12 @@ public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
     [SerializeField] private GameObject pauseBt;
     [SerializeField] private GameObject menuBt;
 
+    private SoundManager m_soundManager;
 
+    private void Start()
+    {
+        m_soundManager = SoundManager.Instance;
+    }
     public void Pause()
     {
         if (playBt != null && pauseBt != null && menuBt != null)
@@ -22,6 +27,7 @@ public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
             playBt.SetActive(true);
             pauseBt.SetActive(false);
             menuBt.SetActive(true);
+            m_soundManager.m_audioSource.Pause();
         }      
     }
     public void Play()
@@ -32,6 +38,7 @@ public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
             playBt.SetActive(false);
             pauseBt.SetActive(true);
             menuBt.SetActive(false);
+            m_soundManager.m_audioSource.Play();
         }
     }
     public void ReturnToMenu(int indexScene)

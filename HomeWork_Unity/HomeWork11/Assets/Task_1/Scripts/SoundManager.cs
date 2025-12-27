@@ -8,12 +8,11 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-    private AudioSource m_audioSource;
-    
+    [HideInInspector] public AudioSource m_audioSource;
+    private bool m_isActiveSound = true;
+
     public AudioClip coinClip;
     public AudioClip jumpClip;
-    public bool isActiveSound = true;
-
 
     private void Awake()
     {
@@ -34,11 +33,19 @@ public class SoundManager : MonoBehaviour
         {
             m_audioSource = gameObject.AddComponent<AudioSource>();
         }
+        if( coinClip != null )
+        {
+            coinClip.LoadAudioData();
+        }
+        if(jumpClip != null )
+        {
+            jumpClip.LoadAudioData();
+        }
     }
 
     public void PlayCoinSound()
     {
-        if(isActiveSound && coinClip != null && m_audioSource != null)
+        if(m_isActiveSound && coinClip != null && m_audioSource != null)
         {
             m_audioSource.PlayOneShot(coinClip);
         }
@@ -48,9 +55,9 @@ public class SoundManager : MonoBehaviour
 
     public void PlayJumpSound()
     {
-        if(isActiveSound && jumpClip != null && m_audioSource != null)
+        if(m_isActiveSound && jumpClip != null && m_audioSource != null)
         {
-            m_audioSource?.PlayOneShot(jumpClip);
+            m_audioSource.PlayOneShot(jumpClip);
         }   
     }
 }
