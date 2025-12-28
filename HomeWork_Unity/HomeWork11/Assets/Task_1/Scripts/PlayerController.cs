@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour, IMovementController
 {
+    //public GameObject gameObject;
+    private FireWorks m_fireWorks;
     private AudioSource m_audioSource;
     private SoundManager m_soundManager;
     private Animator m_anim;
@@ -29,6 +31,15 @@ public class PlayerController : MonoBehaviour, IMovementController
         m_anim = GetComponent<Animator>();
         m_rb = GetComponent<Rigidbody>();
         m_soundManager = SoundManager.Instance;
+        //m_fireWorks = FireWorks.Instance;
+    }
+    private void Start()
+    {
+        m_fireWorks = FireWorks.Instance;
+        if(m_fireWorks == null)
+        {
+            m_fireWorks = FindObjectOfType<FireWorks>();
+        }
     }
 
     void Update()
@@ -41,15 +52,7 @@ public class PlayerController : MonoBehaviour, IMovementController
         }
     }
 
-
-    //private void SoundJumpPlayer()
-    //{
-    //    if(m_soundManager != null)
-    //    {
-    //        m_soundManager.PlayJumpSound();
-    //    }      
-    //}
-
+    // Звук сбора монетки.
     private void SoundCoin()
     {
         if (m_soundManager != null)
@@ -58,17 +61,22 @@ public class PlayerController : MonoBehaviour, IMovementController
         }       
     }
 
+    // Проверка, на земле ли.
     private void Checkgrounded()
     {
         m_IsGrounded = Physics.CheckSphere(transform.position, m_groundCheckDistance, m_groundMask);
     }
 
+
+    // Прыжок.
     public void Jump()
     {
         m_rb.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
         m_soundManager.PlayJumpSound();
     }
 
+
+    // Движение.
     public void Move()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -115,14 +123,13 @@ public class PlayerController : MonoBehaviour, IMovementController
             CountCoin++;
             m_soundManager.PlayCoinSound();
         }
-        if(other.gameObject.CompareTag("Level") && IsActive)
+        if (other.gameObject.CompareTag("Level"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            m_fireWorks.StartFireworks();
         }
+        //if(other.gameObject.CompareTag("Level") && IsActive)
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //}
     }
-    //public int UdateCountCoin()
-    //{
-    //    CountCoin++;
-    //    return CountCoin;
-    //}
 }

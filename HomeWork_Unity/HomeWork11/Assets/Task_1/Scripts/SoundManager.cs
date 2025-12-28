@@ -43,6 +43,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+
     public void PlayCoinSound()
     {
         if(m_isActiveSound && coinClip != null && m_audioSource != null)
