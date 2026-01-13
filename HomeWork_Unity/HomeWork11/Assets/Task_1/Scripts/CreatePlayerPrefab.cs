@@ -1,18 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreatePlayerPrefab : MonoBehaviour, IPrefabFactory
+public class CreatePlayerPrefab : AbstractPrefabCreate
 {
+
     [SerializeField] private GameObject m_prefab;
 
-    public GameObject Prefab {  get => m_prefab; set => m_prefab = value; }
+    public override GameObject Prefab {  get => m_prefab; set => m_prefab = value; }
 
-    public GameObject CreatePrefab(Transform parentTransform)
+    public override GameObject CreatePrefab(Transform parentTransform)
     {
         Vector3 spawnPosPlayer = new Vector3(0, 0.12f, -49f);
 
-        GameObject newPlayer = Instantiate(Prefab, spawnPosPlayer, Quaternion.identity);
+        GameObject newPlayer = GameObject.Instantiate(Prefab, spawnPosPlayer, Quaternion.identity, parentTransform);
 
         return newPlayer; 
     }

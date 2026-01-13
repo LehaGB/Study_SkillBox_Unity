@@ -48,9 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cce15e17ae35041833dee9fa9c7f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 5417670888025044114, guid: 3d92f13d644279d4da8ccb56e55b2bf9, type: 3}
+  m_audioSource: {fileID: 0}
+  m_soundManager: {fileID: 0}
+  m_anim: {fileID: 1591404185466159810}
+  m_rb: {fileID: 6577607490470892368}
   IsActive: 1
-  m_jumpForce: 7
+  m_jumpForce: 2
   m_groundCheckDistance: 0.2
   m_groundMask:
     serializedVersion: 2

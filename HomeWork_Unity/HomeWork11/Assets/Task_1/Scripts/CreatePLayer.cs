@@ -8,23 +8,23 @@ public class CreatePLayer : MonoBehaviour
     [SerializeField] private GameObject m_playerPrefab;
     [SerializeField] private CameraFollow m_cameraFollow;
 
-    private IPrefabFactory m_createPlayerPrefab;
+    private AbstractPrefabCreate m_prefabCreate = new CreatePlayerPrefab();
     public static event System.Action<PlayerController> OnPlayerCreated;
 
-    private void Awake()
-    {
-        m_createPlayerPrefab = GetComponent<CreatePlayerPrefab>();
-        if(m_createPlayerPrefab == null)
-        {
-            m_createPlayerPrefab = gameObject.AddComponent<CreatePlayerPrefab>();
-        }
-        m_createPlayerPrefab.Prefab = m_playerPrefab;
-    }
-
+    private GameObject _newPlayer;
     private void Start()
     {
-        GameObject newPlayer = m_createPlayerPrefab.CreatePrefab(transform);
-        m_cameraFollow.SetTarget(newPlayer.transform); 
-        OnPlayerCreated?.Invoke(newPlayer.GetComponent<PlayerController>());
+        m_prefabCreate.Prefab = m_playerPrefab;
+        _newPlayer = m_prefabCreate.CreatePrefab(transform);
+        m_cameraFollow.SetTarget(_newPlayer.transform); 
+        OnPlayerCreated?.Invoke(_newPlayer.GetComponent<PlayerController>());
+    }
+    private void OnDestroy()
+    {
+        if (_newPlayer != null)
+        {
+            Destroy(_newPlayer); 
+        }
+        OnPlayerCreated = null;      
     }
 }

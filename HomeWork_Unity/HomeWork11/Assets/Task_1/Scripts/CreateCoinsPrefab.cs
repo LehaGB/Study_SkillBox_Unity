@@ -2,19 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateCoinsPrefab : MonoBehaviour, IPrefabFactory
+public class CreateCoinsPrefab : AbstractPrefabCreate
 {
     [SerializeField] private GameObject coinPrefab;
-    public GameObject Prefab { get => coinPrefab; set => coinPrefab = value; }
+    public override GameObject Prefab { get => coinPrefab; set => coinPrefab = value; }
 
     [SerializeField] private float _posXCoin = 2.3f;
     [SerializeField] private float _posZCoin = -45f;
     [SerializeField] private float _posZ2Coin = -9f;
     [SerializeField] private float _posYCoin = 0.1f;
     [SerializeField] private float _posY2Coin = 0.3f;
-    [SerializeField] private int _countCoinMax = 10;
+    [SerializeField] private int _countCoinMax = 20;
     [SerializeField] private int _countCoinMin = 5;
-    public GameObject CreatePrefab(Transform parent)
+
+
+    public override GameObject CreatePrefab(Transform parent)
     {
         int randomCountCoin = Random.Range(_countCoinMin, _countCoinMax);
         GameObject firstCoin = null;
@@ -27,7 +29,7 @@ public class CreateCoinsPrefab : MonoBehaviour, IPrefabFactory
 
             Vector3 spawnPosition = new Vector3(randomX, randomY, randomZ);
 
-            GameObject newCoin = Instantiate(Prefab, parent);
+            GameObject newCoin = GameObject.Instantiate(Prefab, parent);
 
             newCoin.transform.localPosition = spawnPosition;
             if(i  == 0)

@@ -2,18 +2,34 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
 {
     public LoadLevelSceneManager scene;
-
+    private PlayerController playerController;
 
     [SerializeField] private GameObject m_playBt;
     [SerializeField] private GameObject m_pauseBt;
     [SerializeField] private GameObject m_menuBt;
 
     private SoundManager m_soundManager;
+
+    private void OnEnable()
+    {
+        CreatePLayer.OnPlayerCreated += HandlePlayerCreated;
+    }
+    private void OnDisable()
+    {
+        CreatePLayer.OnPlayerCreated -= HandlePlayerCreated;
+    }
+
+    private void HandlePlayerCreated(PlayerController player)
+    {
+        playerController = player;
+    }
+
 
     private void Start()
     {
@@ -43,6 +59,12 @@ public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
     }
     public void ReturnToMenu(int indexScene)
     {
-        scene.LoadScene(indexScene);
+        SceneManager.LoadScene(indexScene, LoadSceneMode.Single);
+
+        if(playerController != null)
+        {
+            playerController.CountCoin = 0;
+            Destroy(playerController.gameObject);
+        }
     }
 }

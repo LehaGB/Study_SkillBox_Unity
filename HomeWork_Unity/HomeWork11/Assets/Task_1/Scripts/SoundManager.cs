@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip coinClip;
     public AudioClip jumpClip;
+    public AudioClip victoryClip;
 
     private void Awake()
     {
@@ -41,6 +42,10 @@ public class SoundManager : MonoBehaviour
         {
             jumpClip.LoadAudioData();
         }
+        if( victoryClip != null)
+        {
+            victoryClip.LoadAudioData();
+        }
     }
 
 
@@ -60,5 +65,13 @@ public class SoundManager : MonoBehaviour
         {
             m_audioSource.PlayOneShot(jumpClip);
         }   
+    }
+
+    public void PlayVictoryClip()
+    {
+        if (m_isActiveSound && victoryClip != null && m_audioSource != null)
+        {
+            m_audioSource.PlayOneShot(victoryClip);
+        }
     }
 }
