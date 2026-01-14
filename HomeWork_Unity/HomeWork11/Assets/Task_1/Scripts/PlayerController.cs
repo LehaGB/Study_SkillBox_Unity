@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour, IMovementController
 {
-    [SerializeField]private AudioSource m_audioSource;
+    private AudioSource m_audioSource;
     [SerializeField] private SoundManager m_soundManager;
     [SerializeField] private Animator m_anim;
     [SerializeField] private Rigidbody m_rb;
@@ -29,10 +29,6 @@ public class PlayerController : MonoBehaviour, IMovementController
         m_anim = GetComponentInChildren<Animator>();
         m_soundManager = SoundManager.Instance;
         m_rb = GetComponent<Rigidbody>();
-        //Добавляем проверку
-        if (m_anim == null) Debug.LogError("Animator not found on children!");
-        if (m_rb == null) Debug.LogError("Rigidbody is null");
-
     }
 
     void Update()

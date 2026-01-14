@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
 
     [HideInInspector] public AudioSource m_audioSource;
-    private bool m_isActiveSound = true;
+    public bool m_isActiveSound = true;
 
     public AudioClip coinClip;
     public AudioClip jumpClip;
@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(this);
         }
@@ -25,15 +25,21 @@ public class SoundManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            m_audioSource = GetComponent<AudioSource>();
+            if (m_audioSource == null)
+            {
+                m_audioSource = gameObject.AddComponent<AudioSource>();
+            }
+            if (m_audioSource == null)
+            {
+                Debug.LogError("AudioSource не найден и не создан! Убедитесь, что SoundManager прикреплен к GameObject.");
+            }
         }
+        
     }
     private void Start()
     {
-        m_audioSource = GetComponent<AudioSource>();
-        if (m_audioSource == null)
-        {
-            m_audioSource = gameObject.AddComponent<AudioSource>();
-        }
+        
         if( coinClip != null )
         {
             coinClip.LoadAudioData();
@@ -46,6 +52,7 @@ public class SoundManager : MonoBehaviour
         {
             victoryClip.LoadAudioData();
         }
+        
     }
 
 
@@ -61,11 +68,12 @@ public class SoundManager : MonoBehaviour
 
     public void PlayJumpSound()
     {
-        if(m_isActiveSound && jumpClip != null && m_audioSource != null)
+        if(m_isActiveSound && jumpClip != null && m_audioSource != null && m_audioSource.enabled)
         {
             m_audioSource.PlayOneShot(jumpClip);
         }   
     }
+
 
     public void PlayVictoryClip()
     {
