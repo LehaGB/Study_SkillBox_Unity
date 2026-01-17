@@ -8,44 +8,50 @@ using UnityEngine.UI;
 public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
 {
     public LoadLevelSceneManager scene;
-    private PlayerController playerController;
+    private PlayerController _playerController;
 
-    [SerializeField] private GameObject m_playBt;
-    [SerializeField] private GameObject m_pauseBt;
-    [SerializeField] private GameObject m_menuBt;
+    [SerializeField] private GameObject _playBt;
+    [SerializeField] private GameObject _pauseBt;
+    [SerializeField] private GameObject _menuBt;
 
-    private SoundManager m_soundManager;
+    private SoundManager _soundManager;
 
     private void Start()
     {
-        m_soundManager = SoundManager.Instance;
+        _soundManager = SoundManager.Instance;
+        _playerController = GetComponent<PlayerController>();
     }
     public void Pause()
     {
-        if (m_playBt != null && m_pauseBt != null && m_menuBt != null)
+        Debug.Log("Зашел в метод Pause");
+        if (_pauseBt != null)
         {
-            Time.timeScale = 0f;
-            m_playBt.SetActive(true);
-            m_pauseBt.SetActive(true);
-            m_menuBt.SetActive(true);
+            Debug.Log(" в if");
+           // Time.timeScale = 0f;
+            _playBt.SetActive(true);
+            _pauseBt.SetActive(true);
+            _menuBt.SetActive(true);
+            _soundManager._audioSource.Stop();
         }      
     }
     public void Play()
     {
-        if (m_playBt != null && m_pauseBt != null)
+        if (_playBt != null && _pauseBt != null)
         {
-            Time.timeScale = 1f;
-            m_playBt.SetActive(true);
-            m_pauseBt.SetActive(true);
-            m_menuBt.SetActive(true);
+            Debug.Log("Зашел в метод Play");
+            //Time.timeScale = 1f;
+            _playBt.SetActive(true);
+            _pauseBt.SetActive(true);
+            _menuBt.SetActive(true);
+            _soundManager._audioSource.Play();
         }
     }
     public void ReturnToMenu(int indexScene)
     {
-        if(playerController != null)
+        if(_playerController != null)
         {
-            playerController.CountCoin = 0;
-            Destroy(playerController.gameObject);
+            _playerController.CountCoin = 0;
+            Destroy(_playerController.gameObject);
         }
         SceneManager.LoadScene(indexScene, LoadSceneMode.Single);
     }

@@ -8,8 +8,8 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; private set; }
 
-    [HideInInspector] public AudioSource m_audioSource;
-    public bool m_isActiveSound = true;
+    public AudioSource _audioSource;
+    public bool _isActiveSound = true;
 
     public AudioClip coinClip;
     public AudioClip jumpClip;
@@ -24,18 +24,18 @@ public class SoundManager : MonoBehaviour
         else
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
-            m_audioSource = GetComponent<AudioSource>();
-            if (m_audioSource == null)
+            DontDestroyOnLoad(this.gameObject);
+            _audioSource = GetComponent<AudioSource>();
+            if (_audioSource == null)
             {
-                m_audioSource = gameObject.AddComponent<AudioSource>();
+                _audioSource = gameObject.AddComponent<AudioSource>();
             }
-            if (m_audioSource == null)
+            if (_audioSource == null)
             {
                 Debug.LogError("AudioSource не найден и не создан! Убедитесь, что SoundManager прикреплен к GameObject.");
             }
         }
-        
+        _audioSource.enabled = true;
     }
     private void Start()
     {
@@ -55,12 +55,11 @@ public class SoundManager : MonoBehaviour
         
     }
 
-
     public void PlayCoinSound()
     {
-        if(m_isActiveSound && coinClip != null && m_audioSource != null)
+        if(_isActiveSound && coinClip != null && _audioSource != null)
         {
-            m_audioSource.PlayOneShot(coinClip);
+            _audioSource.PlayOneShot(coinClip);
         }
         
     }
@@ -68,18 +67,18 @@ public class SoundManager : MonoBehaviour
 
     public void PlayJumpSound()
     {
-        if(m_isActiveSound && jumpClip != null && m_audioSource != null && m_audioSource.enabled)
+        if(_isActiveSound && jumpClip != null && _audioSource != null && _audioSource.enabled)
         {
-            m_audioSource.PlayOneShot(jumpClip);
+            _audioSource.PlayOneShot(jumpClip);
         }   
     }
 
 
     public void PlayVictoryClip()
     {
-        if (m_isActiveSound && victoryClip != null && m_audioSource != null)
+        if (_isActiveSound && victoryClip != null && _audioSource != null)
         {
-            m_audioSource.PlayOneShot(victoryClip);
+            _audioSource.PlayOneShot(victoryClip);
         }
     }
 }

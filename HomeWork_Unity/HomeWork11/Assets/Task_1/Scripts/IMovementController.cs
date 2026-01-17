@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface IMovementController
 {
-    void Move();
+    void Move(Vector3 mov);
     void Jump();
 }

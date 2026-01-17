@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0102629b83e36a1498b8f03ac01e8a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_audioSource: {fileID: 0}
-  m_isActiveSound: 1
+  _audioSource: {fileID: 4308848008097189718}
+  _isActiveSound: 1
   coinClip: {fileID: 8300000, guid: a75f73173c2b99149be9cd8d1eefdf46, type: 3}
   jumpClip: {fileID: 8300000, guid: 0680c831b5c1f424cb7490203a489d19, type: 3}
   victoryClip: {fileID: 8300000, guid: 09f5b5fb3309e484d9f72235603d75e8, type: 3}
