@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Study_SkillBox_Unity\\Lecture_Unity\\Lecture12\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5A7DE3EE-F1BF-969C-E47F-AF2947C1CBB3}|Assembly-CSharp.csproj|c:\\study_skillbox_unity\\lecture_unity\\lecture12\\assets\\scripts\\cameramovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A7DE3EE-F1BF-969C-E47F-AF2947C1CBB3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameramovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CameraMovement.cs",
+              "DocumentMoniker": "C:\\Study_SkillBox_Unity\\Lecture_Unity\\Lecture12\\Assets\\Scripts\\CameraMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraMovement.cs",
+              "ToolTip": "C:\\Study_SkillBox_Unity\\Lecture_Unity\\Lecture12\\Assets\\Scripts\\CameraMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraMovement.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T02:54:35.495Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
