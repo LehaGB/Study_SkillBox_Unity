@@ -8,7 +8,6 @@ namespace WildBall.Inputs
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerMovement : MonoBehaviour, IMovementController
     {
-        //private SoundManager _soundManager;
 
         private Rigidbody _rbPlayer;
         private Vector3 _movement;

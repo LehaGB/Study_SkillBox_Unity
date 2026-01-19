@@ -5,14 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerController))]
 public class PlayerAnimator : MonoBehaviour
 {
-    [SerializeField] private Animator m_anim;
+    [SerializeField] private Animator _anim;
 
     private PlayerController _playerController;
 
 
     private void Awake()
     {
-        m_anim = GetComponentInChildren<Animator>();
+        _anim = GetComponentInChildren<Animator>();
         _playerController = GetComponent<PlayerController>();
     }
 
@@ -25,23 +25,23 @@ public class PlayerAnimator : MonoBehaviour
         bool IsMovingLeft = _playerController.horizontalInput < 0;
 
 
-        m_anim.SetBool("IsMovingForward", IsMovingForward);
-        m_anim.SetBool("IsMovingBack", IsMovingBack);
-        m_anim.SetBool("IsMovingLeft", IsMovingLeft);
-        m_anim.SetBool("IsMovingRight", IsMovingRight);
+        _anim.SetBool("IsMovingForward", IsMovingForward);
+        _anim.SetBool("IsMovingBack", IsMovingBack);
+        _anim.SetBool("IsMovingLeft", IsMovingLeft);
+        _anim.SetBool("IsMovingRight", IsMovingRight);
 
         if (_playerController._movemenDirection.magnitude > 0)
         {
 
-            m_anim.SetBool("IsActive", false);
+            _anim.SetBool("IsActive", false);
         }
         else
         {
-            m_anim.SetBool("IsActive", true);
-            m_anim.SetBool("IsMovingForward", false);
-            m_anim.SetBool("IsMovingLeft", false);
-            m_anim.SetBool("IsMovingRight", false);
-            m_anim.SetBool("IsMovingBack", false);
+            _anim.SetBool("IsActive", true);
+            _anim.SetBool("IsMovingForward", false);
+            _anim.SetBool("IsMovingLeft", false);
+            _anim.SetBool("IsMovingRight", false);
+            _anim.SetBool("IsMovingBack", false);
         }
     }
 }

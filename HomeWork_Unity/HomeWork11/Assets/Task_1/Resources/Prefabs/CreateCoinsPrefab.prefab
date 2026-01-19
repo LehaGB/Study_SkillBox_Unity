@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ff6d5dfe099064182702e5687d6a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_coinPrefab: {fileID: 0}
+  m_coinPrefab: {fileID: 3145643288756902642, guid: f7330893ead0b5943a6c898ef507ddf8, type: 3}

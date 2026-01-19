@@ -26,8 +26,7 @@ public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
         Debug.Log("Зашел в метод Pause");
         if (_pauseBt != null)
         {
-            Debug.Log(" в if");
-           // Time.timeScale = 0f;
+            Time.timeScale = 0f;
             _playBt.SetActive(true);
             _pauseBt.SetActive(true);
             _menuBt.SetActive(true);
@@ -38,21 +37,26 @@ public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
     {
         if (_playBt != null && _pauseBt != null)
         {
-            Debug.Log("Зашел в метод Play");
-            //Time.timeScale = 1f;
+            Time.timeScale = 1f;
             _playBt.SetActive(true);
             _pauseBt.SetActive(true);
             _menuBt.SetActive(true);
             _soundManager._audioSource.Play();
         }
     }
+
     public void ReturnToMenu(int indexScene)
     {
-        if(_playerController != null)
+        if (_soundManager != null)
+        {
+            _soundManager._audioSource.Stop();
+        }
+        if (_playerController != null)
         {
             _playerController.CountCoin = 0;
             Destroy(_playerController.gameObject);
         }
+        
         SceneManager.LoadScene(indexScene, LoadSceneMode.Single);
     }
 }

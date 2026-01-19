@@ -30,10 +30,6 @@ public class SoundManager : MonoBehaviour
             {
                 _audioSource = gameObject.AddComponent<AudioSource>();
             }
-            if (_audioSource == null)
-            {
-                Debug.LogError("AudioSource не найден и не создан! Убедитесь, что SoundManager прикреплен к GameObject.");
-            }
         }
         _audioSource.enabled = true;
     }

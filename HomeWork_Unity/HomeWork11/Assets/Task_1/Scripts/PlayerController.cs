@@ -11,8 +11,11 @@ public class PlayerController : MonoBehaviour
 {
     private PlayerMovement _playerMovement;
     private PlayerAnimator _playerAnimator;
-    private int m_countCoin;
-    private AudioSource m_audioSource;
+    private AudioSource _audioSource;
+    private LoadLevelSceneManager _sceneManager;
+
+    private int _countCoin;
+    private int _indexLevel;
 
     [SerializeField] private SoundManager _soundManager;    
 
@@ -20,9 +23,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public float horizontalInput;
     [HideInInspector] public float verticalInput;
 
-    public bool IsActive = true;
-    public int CountCoin { get => m_countCoin; set => m_countCoin = value; }
-
+    public bool IsActive;
+    public int CountCoin { get => _countCoin; set => _countCoin = value; }
     private void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
@@ -34,9 +36,9 @@ public class PlayerController : MonoBehaviour
     {
         bool ground =  _playerMovement.Checkgrounded();
         if (Input.GetButtonDown(GlobalStringVarible.JUMP_BUTTON) && ground)
-        {   
+        {
             _playerMovement.Jump();
-            _soundManager.PlayJumpSound();
+            _soundManager.PlayJumpSound();           
         }
         else
         {
@@ -73,11 +75,11 @@ public class PlayerController : MonoBehaviour
         }
         _playerMovement.Move(_movemenDirection);
         _playerAnimator.PlayerAnimtion();
-      
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        IsActive = true;
         if (other.gameObject.CompareTag("Coin") && IsActive)
         {
             Destroy(other.gameObject);
@@ -86,15 +88,17 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Level"))
         {
-            _soundManager._audioSource.Stop();
-            _soundManager.PlayVictoryClip();
-            
-            StartCoroutine(NewLevel());
+            if(_soundManager != null)
+            {
+                _soundManager._audioSource.Stop();
+                _soundManager.PlayVictoryClip();
+            }
         }
+
     }
-    IEnumerator NewLevel()
+    private void OnTriggerExit(Collider other)
     {
-        yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        _soundManager.victoryClip = null;
+        IsActive = false;
     }
 }

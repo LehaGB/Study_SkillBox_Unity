@@ -8,11 +8,11 @@ public class CreateCoinsPrefab : AbstractPrefabCreate
     public override GameObject Prefab { get => coinPrefab; set => coinPrefab = value; }
 
     [SerializeField] private float _posXCoin = 2.3f;
-    [SerializeField] private float _posZCoin = -45f;
+    [SerializeField] private float _posZCoin = 20f;
     [SerializeField] private float _posZ2Coin = -9f;
     [SerializeField] private float _posYCoin = 0.1f;
     [SerializeField] private float _posY2Coin = 0.3f;
-    [SerializeField] private int _countCoinMax = 20;
+    [SerializeField] private int _countCoinMax = 10;
     [SerializeField] private int _countCoinMin = 5;
 
 
