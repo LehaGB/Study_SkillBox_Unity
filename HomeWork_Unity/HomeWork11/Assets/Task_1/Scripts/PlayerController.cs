@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
 using System.Data;
+using TMPro;
 using UnityEditor;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using WildBall.Inputs;
 
@@ -34,9 +35,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         bool ground =  _playerMovement.Checkgrounded();
         if (Input.GetButtonDown(GlobalStringVarible.JUMP_BUTTON) && ground)
         {
+            Debug.Log("ѕытаюсь прыгнуть");
             _playerMovement.Jump();
             _soundManager.PlayJumpSound();           
         }

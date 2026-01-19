@@ -6,7 +6,23 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance { get; private set; }
+    private static SoundManager _instance;
+    public static SoundManager Instance 
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<SoundManager>();
+                if( _instance == null)
+                {
+                    GameObject soundmanagerGo = new GameObject("SoundManager");
+                    _instance = soundmanagerGo.AddComponent<SoundManager>();
+                }
+            }
+            return _instance;
+        }
+    }
 
     public AudioSource _audioSource;
     public bool _isActiveSound = true;
@@ -17,21 +33,22 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (_instance != null && _instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
+            return;
         }
-        else
+        _instance = this;
+        DontDestroyOnLoad(this.gameObject);
+        
+        if (_audioSource == null)
         {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
             _audioSource = GetComponent<AudioSource>();
-            if (_audioSource == null)
+            if(_audioSource == null)
             {
                 _audioSource = gameObject.AddComponent<AudioSource>();
-            }
+            }   
         }
-        _audioSource.enabled = true;
     }
     private void Start()
     {

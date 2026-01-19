@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba6424143025454e85343b4c1354927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: {fileID: 0}
-  _playBt: {fileID: 0}
-  _pauseBt: {fileID: 0}
-  _menuBt: {fileID: 0}
+  scene: {fileID: 7492688535927829000, guid: 04edd300b04597a44a2835541365e031, type: 3}
+  _playBt: {fileID: 6661992305216381816, guid: 6049d689fe2956b45ac432a7db69556f, type: 3}
+  _pauseBt: {fileID: 2080665212009447203, guid: 92edfa1c377ae7b4f9ed9d2740aada31, type: 3}
+  _menuBt: {fileID: 1983734502918351645, guid: 98b8b72873575dd4c8596707f1985530, type: 3}
+  playerPrefab: {fileID: 5095737253543604134, guid: fc62402a3afb7584395c0f1638edde09, type: 3}
