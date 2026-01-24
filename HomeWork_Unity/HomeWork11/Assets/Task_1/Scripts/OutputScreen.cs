@@ -8,7 +8,7 @@ public class OutputScreen : MonoBehaviour
 {
     public TextMeshProUGUI countCoinText;
 
-    private PlayerController m_controller;
+    private PlayerController _controller;
     private int m_countCoinOutputScreen;
 
     private void OnEnable()
@@ -22,19 +22,19 @@ public class OutputScreen : MonoBehaviour
 
     private void HandlePlayerCreated(PlayerController playerController)
     {
-        m_controller = playerController;
+        _controller = playerController;
         UdateCoinCount();
     }
     void Update()
     {
-        if (m_controller != null && m_controller.IsActive)
+        if (_controller != null)
         {
             UdateCoinCount();
         }
     }
     private void UdateCoinCount()
     {
-        m_countCoinOutputScreen = m_controller.CountCoin;
+        m_countCoinOutputScreen = _controller.CountCoin;
         countCoinText.text = m_countCoinOutputScreen.ToString();
     }
 }

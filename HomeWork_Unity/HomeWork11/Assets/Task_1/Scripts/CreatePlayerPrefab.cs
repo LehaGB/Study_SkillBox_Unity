@@ -12,7 +12,7 @@ public class CreatePlayerPrefab : AbstractPrefabCreate
 
     public override GameObject CreatePrefab(Transform parentTransform)
     {
-        Vector3 spawnPosPlayer = new Vector3(0, 0.12f, -14f);
+        Vector3 spawnPosPlayer = new Vector3(0, 0.14f, -14f);
 
         GameObject newPlayer = GameObject.Instantiate(Prefab, spawnPosPlayer, Quaternion.identity, parentTransform);
 

@@ -12,44 +12,37 @@ public class PlayerController : MonoBehaviour
 {
     private PlayerMovement _playerMovement;
     private PlayerAnimator _playerAnimator;
+
     private AudioSource _audioSource;
     private LoadLevelSceneManager _sceneManager;
 
     private int _countCoin;
-    private int _indexLevel;
-
-    [SerializeField] private SoundManager _soundManager;    
+    //private int _indexLevel;  
 
     [HideInInspector] public Vector3 _movemenDirection;
     [HideInInspector] public float horizontalInput;
     [HideInInspector] public float verticalInput;
 
-    public bool IsActive;
+    public float posPlayerDeath = -1.5f;
+
+    //public bool IsGrounded = true;
     public int CountCoin { get => _countCoin; set => _countCoin = value; }
     private void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
         _playerAnimator = GetComponent<PlayerAnimator>();
-        _soundManager = SoundManager.Instance;
+        
+    }
+
+    private void Start()
+    {
+
     }
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return;
-        }
-        bool ground =  _playerMovement.Checkgrounded();
-        if (Input.GetButtonDown(GlobalStringVarible.JUMP_BUTTON) && ground)
-        {
-            Debug.Log("ѕытаюсь прыгнуть");
-            _playerMovement.Jump();
-            _soundManager.PlayJumpSound();           
-        }
-        else
-        {
-            ground = false;
-        }
+        PlayerJump();
+        DeathPlayer();
     }
 
     private void FixedUpdate()
@@ -60,9 +53,9 @@ public class PlayerController : MonoBehaviour
     // «вук сбора монетки.
     private void SoundCoin()
     {
-        if (_soundManager != null)
+        if (SoundManager.Instance != null)
         {
-            _soundManager.PlayCoinSound();
+            SoundManager.Instance.PlayCoinSound();
         }       
     }
 
@@ -83,28 +76,48 @@ public class PlayerController : MonoBehaviour
         _playerAnimator.PlayerAnimtion();
     }
 
+    private void DeathPlayer()
+    {
+        if (transform.position.y < posPlayerDeath)
+        {
+            SoundManager.Instance._audioSource.Stop();
+            Destroy(gameObject);
+        }
+    }
+
+    private void PlayerJump()
+    {
+        bool Ground = _playerMovement.Checkgrounded();
+        if (Input.GetButtonDown(GlobalStringVarible.JUMP_BUTTON) && Ground)
+        {
+            Debug.Log("ѕытаюсь прыгнуть");
+            _playerMovement.Jump();
+            SoundManager.Instance.PlayJumpSound();           
+        }
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
-        IsActive = true;
-        if (other.gameObject.CompareTag("Coin") && IsActive)
+        if (other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
             CountCoin++;
-            _soundManager.PlayCoinSound();
+            SoundManager.Instance.PlayCoinSound();
         }
         if (other.gameObject.CompareTag("Level"))
         {
-            if(_soundManager != null)
+            if(SoundManager.Instance != null)
             {
-                _soundManager._audioSource.Stop();
-                _soundManager.PlayVictoryClip();
+                SoundManager.Instance._audioSource.Stop();
+                SoundManager.Instance.PlayVictoryClip();
             }
         }
 
     }
-    private void OnTriggerExit(Collider other)
-    {
-        _soundManager.victoryClip = null;
-        IsActive = false;
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    SoundManager.Instance.victoryClip = null;
+    //    IsGrounded = false;
+    //}
 }

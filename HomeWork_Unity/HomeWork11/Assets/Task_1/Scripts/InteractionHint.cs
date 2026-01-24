@@ -7,13 +7,23 @@ using UnityEngine.SceneManagement;
 
 public class InteractionHint : MonoBehaviour
 {
-
-    public string hintText = "ֽאזלטעו ֵ";
+    private SoundManager _soundManager;
+    private BuildIndexScene _indexScene;
+    
     public TextMeshProUGUI hintTextUI;
     public GameObject player;
 
+    public string hintText = "ֽאזלטעו ֵ";
+
     private bool _isZone = false;
     private int _indexLevel;
+
+
+    private void Awake()
+    {
+        _soundManager = SoundManager.Instance;
+        _indexScene = GetComponent<BuildIndexScene>();
+    }
 
     private void Start()
     {
@@ -38,7 +48,8 @@ public class InteractionHint : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                _indexScene.LoadBuildIndexScene();
+                _soundManager._audioSource.Play();
             }
         }
     }
@@ -48,7 +59,7 @@ public class InteractionHint : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _isZone = true;
-            ShowHit();
+            ShowHit();            
         }
     }
 
@@ -71,5 +82,6 @@ public class InteractionHint : MonoBehaviour
     {
         hintTextUI.text = hintText;
         hintTextUI.gameObject.SetActive(true);
+        SoundManager.Instance.PlayVictoryClip();
     }
 }

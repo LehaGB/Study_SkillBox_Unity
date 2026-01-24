@@ -33,6 +33,7 @@ public class SoundManager : MonoBehaviour
 
     private void Awake()
     {
+        
         if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
@@ -40,14 +41,14 @@ public class SoundManager : MonoBehaviour
         }
         _instance = this;
         DontDestroyOnLoad(this.gameObject);
-        
+
         if (_audioSource == null)
         {
             _audioSource = GetComponent<AudioSource>();
-            if(_audioSource == null)
+            if (_audioSource == null)
             {
                 _audioSource = gameObject.AddComponent<AudioSource>();
-            }   
+            }
         }
     }
     private void Start()
@@ -64,20 +65,21 @@ public class SoundManager : MonoBehaviour
         if( victoryClip != null)
         {
             victoryClip.LoadAudioData();
-        }
-        
+        }   
     }
 
+
+    // Монетка.
     public void PlayCoinSound()
     {
         if(_isActiveSound && coinClip != null && _audioSource != null)
         {
             _audioSource.PlayOneShot(coinClip);
-        }
-        
+        }      
     }
 
 
+    // Прыжок.
     public void PlayJumpSound()
     {
         if(_isActiveSound && jumpClip != null && _audioSource != null && _audioSource.enabled)
@@ -86,7 +88,7 @@ public class SoundManager : MonoBehaviour
         }   
     }
 
-
+    // Победа.
     public void PlayVictoryClip()
     {
         if (_isActiveSound && victoryClip != null && _audioSource != null)

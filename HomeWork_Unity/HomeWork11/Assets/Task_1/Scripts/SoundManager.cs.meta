@@ -4,10 +4,10 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - _audioSource: {fileID: 4308848008097189718, guid: e054dc6459574c642b6ad3393aa60509, type: 3}
-  - coinClip: {fileID: 8300000, guid: a75f73173c2b99149be9cd8d1eefdf46, type: 3}
-  - jumpClip: {fileID: 8300000, guid: 0680c831b5c1f424cb7490203a489d19, type: 3}
-  - victoryClip: {fileID: 8300000, guid: 09f5b5fb3309e484d9f72235603d75e8, type: 3}
+  - _audioSource: {instanceID: 0}
+  - coinClip: {instanceID: 0}
+  - jumpClip: {instanceID: 0}
+  - victoryClip: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

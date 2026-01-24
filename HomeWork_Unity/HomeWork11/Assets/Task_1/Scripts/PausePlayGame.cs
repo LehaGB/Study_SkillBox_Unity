@@ -4,26 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using WildBall.Inputs;
 
 public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
 {
-    public LoadLevelSceneManager scene;
     private PlayerController _playerController;
+
 
     [SerializeField] private GameObject _playBt;
     [SerializeField] private GameObject _pauseBt;
     [SerializeField] private GameObject _menuBt;
+    [SerializeField] public GameObject _againBt;
 
     private SoundManager _soundManager;
-    private void Awake()
-    {
-        
-    }
+
 
     private void Start()
     {
         _soundManager = SoundManager.Instance;
-        _playerController = GetComponent<PlayerController>();
+        _playerController = GetComponent<PlayerController>(); 
     }
 
 
@@ -47,11 +46,24 @@ public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
         _playBt.SetActive(false);
         _pauseBt.SetActive(true);
         _menuBt.SetActive(true);
+
+
         if (_soundManager != null)
         {
             _soundManager._audioSource.Play();
             Debug.Log("Музыка Play");
         }
+    }
+
+    public void Jump()
+    {
+        _soundManager.PlayJumpSound();
+    }
+
+
+    public void Again()
+    {
+        _againBt.SetActive(true);
     }
 
     public void ReturnToMenu(int indexScene)
@@ -60,17 +72,15 @@ public class PausePlayGame : MonoBehaviour, IPausePLayReturnToMenu
 
         if (_soundManager != null)
         {
-            //_soundManager._audioSource.enabled = false;
+
             _soundManager._audioSource.Stop();
+            Time.timeScale = 0f;
             Debug.Log("Музыка Стоп ReturnToMenu");          
         }
         if (_playerController != null)
         {
             _playerController.CountCoin = 0;
             Debug.Log("_playerController.CountCoin = 0");
-
-            //Destroy(_playerController.gameObject);
-            //Debug.Log("_playerController.gameObject = удаляем игрока");
         }
 
         SceneManager.LoadScene(indexScene, LoadSceneMode.Single);

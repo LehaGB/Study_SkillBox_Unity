@@ -7,5 +7,7 @@ public interface IPausePLayReturnToMenu
 {
     void Pause();
     void Play();
+
+    void Again();
     void ReturnToMenu(int indexScene);
 }

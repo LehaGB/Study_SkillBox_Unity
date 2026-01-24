@@ -19,7 +19,7 @@ namespace WildBall.Inputs
         
 
 
-        public bool _IsGrounded = false;
+        public bool IsGrounded = false;
 
         private void Awake()
         {
@@ -38,8 +38,8 @@ namespace WildBall.Inputs
 
         public bool Checkgrounded()
         {
-            _IsGrounded = Physics.CheckSphere(transform.position, _groundCheckDistance, _groundMask);
-            return _IsGrounded;
+            IsGrounded = Physics.CheckSphere(transform.position, _groundCheckDistance, _groundMask);
+            return IsGrounded;
         }
 #if UNITY_EDITOR
         [ContextMenu("Reset moveSpeed")]
