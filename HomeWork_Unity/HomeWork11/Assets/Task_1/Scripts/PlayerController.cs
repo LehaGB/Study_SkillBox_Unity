@@ -6,43 +6,39 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using WildBall.Inputs;
 
 public class PlayerController : MonoBehaviour
 {
     private PlayerMovement _playerMovement;
     private PlayerAnimator _playerAnimator;
+    private DeathPlayer _deathPlayer;
 
     private AudioSource _audioSource;
     private LoadLevelSceneManager _sceneManager;
 
-    private int _countCoin;
-    //private int _indexLevel;  
 
     [HideInInspector] public Vector3 _movemenDirection;
     [HideInInspector] public float horizontalInput;
     [HideInInspector] public float verticalInput;
 
-    public float posPlayerDeath = -1.5f;
 
-    //public bool IsGrounded = true;
+    private int _countCoin;
+
     public int CountCoin { get => _countCoin; set => _countCoin = value; }
+
+
     private void Awake()
     {
         _playerMovement = GetComponent<PlayerMovement>();
         _playerAnimator = GetComponent<PlayerAnimator>();
-        
-    }
-
-    private void Start()
-    {
-
+        _deathPlayer = GetComponent<DeathPlayer>();
     }
 
     void Update()
     {
         PlayerJump();
-        DeathPlayer();
     }
 
     private void FixedUpdate()
@@ -74,16 +70,13 @@ public class PlayerController : MonoBehaviour
         }
         _playerMovement.Move(_movemenDirection);
         _playerAnimator.PlayerAnimtion();
-    }
 
-    private void DeathPlayer()
-    {
-        if (transform.position.y < posPlayerDeath)
+        if(transform.position.y < -1.5f)
         {
-            SoundManager.Instance._audioSource.Stop();
-            Destroy(gameObject);
+            DeathPlayer.Instanse.DeathPlayerS();
         }
     }
+
 
     private void PlayerJump()
     {
