@@ -43,6 +43,5 @@ public class DeathPlayer : MonoBehaviour
         _buttonManager.Again(gameObjectButton);
         Debug.Log("Проверяем падаю я или нет");
         SoundManager.Instance._audioSource.Stop();
-        Destroy(gameObject);
     }
 }

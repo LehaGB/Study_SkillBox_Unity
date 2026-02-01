@@ -13,26 +13,12 @@ public class PausePlayGame : MonoBehaviour
 
     private PlayerController _playerController;
 
-    public static PausePlayGame Instance { get; private set; }
-
     [SerializeField] private GameObject _playBt;
     [SerializeField] private GameObject _pauseBt;
     [SerializeField] private GameObject _menuBt;
     [SerializeField] private GameObject _againBt;
 
     private SoundManager _soundManager;
-
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
 
     private void Start()
     {
