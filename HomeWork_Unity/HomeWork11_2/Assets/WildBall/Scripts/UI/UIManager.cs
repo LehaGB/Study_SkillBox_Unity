@@ -8,7 +8,7 @@ using Zenject;
 public class UIManager : MonoBehaviour
 {
     [Inject] private ILoadLevelScene _loadLevelScene;
-
+    [Inject] private TimeController _timeController;
 
     public void ButtonPlayClicked()
     {
@@ -38,11 +38,11 @@ public class UIManager : MonoBehaviour
 
     public void ButtonPauseClicked()
     {
-        _loadLevelScene.Pause();
+        _timeController.SetPauseOn();
     }
 
     public void ButtonResumeClicked()
     {
-        _loadLevelScene.Resume();
+        _timeController.SetPauseOff();
     }
 }

@@ -1,19 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
+    //[SerializeField] private GameObject _player;
 
+    [Inject] TimeController _timeController;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float _movementSpeed = 100;
 
-    // Update is called once per frame
     void Update()
     {
         Move();
@@ -21,6 +18,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move()
     {
-        _player.transform.Rotate(0, 1, 0);
+        transform.Rotate(Vector3.up, _movementSpeed * Time.deltaTime);
     }  
 }

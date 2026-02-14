@@ -16,8 +16,4 @@ public interface ILoadLevelScene
     void Menu();
 
     void Back();
-
-    void Pause();
-
-    void Resume();
 }

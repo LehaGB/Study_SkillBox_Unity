@@ -9,5 +9,6 @@ public class AppInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<ILoadLevelScene>().To<LoadLevelScene>().FromComponentInHierarchy().AsSingle();
+        Container.Bind<TimeController>().AsSingle();
     }
 }
