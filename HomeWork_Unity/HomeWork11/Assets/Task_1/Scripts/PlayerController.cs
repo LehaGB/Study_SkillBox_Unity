@@ -13,11 +13,14 @@ public class PlayerController : MonoBehaviour
 {
     private PlayerMovement _playerMovement;
     private PlayerAnimator _playerAnimator;
-    private DeathPlayer _deathPlayer;
+    private CreatePLayer _createPLayer;
 
     private AudioSource _audioSource;
     private LoadLevelSceneManager _sceneManager;
 
+    //private GameObject buttonPrefab;
+    public GameObject deidPlayerCanvas;
+    public GameObject buttonCanvas;
 
     [HideInInspector] public Vector3 _movemenDirection;
     [HideInInspector] public float horizontalInput;
@@ -33,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         _playerMovement = GetComponent<PlayerMovement>();
         _playerAnimator = GetComponent<PlayerAnimator>();
-        _deathPlayer = GetComponent<DeathPlayer>();
+        _createPLayer = GetComponent<CreatePLayer>();
     }
 
     void Update()
@@ -44,15 +47,6 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         MovementCharacter();
-    }
-
-    // Звук сбора монетки.
-    private void SoundCoin()
-    {
-        if (SoundManager.Instance != null)
-        {
-            SoundManager.Instance.PlayCoinSound();
-        }       
     }
 
 
@@ -73,7 +67,15 @@ public class PlayerController : MonoBehaviour
 
         if(transform.position.y < -1.5f)
         {
-            DeathPlayer.Instanse.DeathPlayerS();
+            _createPLayer.deidCanvas.SetActive(true);
+            _createPLayer.levelCanvas.SetActive(value: false);
+            Destroy(gameObject);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            _createPLayer.deidCanvas.SetActive(false);
+            _createPLayer.levelCanvas.SetActive(value: true);
         }
     }
 
@@ -108,6 +110,10 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+
+
+
     //private void OnTriggerExit(Collider other)
     //{
     //    SoundManager.Instance.victoryClip = null;

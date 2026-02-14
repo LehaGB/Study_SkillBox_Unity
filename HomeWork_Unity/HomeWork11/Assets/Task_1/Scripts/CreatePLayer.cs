@@ -6,6 +6,8 @@ using UnityEngine;
 public class CreatePLayer : MonoBehaviour 
 {
     public GameObject _playerPrefab;
+    public GameObject deidCanvas;
+    public GameObject levelCanvas;
     [SerializeField] private CameraFollow _cameraFollow;
 
     private AbstractPrefabCreate _prefabCreate = new CreatePlayerPrefab();
