@@ -9,12 +9,17 @@ public class UIManager : MonoBehaviour
 {
     [Inject] private ILoadLevelScene _loadLevelScene;
     [Inject] private TimeController _timeController;
-    [Inject] private AudioManager _audioManager;
+    [Inject] private UIController _uiController;
+
+    private void Start()
+    {
+
+    }
 
     public void ButtonPlayClicked()
     {
-        _loadLevelScene?.Play();
-        _audioManager?.SwitchMusic();
+        _loadLevelScene?.Game();
+        _uiController?.ButtonSwitchMusicClicked();
     }
 
     public void ButtonExitClicked()
@@ -26,13 +31,13 @@ public class UIManager : MonoBehaviour
     public void ButtonMenuClicked()
     {
         _loadLevelScene?.Menu();
-        _audioManager?.PlayMusic();
+        _uiController?.ButtonPlayMusicClicked();
     }
 
     public void ButtonBackClicked()
     {
         _loadLevelScene?.Back();
-        _audioManager?.SwitchMusic();
+        _uiController?.ButtonSwitchMusicClicked();
     }
 
     public void ButtonLoadLevelClicked(int indexScene)
@@ -43,12 +48,10 @@ public class UIManager : MonoBehaviour
     public void ButtonPauseClicked()
     {
         _timeController?.SetPauseOn();
-        _audioManager?.PauseMusic();
     }
 
     public void ButtonResumeClicked()
     {
         _timeController?.SetPauseOff();
-        _audioManager?.ResumeMusic();
     }
 }

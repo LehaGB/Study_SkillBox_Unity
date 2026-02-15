@@ -9,7 +9,7 @@ public interface ILoadLevelScene
     void LoadScene(int indexScene);
     void LoadLevelButtonClicked(int levelIndex);
 
-    void Play();
+    void Game();
 
     void Exit();
 

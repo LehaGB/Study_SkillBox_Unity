@@ -26,7 +26,7 @@ public class LoadLevelScene : MonoBehaviour, ILoadLevelScene
         LoadScene(levelIndex);
     }
 
-    public void Play()
+    public void Game()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

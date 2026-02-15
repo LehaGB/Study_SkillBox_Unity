@@ -10,5 +10,7 @@ public class AppInstaller : MonoInstaller
     {
         Container.Bind<ILoadLevelScene>().To<LoadLevelScene>().FromComponentInHierarchy().AsSingle();
         Container.Bind<TimeController>().AsSingle();
+        Container.Bind<IAudioManager>().To<AudioManager>().AsSingle();
+
     }
 }
