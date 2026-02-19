@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144047576}
-  - component: {fileID: 144047575}
+  - component: {fileID: 144047577}
   m_Layer: 0
   m_Name: LoadLevelScene
   m_TagString: Untagged
@@ -139,20 +139,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &144047575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144047574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5f5a4d47afa214ca455f65aebc3017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameLevelScene: GameLevelScene
-  mainScene: MainScene
 --- !u!4 &144047576
 Transform:
   m_ObjectHideFlags: 0
@@ -168,6 +154,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &144047577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144047574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a00f0ecd331504e942ace6716fb562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameLevelScene: GameLevelScene
+  mainScene: MainScene
 --- !u!1 &213551321
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -131.99998, y: 20.99997}
+  m_AnchoredPosition: {x: -132, y: 20.999939}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &347241037
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 442564169}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03736e07aaec10743b65e063ff654ff3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a202ebfd24cd2a4fa9e097aac8af738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundClip: {fileID: 8300000, guid: 5bf1a522c6ac64e438660aefe7bbfdbe, type: 3}
@@ -1149,7 +1149,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -131.99998, y: 20.99997}
+  m_AnchoredPosition: {x: -132, y: 20.999939}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &816662716
@@ -1731,8 +1731,8 @@ GameObject:
   - component: {fileID: 1920028098}
   - component: {fileID: 1920028097}
   - component: {fileID: 1920028096}
-  - component: {fileID: 1920028101}
   - component: {fileID: 1920028100}
+  - component: {fileID: 1920028101}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -1853,7 +1853,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1920028095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bdc019d78aa3784fb544682b9663d9b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7eac9f9842c790947930dbcaa0eacd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

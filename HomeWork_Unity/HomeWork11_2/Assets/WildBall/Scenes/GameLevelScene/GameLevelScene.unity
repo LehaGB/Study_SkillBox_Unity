@@ -722,7 +722,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1702238458}
+      - m_Target: {fileID: 1702238460}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ButtonLoadLevelClicked
         m_Mode: 3
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 908325445}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03736e07aaec10743b65e063ff654ff3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a202ebfd24cd2a4fa9e097aac8af738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundClip: {fileID: 8300000, guid: 5bf1a522c6ac64e438660aefe7bbfdbe, type: 3}
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1702238458}
+      - m_Target: {fileID: 1702238460}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ButtonLoadLevelClicked
         m_Mode: 3
@@ -1418,7 +1418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1702238458}
+      - m_Target: {fileID: 1702238460}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ButtonLoadLevelClicked
         m_Mode: 3
@@ -1551,7 +1551,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1702238458}
+      - m_Target: {fileID: 1702238460}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: ButtonBackClicked
         m_Mode: 1
@@ -1613,8 +1613,8 @@ GameObject:
   - component: {fileID: 1702238456}
   - component: {fileID: 1702238455}
   - component: {fileID: 1702238454}
-  - component: {fileID: 1702238458}
   - component: {fileID: 1702238459}
+  - component: {fileID: 1702238460}
   m_Layer: 5
   m_Name: GameLevelCanvas
   m_TagString: Untagged
@@ -1707,18 +1707,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1702238458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1702238453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bdc019d78aa3784fb544682b9663d9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1702238459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,11 +1720,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _components:
-  - {fileID: 1702238458}
+  - {fileID: 1702238460}
   _identifier: 
   _useSceneContext: 0
   _context: {fileID: 0}
   _bindType: 0
+--- !u!114 &1702238460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702238453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eac9f9842c790947930dbcaa0eacd9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1714990974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1793,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1869439051}
-  - component: {fileID: 1869439050}
   - component: {fileID: 1869439052}
   m_Layer: 0
   m_Name: LoadLevelScene
@@ -1802,20 +1801,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1869439050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869439049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b5f5a4d47afa214ca455f65aebc3017, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameLevelScene: GameLevelScene
-  mainScene: MainScene
 --- !u!4 &1869439051
 Transform:
   m_ObjectHideFlags: 0
@@ -1840,15 +1825,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1869439049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
+  m_Script: {fileID: 11500000, guid: d7a00f0ecd331504e942ace6716fb562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _components:
-  - {fileID: 1869439052}
-  _identifier: 
-  _useSceneContext: 0
-  _context: {fileID: 0}
-  _bindType: 0
+  gameLevelScene: GameLevelScene
+  mainScene: MainScene
 --- !u!1 &1876931485
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,10 +48,12 @@ public class UIManager : MonoBehaviour
     public void ButtonPauseClicked()
     {
         _timeController?.SetPauseOn();
+        _uiController?.ButtonPauseMusicClicked();
     }
 
     public void ButtonResumeClicked()
     {
         _timeController?.SetPauseOff();
+        _uiController?.ButtonResumeMusicClicked();
     }
 }
