@@ -4,15 +4,6 @@ using Zenject;
 
 public class AudioManager : ScriptableObject,  IAudioManager
 {
-    // private AudioSource _audioSource;
-
-    ////private AudioClip backgroundClip;
-    ////public AudioClip gameClip;
-
-    //public AudioManager(AudioSource audioSource)
-    //{
-    //    _audioSource = audioSource;
-    //}
 
     public void PlayMusic(AudioClip backgroundClip, AudioSource source, AudioClip clip = null)
     {

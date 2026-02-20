@@ -8,7 +8,7 @@ public class AppInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        Container.Bind<ILoadLevelScene>().To<LoadLevelScene>().FromComponentInHierarchy().AsSingle();
+        Container.Bind<IButtonManager>().To<ButtonManager>().FromComponentInHierarchy().AsSingle();
         Container.Bind<TimeController>().AsSingle();
         Container.Bind<IAudioManager>().To<AudioManager>().AsSingle();
     }

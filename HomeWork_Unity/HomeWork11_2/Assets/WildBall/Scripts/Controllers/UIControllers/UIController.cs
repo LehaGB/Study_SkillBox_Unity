@@ -7,7 +7,7 @@ public class UIController : MonoBehaviour
 {
     //[Inject] private AudioManager _iAudioManager;
     [Inject] private IAudioManager _iAudioManager;
-    [Inject] private ILoadLevelScene _loadLevelScene;
+    [Inject] private IButtonManager _loadLevelScene;
     [Inject] private TimeController _timeController;
 
     private AudioSource _uiAudioSource;

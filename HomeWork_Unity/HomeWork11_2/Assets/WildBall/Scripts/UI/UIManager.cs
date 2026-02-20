@@ -7,14 +7,10 @@ using Zenject;
 
 public class UIManager : MonoBehaviour
 {
-    [Inject] private ILoadLevelScene _loadLevelScene;
+    [Inject] private IButtonManager _loadLevelScene;
     [Inject] private TimeController _timeController;
     [Inject] private UIController _uiController;
 
-    private void Start()
-    {
-
-    }
 
     public void ButtonPlayClicked()
     {
