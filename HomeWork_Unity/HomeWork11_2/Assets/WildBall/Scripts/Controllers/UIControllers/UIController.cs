@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
     [Inject] private TimeController _timeController;
 
     private AudioSource _uiAudioSource;
+    private AudioSource _uiSoundClickSource;
     private AudioClip clip = null;
     private bool _isPausedActive;
 

@@ -8,6 +8,5 @@ public interface  IAudioManager
     void SwitchMusic(AudioClip gameClip, AudioSource source, AudioClip clip = null);
     void PauseMusic(AudioSource source);
     void ResumeMusic(AudioSource source);
-
     void MenuMusic(AudioSource source);
 }
