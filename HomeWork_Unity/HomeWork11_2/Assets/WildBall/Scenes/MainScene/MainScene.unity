@@ -166,8 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a00f0ecd331504e942ace6716fb562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameLevelScene: GameLevelScene
-  mainScene: MainScene
 --- !u!1 &213551321
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +555,7 @@ GameObject:
   - component: {fileID: 442564173}
   - component: {fileID: 442564174}
   m_Layer: 0
-  m_Name: BackgroundMusic
+  m_Name: UIController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1243,16 +1241,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1920028101}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 442564174}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ButtonMenuClicked
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GameLevelScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &902272945
@@ -1468,8 +1466,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1920028101}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 442564174}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ButtonExitClicked
         m_Mode: 1
         m_Arguments:
@@ -1601,8 +1599,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1920028101}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 442564174}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ButtonPlayClicked
         m_Mode: 1
         m_Arguments:
@@ -1731,8 +1729,6 @@ GameObject:
   - component: {fileID: 1920028098}
   - component: {fileID: 1920028097}
   - component: {fileID: 1920028096}
-  - component: {fileID: 1920028100}
-  - component: {fileID: 1920028101}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -1826,36 +1822,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1920028100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920028095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _components:
-  - {fileID: 1920028101}
-  _identifier: 
-  _useSceneContext: 0
-  _context: {fileID: 0}
-  _bindType: 0
---- !u!114 &1920028101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920028095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eac9f9842c790947930dbcaa0eacd9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

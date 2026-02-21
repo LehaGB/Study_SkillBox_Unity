@@ -1,55 +1,92 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Zenject;
 
 public class UIController : MonoBehaviour
 {
-    //[Inject] private AudioManager _iAudioManager;
     [Inject] private IAudioManager _iAudioManager;
-    [Inject] private IButtonManager _loadLevelScene;
+    [Inject] private IButtonManager _buttonManager;
     [Inject] private TimeController _timeController;
 
     private AudioSource _uiAudioSource;
     private AudioClip clip = null;
+    private bool _isPausedActive;
 
     public AudioClip backgroundClip;
     public AudioClip gameClip;
+
+    public bool IsPausedActive { get { return _isPausedActive; } set { _isPausedActive = value; } }
 
     void Start()
     {
         _uiAudioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void ButtonPlayMusicClicked()
+    public void ButtonPlayClicked()
     {
         _iAudioManager?.PlayMusic(backgroundClip, _uiAudioSource, clip);
-    }
-
-
-    public void ButtonSwitchMusicClicked()
-    {
+        _buttonManager?.Game();
         _iAudioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
     }
 
-    public void ButtonPauseMusicClicked()
+
+    public void ButtonPauseClicked(bool isPaused = false)
     {
-        _iAudioManager?.PauseMusic(_uiAudioSource);
+        IsPausedActive = isPaused;
+        if (IsPausedActive)
+        {
+            IsPausedActive = false;
+            _iAudioManager?.PlayMusic(gameClip, _uiAudioSource, clip);
+            _timeController?.SetPauseOff();
+        }
+        else
+        {
+            IsPausedActive = true;
+            _iAudioManager?.PauseMusic(_uiAudioSource);
+            _timeController?.SetPauseOn();
+        }
+        IsPausedActive = false;
     }
 
-    public void ButtonResumeMusicClicked()
+    public void ButtonResumeClicked(bool isPaused = true)
     {
-        _iAudioManager?.ResumeMusic(_uiAudioSource);
+        IsPausedActive = isPaused;
+        if(IsPausedActive)
+        {
+            IsPausedActive = true;
+            _iAudioManager?.PlayMusic(gameClip, _uiAudioSource, clip);
+            _timeController?.SetPauseOff();
+        }
+        else
+        {
+            IsPausedActive = false;
+            _iAudioManager?.ResumeMusic(_uiAudioSource);
+            _timeController?.SetPauseOn();
+        }
+        IsPausedActive = false;
     }
 
-    public void ButtonMenuMusicClicked()
+    public void ButtonExitClicked()
     {
-        _iAudioManager?.MenuMusic(_uiAudioSource);
+        _buttonManager?.Exit();
+    }
+
+    public void LoadSceneButtonClicked(int indexScene)
+    {
+        _buttonManager?.LoadLevelButtonClicked(indexScene);
+        _iAudioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
+    }
+
+    public void ButtonMenuClicked(string nameScene)
+    {
+        if (!IsPausedActive)
+        {
+            IsPausedActive = false;
+            _timeController?.SetPauseOff();
+        }
+        _buttonManager?.Back(nameScene);
+        _iAudioManager?.SwitchMusic(backgroundClip, _uiAudioSource, clip); 
     }
 }

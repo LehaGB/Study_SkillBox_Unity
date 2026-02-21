@@ -9,16 +9,13 @@ using Zenject;
 public class ButtonManager : MonoBehaviour, IButtonManager
 {
 
-    public string gameLevelScene = "GameLevelScene";
-    public string mainScene = "MainScene";
-
     public event Action<int> OnLoadLevel;
 
     public void LoadScene(int indexScene)
     {
         OnLoadLevel?.Invoke(indexScene);
 
-        SceneManager.LoadScene(indexScene);
+        SceneManager.LoadScene(indexScene, LoadSceneMode.Single);
     }
 
     public void LoadLevelButtonClicked(int levelIndex)
@@ -28,7 +25,7 @@ public class ButtonManager : MonoBehaviour, IButtonManager
 
     public void Game()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1, LoadSceneMode.Single);
     }
 
     public void Exit()
@@ -37,13 +34,13 @@ public class ButtonManager : MonoBehaviour, IButtonManager
         Application.Quit();
     }
 
-    public void Menu()
+    public void Menu(string gameLevelScene)
     {
-        SceneManager.LoadScene(gameLevelScene);
+        SceneManager.LoadScene(gameLevelScene, LoadSceneMode.Single);
     }
 
-    public void Back()
+    public void Back(string mainScene)
     {
-        SceneManager.LoadScene(mainScene);
+        SceneManager.LoadScene(mainScene, LoadSceneMode.Single);
     }
 }

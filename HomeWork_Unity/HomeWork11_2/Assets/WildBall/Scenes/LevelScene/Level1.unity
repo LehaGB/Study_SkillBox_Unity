@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 31353041}
   - component: {fileID: 31353042}
   m_Layer: 0
-  m_Name: GameMusic
+  m_Name: UIController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -462,8 +462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7a00f0ecd331504e942ace6716fb562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameLevelScene: GameLevelScene
-  mainScene: MainScene
 --- !u!1 &397564514
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,17 +743,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1087704671}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 31353042}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ButtonResumeClicked
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &654595570
 MonoBehaviour:
@@ -1097,8 +1095,6 @@ GameObject:
   - component: {fileID: 1087704667}
   - component: {fileID: 1087704666}
   - component: {fileID: 1087704665}
-  - component: {fileID: 1087704670}
-  - component: {fileID: 1087704671}
   m_Layer: 5
   m_Name: CanvasLevel_1
   m_TagString: Untagged
@@ -1189,36 +1185,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1087704670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087704664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0166d8ff8d905b048b2448179e1f5d11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _components:
-  - {fileID: 1087704670}
-  _identifier: 
-  _useSceneContext: 0
-  _context: {fileID: 0}
-  _bindType: 0
---- !u!114 &1087704671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087704664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eac9f9842c790947930dbcaa0eacd9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1093056400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,16 +1336,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1087704671}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ButtonMenuClicked
-        m_Mode: 1
+      - m_Target: {fileID: 31353038}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: GameLevelScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1231343138
@@ -1637,10 +1603,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1087704671}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 31353042}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: ButtonPauseClicked
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

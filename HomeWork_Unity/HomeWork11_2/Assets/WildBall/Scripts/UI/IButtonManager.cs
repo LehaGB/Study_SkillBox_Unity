@@ -13,7 +13,7 @@ public interface IButtonManager
 
     void Exit();
 
-    void Menu();
+    void Menu(string nameScene);
 
-    void Back();
+    void Back(string nameScene);
 }
