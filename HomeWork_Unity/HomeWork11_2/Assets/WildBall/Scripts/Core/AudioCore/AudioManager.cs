@@ -36,7 +36,7 @@ public class AudioManager : ScriptableObject,  IAudioManager
         if (source != null)
         {
             Debug.Log("Зашли PauseMusic");
-            source.Stop();
+            source.Pause();
             Debug.Log("Стоп музыка audioSource");
         }
     }
@@ -45,7 +45,7 @@ public class AudioManager : ScriptableObject,  IAudioManager
     {
         if (source != null)
         {
-            source.Play();
+            source.UnPause();
         }
     }
 

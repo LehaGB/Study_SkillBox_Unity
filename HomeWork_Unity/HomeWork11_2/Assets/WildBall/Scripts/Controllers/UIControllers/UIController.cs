@@ -16,6 +16,7 @@ public class UIController : MonoBehaviour
 
     public GameObject canvasLevel;
     public GameObject canvasMain;
+    public GameObject canvasSettings;
     public AudioClip backgroundClip;
     public AudioClip gameClip;
 
@@ -28,7 +29,6 @@ public class UIController : MonoBehaviour
 
     public void ButtonPlayClicked()
     {
-        //_iAudioManager?.PlayMusic(backgroundClip, _uiAudioSource, clip);
         _buttonManager?.Game();
         _iAudioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
     }
@@ -82,6 +82,13 @@ public class UIController : MonoBehaviour
     {
         IsPausedActive = !IsPausedActive;
         canvasLevel.SetActive(IsPausedActive);
+        canvasMain.SetActive(!IsPausedActive);
+    }
+
+    public void ToggCanvasSettings()
+    {
+        IsPausedActive = !IsPausedActive;
+        canvasSettings.SetActive(IsPausedActive);
         canvasMain.SetActive(!IsPausedActive);
     }
 }
