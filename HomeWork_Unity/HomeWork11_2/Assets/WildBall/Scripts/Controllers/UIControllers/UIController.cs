@@ -28,7 +28,7 @@ public class UIController : MonoBehaviour
 
     public void ButtonPlayClicked()
     {
-        _iAudioManager?.PlayMusic(backgroundClip, _uiAudioSource, clip);
+        //_iAudioManager?.PlayMusic(backgroundClip, _uiAudioSource, clip);
         _buttonManager?.Game();
         _iAudioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
     }
