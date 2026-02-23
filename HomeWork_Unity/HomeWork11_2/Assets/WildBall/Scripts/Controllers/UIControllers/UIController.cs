@@ -14,6 +14,8 @@ public class UIController : MonoBehaviour
     private AudioClip clip = null;
     private bool _isPausedActive;
 
+    public GameObject canvasLevel;
+    public GameObject canvasMain;
     public AudioClip backgroundClip;
     public AudioClip gameClip;
 
@@ -32,37 +34,17 @@ public class UIController : MonoBehaviour
     }
 
 
-    public void ButtonPauseClicked(bool isPaused = false)
+    public void ButtonPauseClicked(bool isPaused = true)
     {
         IsPausedActive = isPaused;
         if (IsPausedActive)
-        {
-            IsPausedActive = false;
-            _iAudioManager?.PlayMusic(gameClip, _uiAudioSource, clip);
-            _timeController?.SetPauseOff();
-        }
-        else
-        {
-            IsPausedActive = true;
-            _iAudioManager?.PauseMusic(_uiAudioSource);
-            _timeController?.SetPauseOn();
-        }
-        IsPausedActive = false;
-    }
-
-    public void ButtonResumeClicked(bool isPaused = true)
-    {
-        IsPausedActive = isPaused;
-        if(IsPausedActive)
-        {
-            IsPausedActive = true;
-            _iAudioManager?.PlayMusic(gameClip, _uiAudioSource, clip);
-            _timeController?.SetPauseOff();
-        }
-        else
-        {
-            IsPausedActive = false;
+        {         
             _iAudioManager?.ResumeMusic(_uiAudioSource);
+            _timeController?.SetPauseOff();
+        }
+        else
+        {
+            _iAudioManager?.PauseMusic(_uiAudioSource);
             _timeController?.SetPauseOn();
         }
         IsPausedActive = false;
@@ -87,6 +69,19 @@ public class UIController : MonoBehaviour
             _timeController?.SetPauseOff();
         }
         _buttonManager?.Back(nameScene);
-        _iAudioManager?.SwitchMusic(backgroundClip, _uiAudioSource, clip); 
+        _iAudioManager?.SwitchMusic(backgroundClip, _uiAudioSource, clip);
+    }
+
+    public void ButtonBackClicked()
+    {
+        ToggCanvas();
+    }
+
+
+    public void ToggCanvas()
+    {
+        IsPausedActive = !IsPausedActive;
+        canvasLevel.SetActive(IsPausedActive);
+        canvasMain.SetActive(!IsPausedActive);
     }
 }

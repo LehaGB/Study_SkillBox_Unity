@@ -153,7 +153,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4988d69c47d7132438b8cd57eb3235af, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.24
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -282,6 +282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a202ebfd24cd2a4fa9e097aac8af738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasLevel: {fileID: 678512592}
+  canvasMain: {fileID: 678512592}
   backgroundClip: {fileID: 8300000, guid: 5bf1a522c6ac64e438660aefe7bbfdbe, type: 3}
   gameClip: {fileID: 8300000, guid: 4988d69c47d7132438b8cd57eb3235af, type: 3}
 --- !u!1 &176538786
@@ -745,7 +747,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 31353042}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ButtonResumeClicked
+        m_MethodName: ButtonPauseClicked
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -793,6 +795,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654595567}
   m_CullTransparentMesh: 1
+--- !u!1 &678512592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678512593}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &678512593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678512592}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 323.80853, y: 141.89572, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &738944467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1378,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GameLevelScene
+          m_StringArgument: MainScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1231343138
@@ -1878,3 +1911,4 @@ SceneRoots:
   - {fileID: 317025015}
   - {fileID: 2135705621}
   - {fileID: 31353040}
+  - {fileID: 678512593}
