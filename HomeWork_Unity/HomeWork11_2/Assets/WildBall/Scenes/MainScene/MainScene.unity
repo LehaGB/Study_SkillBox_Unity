@@ -486,6 +486,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &709314310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 709314312}
+  - component: {fileID: 709314311}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &709314311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709314310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67ace3cb03505248a702f6d59f4480d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &709314312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709314310}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 330.95074, y: 37.274044, z: 515.10144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &714438060
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,9 +2320,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 442564174}
+    - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 709314311}
+    - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: CreatePlayerPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 4348264966145259200, guid: d5278bfefad7cef4fb1dffb14c7022f6, type: 3}
+    - target: {fileID: 1946962601451092864, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3449971169239972689, guid: 80c1d7e55b8ca0d4181fe405904bcff0, type: 3}
       propertyPath: m_Name
       value: PanelButtonPlay
@@ -2469,3 +2545,4 @@ SceneRoots:
   - {fileID: 824206998}
   - {fileID: 1424159272}
   - {fileID: 812537162}
+  - {fileID: 709314312}
