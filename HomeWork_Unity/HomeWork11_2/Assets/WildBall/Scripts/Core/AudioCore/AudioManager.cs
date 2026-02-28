@@ -1,6 +1,4 @@
 using UnityEngine;
-using static Unity.VisualScripting.Member;
-using Zenject;
 
 public class AudioManager : MonoBehaviour,  IAudioManager
 {

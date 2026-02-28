@@ -1,14 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Zenject;
 
-public class ButtonManager : MonoBehaviour, IButtonManager
+public class ButtonManager : IButtonManager
 {
-
+    private IButtonManager _iButtonManager;
+    public ButtonManager(IButtonManager iButtonManager)
+    {
+        _iButtonManager = iButtonManager;
+    }
     public event Action<int> OnLoadLevel;
 
     public void LoadScene(int indexScene)

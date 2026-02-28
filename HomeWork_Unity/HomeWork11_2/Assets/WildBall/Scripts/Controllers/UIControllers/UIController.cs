@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Zenject;
 
 public class UIController : MonoBehaviour
 {
     private IAudioManager _iAudioManager;
-    private IButtonManager _buttonManager;
-    private TimeController _timeController;
+    private static IButtonManager _buttonManager;
+    private TimerController _timerController;
 
     private AudioSource _uiAudioSource;
     private AudioClip clip = null;
@@ -25,6 +24,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         _uiAudioSource = GetComponent<AudioSource>();
+        
     }
 
     public void ButtonPlayClicked()
@@ -40,12 +40,12 @@ public class UIController : MonoBehaviour
         if (IsPausedActive)
         {         
             _iAudioManager?.ResumeMusic(_uiAudioSource);
-            _timeController?.SetPauseOff();
+            _timerController?.SetPauseOff();
         }
         else
         {
             _iAudioManager?.PauseMusic(_uiAudioSource);
-            _timeController?.SetPauseOn();
+            _timerController?.SetPauseOn();
         }
         IsPausedActive = false;
     }
@@ -66,7 +66,7 @@ public class UIController : MonoBehaviour
         if (!IsPausedActive)
         {
             IsPausedActive = false;
-            _timeController?.SetPauseOff();
+            _timerController?.SetPauseOff();
         }
         _buttonManager?.Back(nameScene);
         _iAudioManager?.SwitchMusic(backgroundClip, _uiAudioSource, clip);
