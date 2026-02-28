@@ -2,7 +2,7 @@ using UnityEngine;
 using static Unity.VisualScripting.Member;
 using Zenject;
 
-public class AudioManager : ScriptableObject,  IAudioManager
+public class AudioManager : MonoBehaviour,  IAudioManager
 {
 
     public void PlayMusic(AudioClip backgroundClip, AudioSource source, AudioClip clip = null)

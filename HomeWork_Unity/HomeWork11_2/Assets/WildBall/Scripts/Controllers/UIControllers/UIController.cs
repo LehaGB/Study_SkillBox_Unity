@@ -6,9 +6,9 @@ using Zenject;
 
 public class UIController : MonoBehaviour
 {
-    [Inject] private IAudioManager _iAudioManager;
-    [Inject] private IButtonManager _buttonManager;
-    [Inject] private TimeController _timeController;
+    private IAudioManager _iAudioManager;
+    private IButtonManager _buttonManager;
+    private TimeController _timeController;
 
     private AudioSource _uiAudioSource;
     private AudioClip clip = null;
