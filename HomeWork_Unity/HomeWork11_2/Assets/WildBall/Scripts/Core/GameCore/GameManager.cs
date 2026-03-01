@@ -1,30 +1,23 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private ICreatePrefab _createPrefab = new CreatePlayerPrefab();
 
-    [Header("Managers")]
-    [SerializeField] private SceneLoader sceneLoader;
-    [SerializeField] private AudioManager audioManager;
-    [SerializeField] private UIManager uiManager;
-    [SerializeField] private TimerController timerController;
+    private GameObject _newPlayer;
 
+    public GameObject playerPrefab;
 
-    private void Awake()
+    private void Start()
     {
-        if (sceneLoader == null) sceneLoader = FindObjectOfType<SceneLoader>();
-        if (audioManager == null) audioManager = FindObjectOfType<AudioManager>();
-        if (uiManager == null) uiManager = FindObjectOfType<UIManager>();
-        if (timerController == null) timerController = FindObjectOfType<TimerController>();
+        CreatePlayerPrefab();
+    }
 
-        DontDestroyOnLoad(this); 
-        DontDestroyOnLoad(sceneLoader);
-        DontDestroyOnLoad(audioManager);
+    public void CreatePlayerPrefab()
+    {
+        _createPrefab.Prefab = playerPrefab;
+        _newPlayer = _createPrefab.CreatePrefab(transform);
     }
 }

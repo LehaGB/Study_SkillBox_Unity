@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour,  IAudioManager
+public class AudioManager : MonoBehaviour
 {
 
     public void PlayMusic(AudioClip backgroundClip, AudioSource source, AudioClip clip = null)
@@ -41,18 +41,22 @@ public class AudioManager : MonoBehaviour,  IAudioManager
 
     public void ResumeMusic(AudioSource source)
     {
+        Debug.Log("Зашли ResumeMusic");
         if (source != null)
         {
             source.UnPause();
         }
+        Debug.Log("Play музыка audioSource");
     }
 
     public void MenuMusic(AudioSource source)
     {
-        if(source != null)
+        Debug.Log("Зашли MenuMusic");
+        if (source != null)
         {
             source.Stop();
         }
+        Debug.Log("Зашли в главное меню");
     }
 }
 
