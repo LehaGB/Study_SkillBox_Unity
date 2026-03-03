@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class AbstractCreatePrefab : ICreatePrefab
+public abstract class AbstractCreatePrefab 
 {
     public abstract GameObject Prefab { get; set; }
     public abstract GameObject CreatePrefab(Transform parent);

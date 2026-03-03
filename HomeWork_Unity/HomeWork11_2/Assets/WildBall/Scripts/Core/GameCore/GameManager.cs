@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private ICreatePrefab _createPrefab = new CreatePlayerPrefab();
+    private AbstractCreatePrefab _createPrefab = new CreatePlayerPrefab();
 
     private GameObject _newPlayer;
 
     public GameObject playerPrefab;
+
+
+    private void Awake()
+    {
+        _createPrefab.Prefab = playerPrefab;
+    }
 
     private void Start()
     {
@@ -16,8 +22,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void CreatePlayerPrefab()
-    {
-        _createPrefab.Prefab = playerPrefab;
+    {        
         _newPlayer = _createPrefab.CreatePrefab(transform);
     }
 }

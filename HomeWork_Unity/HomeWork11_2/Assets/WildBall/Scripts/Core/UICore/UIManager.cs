@@ -71,7 +71,7 @@ public class UIManager : MonoBehaviour
     public void LoadSceneButtonClicked(int indexScene)
     {
 
-        if (!IsPausedActive)
+        if (IsPausedActive)
         {
             IsPausedActive = false;
             _timerController?.SetPauseOff();
@@ -84,8 +84,8 @@ public class UIManager : MonoBehaviour
     public void ToggCanvasLevel()
     {
         IsPausedActive = !IsPausedActive;
-        canvasLevel.SetActive(IsPausedActive);
         canvasLevel.SetActive(!IsPausedActive);
+        canvasLevel.SetActive(IsPausedActive);
     }
     public void ToggCanvasMain()
     {

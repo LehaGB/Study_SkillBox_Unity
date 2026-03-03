@@ -6,7 +6,7 @@ using UnityEngine;
 public class CreatePlayerPrefab : AbstractCreatePrefab
 {
 
-    [SerializeField] private GameObject _playerPrefab;
+    private GameObject _playerPrefab;
 
     public override GameObject Prefab { get => _playerPrefab; set => _playerPrefab = value; }
 
