@@ -7,31 +7,28 @@ using WildBall.Inputs;
 public sealed class PlayerController : MonoBehaviour
 {
     private IMovementPlayer _movementPlayer = new PlayerMovement();
-
     private Rigidbody _rbPlayer;
     private Vector3 _moveDirection;
-    private BoxCollider _boxCollider;
 
-    [SerializeField] private LayerMask groundMask;
+   // [SerializeField] private LayerMask groundMask;
 
     [SerializeField] private float moveSpeed = 2.0f;
-    [SerializeField] private float jumpImpuls = 2.0f;
-    [SerializeField] private bool IsGrounded = false;
-    [SerializeField] private float isDistanceGroundedCheck = 0.2f;
+  //  [SerializeField] private float jumpImpuls = 2.0f;
+  //  [SerializeField] private bool IsGrounded = false;
+   // [SerializeField] private float isDistanceGroundedCheck = 0.1f;
 
-    private void Awake()
+
+    private void Start()
     {
-        _rbPlayer = GetComponent<Rigidbody>();
-        _boxCollider = GetComponent<BoxCollider>();
+        _rbPlayer = GetComponent<Rigidbody>(); 
     }
-    private void lateUpdate()
+    private void Update()
     {
-        MovePlayer();
     }
 
     private void FixedUpdate()
     {
-       PlayerJump();
+        MovePlayer();
     }
 
     public void MovePlayer()
@@ -42,23 +39,5 @@ public sealed class PlayerController : MonoBehaviour
         _moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
 
         _movementPlayer.Move(_rbPlayer, _moveDirection, moveSpeed);
-    }
-
-    public void PlayerJump()
-    {
-        
-        if(CheckGrounded() && Input.GetKeyDown(KeyCode.Space))
-        {
-            _movementPlayer.Jump(_rbPlayer, jumpImpuls);
-        }       
-    }
-
-    public bool CheckGrounded()
-    {
-        Vector3 cubeBottom = new Vector3(_boxCollider.bounds.center.x, _boxCollider.bounds.min.y,
-            _boxCollider.bounds.center.z);
-        bool grounded = Physics.CheckCapsule(_boxCollider.bounds.center, cubeBottom, 
-            isDistanceGroundedCheck, groundMask, QueryTriggerInteraction.Ignore);
-        return grounded;
     }
 }

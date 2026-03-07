@@ -155,6 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33cce15e17ae35041833dee9fa9c7f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deidPlayerCanvas: {fileID: 0}
+  buttonCanvas: {fileID: 0}
   _movemenDirection: {x: 0, y: 0, z: 0}
   horizontalInput: 0
   verticalInput: 0
@@ -199,7 +201,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.24144301
-  m_Center: {x: -0.0033263266, y: -0.0053519756, z: 0.00057280064}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7814432090715022893
 Rigidbody:
   m_ObjectHideFlags: 0

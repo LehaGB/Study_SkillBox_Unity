@@ -5,19 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    [Header("Managers")]
-    [SerializeField] private AudioManager _iAudioManager;
-    [SerializeField] private SceneLoader _sceneLoader;
-    [SerializeField] private TimerController _timerController;
-    [SerializeField] private GameManager _gameManager;
+    private IAudioManager _audioManager = new AudioManager();
+
+    [Header("Managers")]  
+    [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private TimerController timerController;
+
+    private GameManager _gameManager;
 
     private AudioSource _uiAudioSource;    
     private bool _isPausedActive;
 
     [Header("Canvas")]
-    public GameObject canvasLevel;
+    public GameObject canvasGamePause;
     public GameObject canvasMain;
     public GameObject canvasSettings;
+
 
     [Header("Clips")]
     public AudioClip backgroundClip;
@@ -29,6 +32,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _uiAudioSource = GetComponent<AudioSource>();
+        _gameManager = FindAnyObjectByType<GameManager>();
     }
 
     public void ButtonPlayClicked(string nameScene)
@@ -37,11 +41,11 @@ public class UIManager : MonoBehaviour
         {
             IsPausedActive = false;
             
-            _timerController?.SetPauseOff();
+            timerController?.SetPauseOff();
         }
         _gameManager.CreatePlayerPrefab();
-        _sceneLoader?.LoadNameScene(nameScene);
-        _iAudioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
+        sceneLoader?.LoadNameScene(nameScene);
+        _audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
     }
 
 
@@ -50,22 +54,22 @@ public class UIManager : MonoBehaviour
         IsPausedActive = isPaused;
         if (IsPausedActive)
         {                    
-            _iAudioManager?.PauseMusic(_uiAudioSource);
-            _timerController?.SetPauseOn();
-            canvasLevel.SetActive(true);
+            //_audioManager?.PauseMusic(_uiAudioSource);
+            timerController?.SetPauseOn();
+            canvasSettings.SetActive(true);
         }
         else if(!IsPausedActive)
         {
-            _iAudioManager?.ResumeMusic(_uiAudioSource);
-            _timerController?.SetPauseOff();
-            canvasLevel.SetActive(false);
+            //_audioManager?.ResumeMusic(_uiAudioSource);
+            timerController?.SetPauseOff();
+            canvasSettings.SetActive(false);
         }
         IsPausedActive = false;
     }
 
     public void ButtonExitClicked()
     {
-        _sceneLoader?.QuitGame();
+        sceneLoader?.QuitGame();
     }
 
     public void LoadSceneButtonClicked(int indexScene)
@@ -74,18 +78,18 @@ public class UIManager : MonoBehaviour
         if (IsPausedActive)
         {
             IsPausedActive = false;
-            _timerController?.SetPauseOff();
-            _sceneLoader?.LoadLevelButtonClicked(indexScene);
+            timerController?.SetPauseOff();
+            sceneLoader?.LoadLevelButtonClicked(indexScene);
         }
         
-        _iAudioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
+        _audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
     }
 
     public void ToggCanvasLevel()
     {
         IsPausedActive = !IsPausedActive;
-        canvasLevel.SetActive(!IsPausedActive);
-        canvasLevel.SetActive(IsPausedActive);
+        canvasGamePause.SetActive(!IsPausedActive);
+        canvasGamePause.SetActive(IsPausedActive);
     }
     public void ToggCanvasMain()
     {

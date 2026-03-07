@@ -10,4 +10,6 @@ public interface  IAudioManager
     void ResumeMusic(AudioSource source);
 
     void MenuMusic(AudioSource source);
+
+    void JumpMusic(AudioSource source, AudioClip audioClip);
 }

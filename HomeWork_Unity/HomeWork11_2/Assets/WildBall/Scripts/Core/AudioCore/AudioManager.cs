@@ -1,6 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : IAudioManager
 {
 
     public void PlayMusic(AudioClip backgroundClip, AudioSource source, AudioClip clip = null)
@@ -57,6 +58,14 @@ public class AudioManager : MonoBehaviour
             source.Stop();
         }
         Debug.Log("Зашли в главное меню");
+    }
+
+    public void JumpMusic(AudioSource source, AudioClip audioClip)
+    {
+        if (source != null && !source.isPlaying)
+        {
+            source.PlayOneShot(audioClip);
+        }
     }
 }
 
