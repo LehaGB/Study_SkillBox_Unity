@@ -48,12 +48,4 @@ public class AudioMixerManager : MonoBehaviour
         float gameValue = (float)Math.Log10(value) * MULTIPLIER;
         audioMixer.SetFloat(gameParametr, gameValue);
     }
-
-    //void OnDestroy()
-    //{
-    //    if (volumeSlider != null)
-    //    {
-    //        volumeSlider.onValueChanged.RemoveListener(HandleSliderVolumeChanged);
-    //    }
-    //}
 }

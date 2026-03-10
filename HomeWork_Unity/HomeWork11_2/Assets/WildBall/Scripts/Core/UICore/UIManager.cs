@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private TimerController timerController;
 
+    
     private GameManager _gameManager;
 
     private AudioSource _uiAudioSource;    
@@ -32,7 +33,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _uiAudioSource = GetComponent<AudioSource>();
-        _gameManager = FindAnyObjectByType<GameManager>();
+        _gameManager = FindFirstObjectByType<GameManager>();
     }
 
     public void ButtonPlayClicked(string nameScene)
@@ -45,7 +46,7 @@ public class UIManager : MonoBehaviour
         }
         _gameManager.CreatePlayerPrefab();
         sceneLoader?.LoadNameScene(nameScene);
-        _audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
+        //_audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
     }
 
 

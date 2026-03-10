@@ -520,37 +520,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9abf89c5c25980e4e8bf1885815a2c26, type: 3}
---- !u!1 &678512592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 678512593}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &678512593
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678512592}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 323.80853, y: 141.89572, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &752141552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,17 +1704,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494102860}
   m_CullTransparentMesh: 1
---- !u!114 &1496543621 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 711378784419452794, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
-  m_PrefabInstance: {fileID: 2024806158}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1007a7cb158543841ab567108c2ae1f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1565200894
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,37 +1970,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1617823812}
   m_CullTransparentMesh: 1
---- !u!1 &1660596115
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1660596116}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1660596116
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660596115}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 330.95074, y: 37.274044, z: 515.10144}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1667138319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,6 +2263,18 @@ PrefabInstance:
       propertyPath: volumeSlider
       value: 
       objectReference: {fileID: 7602398088024745677}
+    - target: {fileID: 3414110879667278900, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
+      propertyPath: gameSlider
+      value: 
+      objectReference: {fileID: 971172739034949154}
+    - target: {fileID: 3414110879667278900, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
+      propertyPath: jumpSlider
+      value: 
+      objectReference: {fileID: 5585478007432843544}
+    - target: {fileID: 3414110879667278900, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
+      propertyPath: volumeSlider
+      value: 
+      objectReference: {fileID: 7602398088024745677}
     - target: {fileID: 5634846868121789230, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
       propertyPath: m_Name
       value: AudioMixermanager
@@ -2352,6 +2291,14 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6073363600565142133, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8641349253221648623, guid: ab1d2b77b5e316e4e9bb043f76ec8248, type: 2}
+    - target: {fileID: 8136155742460207924, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -152468045533914610, guid: ab1d2b77b5e316e4e9bb043f76ec8248, type: 2}
     - target: {fileID: 8245446525791929965, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2396,6 +2343,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9057452593410234793, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 7418671085897237814, guid: ab1d2b77b5e316e4e9bb043f76ec8248, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2708,7 +2659,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496543621}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioMixerManager, Assembly-CSharp
         m_MethodName: HandleSliderGameChanged
         m_Mode: 4
@@ -3330,7 +3281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1115.6554, y: 88}
+  m_AnchoredPosition: {x: 1115.6554, y: -24}
   m_SizeDelta: {x: 893.572, y: -839.653}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3150241560857390998
@@ -4126,7 +4077,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496543621}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioMixerManager, Assembly-CSharp
         m_MethodName: HandleSliderJumpChanged
         m_Mode: 4
@@ -4156,7 +4107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1115.7, y: -39}
+  m_AnchoredPosition: {x: 1115.7, y: 97}
   m_SizeDelta: {x: 893.57, y: -846.775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &5747216821480281691
@@ -4795,7 +4746,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1496543621}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioMixerManager, Assembly-CSharp
         m_MethodName: HandleSliderVolumeChanged
         m_Mode: 4
@@ -5179,8 +5130,6 @@ SceneRoots:
   - {fileID: 1093056403}
   - {fileID: 317025015}
   - {fileID: 31353040}
-  - {fileID: 678512593}
-  - {fileID: 1660596116}
   - {fileID: 11414564}
   - {fileID: 1958713116}
   - {fileID: 5252906189717998177}
