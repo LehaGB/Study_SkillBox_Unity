@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    private IAudioManager _audioManager = new AudioManager();
+   //private IAudioManager _audioManager = new AudioManager();
 
     [Header("Managers")]  
     [SerializeField] private SceneLoader sceneLoader;
@@ -23,10 +23,10 @@ public class UIManager : MonoBehaviour
     public GameObject canvasSettings;
 
 
-    [Header("Clips")]
-    public AudioClip backgroundClip;
-    public AudioClip gameClip;
-    private AudioClip clip = null;
+    //[Header("Clips")]
+    //public AudioClip backgroundClip;
+    //public AudioClip gameClip;
+    //private AudioClip clip = null;
 
     public bool IsPausedActive { get { return _isPausedActive; } set { _isPausedActive = value; } }
 
@@ -83,7 +83,7 @@ public class UIManager : MonoBehaviour
             sceneLoader?.LoadLevelButtonClicked(indexScene);
         }
         
-        _audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
+        //_audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
     }
 
     public void ToggCanvasLevel()

@@ -215,8 +215,6 @@ MonoBehaviour:
   canvasGamePause: {fileID: 776476567}
   canvasMain: {fileID: 1920028095}
   canvasSettings: {fileID: 1424159268}
-  backgroundClip: {fileID: 8300000, guid: 5bf1a522c6ac64e438660aefe7bbfdbe, type: 3}
-  gameClip: {fileID: 8300000, guid: 4988d69c47d7132438b8cd57eb3235af, type: 3}
 --- !u!1 &514208492
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,8 +322,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 554859274}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 30, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -902,7 +900,7 @@ RectTransform:
   m_Father: {fileID: 895836486}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 2.4996948, y: -3.7040005}
   m_SizeDelta: {x: 4.9995, y: -7.409}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1678,11 +1676,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1344540259159138236, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1344540259159138236, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1410748853134810235, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_Pivot.x
@@ -1766,27 +1764,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1411676025133536485, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1411676025133536485, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1411676025133536485, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1934383336236705631, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1934383336236705631, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1934383336236705631, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2312535315665798725, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1806,7 +1804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3963296288626043332, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5585478007642568172, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1834,11 +1832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7040226347875355754, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7040226347875355754, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7314664421016848491, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_IsActive
@@ -1910,14 +1908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioMixermanager
       objectReference: {fileID: 0}
-    - target: {fileID: 6073363600565142133, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -8641349253221648623, guid: ab1d2b77b5e316e4e9bb043f76ec8248, type: 2}
-    - target: {fileID: 8136155742460207924, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: -152468045533914610, guid: ab1d2b77b5e316e4e9bb043f76ec8248, type: 2}
+    - target: {fileID: 5634846868121789230, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8245446525791929965, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 363.53897
@@ -1958,10 +1952,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9057452593410234793, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 7418671085897237814, guid: ab1d2b77b5e316e4e9bb043f76ec8248, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

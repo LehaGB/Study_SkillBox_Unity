@@ -5,53 +5,56 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using WildBall.Inputs;
 
-public class PlayerJump : MonoBehaviour
+namespace WildBall.Inputs
 {
-    private IAudioManager _audioManager = new AudioManager();
-    private Rigidbody _playerRb;
-    private AudioSource _playerAudioSource;
-
-    [Header("Setting player jump")]
-    public float isDistanceGroundedCheck = 0.1f;
-    public float jumpImpuls = 2f;
-    public bool IsGrounded;
-
-    [Header("LayerMask")]
-    public LayerMask ground;
-
-    [Header("Audio clip")]
-    public AudioClip jumpClip;
-
-    void Start()
+    public class PlayerJump : MonoBehaviour
     {
-        _playerRb = GetComponent<Rigidbody>();
-        _playerAudioSource = GetComponent<AudioSource>();
-    }
+        //private IAudioManager _audioManager = new AudioManager();
+        private Rigidbody _playerRb;
+        private AudioSource _playerAudioSource;
 
+        [Header("Setting player jump")]
+        public float isDistanceGroundedCheck = 0.1f;
+        public float jumpImpuls = 2f;
+        public bool IsGrounded;
 
-    void Update()
-    {
-        Jump();
-    }
+        [Header("LayerMask")]
+        public LayerMask ground;
 
+        [Header("Audio clip")]
+        public AudioClip jumpClip;
 
-    public void Jump()
-    {
-        //bool ground = CheckGrounded();
-        if (CheckGrounded() && Input.GetButtonDown(GlobalStringVarieble.JUMP_BUTTON))
+        void Start()
         {
-            _playerRb.AddForce(Vector3.up * jumpImpuls, ForceMode.Impulse);
-            _audioManager.JumpMusic(_playerAudioSource, jumpClip);
+            _playerRb = GetComponent<Rigidbody>();
+            _playerAudioSource = GetComponent<AudioSource>();
         }
-        else if (Input.GetButtonDown(GlobalStringVarieble.JUMP_BUTTON) && !IsGrounded)
-        {
-            Debug.Log("Player is in air, cannot jump again.");
-        }
-    }
 
-    public bool CheckGrounded()
-    {
-        return Physics.CheckSphere(transform.position,
-            isDistanceGroundedCheck, ground);
+
+        void Update()
+        {
+            Jump();
+        }
+
+
+        public void Jump()
+        {
+            //bool ground = CheckGrounded();
+            if (CheckGrounded() && Input.GetButtonDown(GlobalStringVarieble.JUMP_BUTTON))
+            {
+                _playerRb.AddForce(Vector3.up * jumpImpuls, ForceMode.Impulse);
+                _playerAudioSource.PlayOneShot(clip: jumpClip);
+            }
+            else if (Input.GetButtonDown(GlobalStringVarieble.JUMP_BUTTON) && !IsGrounded)
+            {
+                Debug.Log("Player is in air, cannot jump again.");
+            }
+        }
+
+        public bool CheckGrounded()
+        {
+            return Physics.CheckSphere(transform.position,
+                isDistanceGroundedCheck, ground);
+        }
     }
 }
