@@ -15,12 +15,7 @@ public sealed class PlayerController : MonoBehaviour
     public float verticalInput;
 
 
-    // [SerializeField] private LayerMask groundMask;
-
     [SerializeField] private float moveSpeed = 2.0f;
-    //  [SerializeField] private float jumpImpuls = 2.0f;
-    //  [SerializeField] private bool IsGrounded = false;
-    // [SerializeField] private float isDistanceGroundedCheck = 0.1f;
 
 
     private void Start()

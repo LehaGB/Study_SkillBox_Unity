@@ -11,8 +11,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private SceneLoader sceneLoader;
     [SerializeField] private TimerController timerController;
 
-    
-    private GameManager _gameManager;
+    private CreatePreyer _createPreyer;
 
     private AudioSource _uiAudioSource;    
     private bool _isPausedActive;
@@ -33,7 +32,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _uiAudioSource = GetComponent<AudioSource>();
-        _gameManager = FindFirstObjectByType<GameManager>();
+        _createPreyer = FindAnyObjectByType<CreatePreyer>();
     }
 
     public void ButtonPlayClicked(string nameScene)
@@ -44,7 +43,7 @@ public class UIManager : MonoBehaviour
             
             timerController?.SetPauseOff();
         }
-        _gameManager.CreatePlayerPrefab();
+        _createPreyer.CreatePlayerPrefab();
         sceneLoader?.LoadNameScene(nameScene);
         //_audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
     }
