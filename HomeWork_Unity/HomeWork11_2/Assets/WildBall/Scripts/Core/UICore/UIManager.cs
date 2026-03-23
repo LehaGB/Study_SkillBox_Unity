@@ -5,33 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-   //private IAudioManager _audioManager = new AudioManager();
+
+    private IUICanvasManager _canvasManager = new CanvasManager();
 
     [Header("Managers")]  
-    [SerializeField] private SceneLoader sceneLoader;
-    [SerializeField] private TimerController timerController;
+    [SerializeField] private SceneLoader _sceneLoader;
+    [SerializeField] private TimerController _timerController;
+    [SerializeField] private AudioMixerManager _mixerManager;
 
     private CreatePreyer _createPreyer;
 
-    private AudioSource _uiAudioSource;    
+    //private AudioSource _uiAudioSource;    
     private bool _isPausedActive;
 
     [Header("Canvas")]
-    public GameObject canvasGamePause;
+    //public GameObject canvasGamePause;
     public GameObject canvasMain;
     public GameObject canvasSettings;
-
-
-    //[Header("Clips")]
-    //public AudioClip backgroundClip;
-    //public AudioClip gameClip;
-    //private AudioClip clip = null;
+    public GameObject canvasLevel;
 
     public bool IsPausedActive { get { return _isPausedActive; } set { _isPausedActive = value; } }
 
     void Start()
     {
-        _uiAudioSource = GetComponent<AudioSource>();
+        //_uiAudioSource = GetComponent<AudioSource>();
         _createPreyer = FindAnyObjectByType<CreatePreyer>();
     }
 
@@ -41,35 +38,39 @@ public class UIManager : MonoBehaviour
         {
             IsPausedActive = false;
             
-            timerController?.SetPauseOff();
+            _timerController?.SetPauseOff();
         }
         _createPreyer.CreatePlayerPrefab();
-        sceneLoader?.LoadNameScene(nameScene);
-        //_audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
+        _sceneLoader?.LoadNameScene(nameScene);
     }
 
 
-    public void ButtonPauseClicked(bool isPaused = true)
+    public void ButtonPauseClicked()
     {
-        IsPausedActive = isPaused;
-        if (IsPausedActive)
-        {                    
-            //_audioManager?.PauseMusic(_uiAudioSource);
-            timerController?.SetPauseOn();
-            canvasSettings.SetActive(true);
-        }
-        else if(!IsPausedActive)
-        {
-            //_audioManager?.ResumeMusic(_uiAudioSource);
-            timerController?.SetPauseOff();
-            canvasSettings.SetActive(false);
-        }
-        IsPausedActive = false;
+        _canvasManager.ToggCanvasSettings(canvasSettings, true);
+        _timerController.SetPauseOn();
+    }
+
+    public void ButtonMenuCkicked()
+    {
+        _canvasManager.ToggCanvasLevel(canvasLevel, true);
+    }
+
+
+    public void ButtonSettingCkicked()
+    {
+        _canvasManager.ToggCanvasSettings(canvasSettings, true);
+    }
+
+
+    public void ButtonBackClicked()
+    {
+        _canvasManager.ToggButtonBack(canvasMain, true);
     }
 
     public void ButtonExitClicked()
     {
-        sceneLoader?.QuitGame();
+        _sceneLoader?.QuitGame();
     }
 
     public void LoadSceneButtonClicked(int indexScene)
@@ -78,30 +79,8 @@ public class UIManager : MonoBehaviour
         if (IsPausedActive)
         {
             IsPausedActive = false;
-            timerController?.SetPauseOff();
-            sceneLoader?.LoadLevelButtonClicked(indexScene);
+            _timerController?.SetPauseOff();
         }
-        
-        //_audioManager?.SwitchMusic(gameClip, _uiAudioSource, clip);
-    }
-
-    public void ToggCanvasLevel()
-    {
-        IsPausedActive = !IsPausedActive;
-        canvasGamePause.SetActive(!IsPausedActive);
-        canvasGamePause.SetActive(IsPausedActive);
-    }
-    public void ToggCanvasMain()
-    {
-        IsPausedActive = !IsPausedActive;
-        canvasMain.SetActive(IsPausedActive);
-        canvasMain.SetActive(!IsPausedActive);
-    }
-
-    public void ToggCanvasSettings()
-    {
-        IsPausedActive = !IsPausedActive;
-        canvasSettings.SetActive(IsPausedActive);
-        canvasMain.SetActive(!IsPausedActive);
+        _sceneLoader?.LoadLevelButtonClicked(indexScene);
     }
 }
