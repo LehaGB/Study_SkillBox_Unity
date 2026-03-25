@@ -4,43 +4,46 @@ using UnityEngine;
 
 public class CanvasManager : IUICanvasManager
 {
-    public void ToggCanvasLevel(GameObject canvasGameLevel, bool IsPausedActive)
+
+    public void ToggCanvasLevel(GameObject canvasGameLevel, bool IsActive)
     {
-        IsPausedActive = !IsPausedActive;
-        canvasGameLevel.SetActive(IsPausedActive);
-        canvasGameLevel.SetActive(!IsPausedActive);
+        SetUIVisibility(canvasGameLevel, IsActive);
     }
 
-    public void ToggCanvasMain(GameObject canvasMain, bool IsPausedActive)
+    public void ToggCanvasMain(GameObject canvasMain, bool IsActive)
     {
-        IsPausedActive = !IsPausedActive;
-        canvasMain.SetActive(IsPausedActive);
-        canvasMain.SetActive(!IsPausedActive);
+        SetUIVisibility(canvasMain, IsActive);
     }
 
-    public void ToggButtonBack(GameObject canvasMain, bool IsPausedActive)
+    public void ToggButtonBack(GameObject canvasMain, bool IsActive)
     {
-        IsPausedActive = !IsPausedActive;
-        canvasMain.SetActive(IsPausedActive);
-        canvasMain.SetActive(!IsPausedActive);
+        SetUIVisibility(canvasMain, IsActive);
     }
 
-    public void ToggCanvasSettings(GameObject canvasSettings, bool IsPausedActive)
+    public void ToggCanvasSettings(GameObject canvaasSetting, bool IsActive)
     {
-        IsPausedActive = !IsPausedActive;
-        canvasSettings.SetActive(IsPausedActive);
-        canvasSettings.SetActive(!IsPausedActive);
+        SetUIVisibility(canvaasSetting, IsActive);
     }
 
-    public void ToggButtonMenu(GameObject canvasMenu, bool IsPausedActive)
+    public void ToggButtonMenu(GameObject canvasMenu, bool IsActive)
     {
-        IsPausedActive = !IsPausedActive;
-        canvasMenu.SetActive(IsPausedActive);
-        canvasMenu.SetActive(!IsPausedActive);
+        SetUIVisibility(canvasMenu, IsActive);
     }
 
-    public void ToggCanvasResume(GameObject canvasPause, bool IsPausedActive)
+    public void ToggCanvasResume(GameObject canvasPause, bool IsActive)
     {
+        SetUIVisibility(canvasPause, IsActive);
+    }
 
+    private void SetUIVisibility(GameObject uiObject, bool isActive)
+    {
+        if(uiObject != null)
+        {
+            uiObject.SetActive(isActive);
+        }
+        else
+        {
+            Debug.LogWarning($"Попытка управлять невалидным UI объектом.");
+        }
     }
 }

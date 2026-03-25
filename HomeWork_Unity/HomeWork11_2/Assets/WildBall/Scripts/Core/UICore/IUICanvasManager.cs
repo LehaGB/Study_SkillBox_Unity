@@ -4,15 +4,15 @@ using UnityEngine;
 
 public interface IUICanvasManager
 {
-    void ToggCanvasLevel(GameObject canvasGameLevel, bool IsPausedActive);
+    void ToggCanvasLevel(GameObject canvasGameLevel, bool IsActive);
 
-    void ToggCanvasMain(GameObject canvasMain, bool IsPausedActive);
+    void ToggCanvasMain(GameObject canvasMain, bool IsActive);
 
-    void ToggCanvasSettings(GameObject canvasSetting, bool IsPausedActive);
+    void ToggCanvasSettings(GameObject canvasLevel, bool IsActive);
 
-    void ToggButtonMenu(GameObject canvasMenu, bool IsPausedActive);
+    void ToggButtonMenu(GameObject canvasMenu, bool IsActive);
 
-    void ToggCanvasResume(GameObject canvasPause, bool IsPausedActive);
+    void ToggCanvasResume(GameObject canvasPause, bool IsActive);
 
-    void ToggButtonBack(GameObject canvasMain, bool IsPausedActive);
+    void ToggButtonBack(GameObject canvasMain, bool IsActive);
 }
