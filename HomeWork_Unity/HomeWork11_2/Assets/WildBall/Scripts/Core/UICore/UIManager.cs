@@ -7,12 +7,12 @@ public class UIManager : MonoBehaviour
 {
 
     private IUICanvasManager _canvasManager = new CanvasManager();
+    
 
     [Header("Managers")]  
     [SerializeField] private SceneLoader _sceneLoader;
     [SerializeField] private TimerController _timerController;
     [SerializeField] private AudioMixerManager _mixerManager;
-    
 
     private CreatePreyer _createPreyer;
     private bool _isPausedActive;
