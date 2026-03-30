@@ -9,14 +9,14 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private Animator _animator;
     private bool _isPointerInside = false;
 
-    public AudioClip clickClip;
     public Button button;
+
+    public AudioMixerManager mixer;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         button = GetComponent<Button>();
-        _audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -24,14 +24,14 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         _animator.SetTrigger("Highlighted");
         _isPointerInside = true;
-        _audioSource.PlayOneShot(clickClip);
+        mixer.PlayButtonClick();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         _animator.SetTrigger("Disabled");
         _isPointerInside = false;
-        _audioSource.Stop();
+        mixer.StopButtonClick();
     }
 
     public void OnPointerClick(PointerEventData eventData)

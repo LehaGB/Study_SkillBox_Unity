@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class AudioMixerManager : MonoBehaviour
 {
+    private AudioSource _audioSource;
 
     [Header("AudioMixer")]
     [SerializeField] private AudioMixer audioMixer;
@@ -22,6 +23,9 @@ public class AudioMixerManager : MonoBehaviour
     public string jumpParametr = "JumpVolume";
     public string gameParametr = "GameVolume";
 
+    [Header("Button clip")]
+    public AudioClip buttonClip;
+
     private const float MULTIPLIER = 20f;
 
     private void Awake()
@@ -29,6 +33,7 @@ public class AudioMixerManager : MonoBehaviour
         volumeSlider.onValueChanged.AddListener(HandleSliderVolumeChanged);
         jumpSlider.onValueChanged.AddListener(HandleSliderJumpChanged);
         gameSlider.onValueChanged.AddListener(HandleSliderGameChanged);
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void HandleSliderVolumeChanged(float value)
@@ -48,5 +53,15 @@ public class AudioMixerManager : MonoBehaviour
     {
         float gameValue = (float)Math.Log10(value) * MULTIPLIER;
         audioMixer.SetFloat(gameParametr, gameValue);
+    }
+
+    public void PlayButtonClick()
+    {
+        _audioSource.PlayOneShot(buttonClip);
+    }
+
+    public void StopButtonClick()
+    {
+        _audioSource.Stop();
     }
 }
