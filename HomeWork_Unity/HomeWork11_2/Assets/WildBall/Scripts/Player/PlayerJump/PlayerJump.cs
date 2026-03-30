@@ -21,7 +21,7 @@ namespace WildBall.Inputs
         [Header("LayerMask")]
         public LayerMask ground;
 
-        [Header("Audio clip")]
+        [Header("Audio clickClip")]
         public AudioClip jumpClip;
 
         void Start()
