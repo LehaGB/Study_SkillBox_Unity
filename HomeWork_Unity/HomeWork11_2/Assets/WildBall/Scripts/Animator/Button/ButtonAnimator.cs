@@ -41,6 +41,6 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private void ResetToDefaultState()
     {
-        button.transform.localScale = Vector3.one;
+        _animator.SetTrigger("Normal");
     }
 }
