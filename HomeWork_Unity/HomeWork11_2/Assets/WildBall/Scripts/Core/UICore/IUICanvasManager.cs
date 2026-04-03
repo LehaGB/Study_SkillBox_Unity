@@ -10,9 +10,11 @@ public interface IUICanvasManager
 
     void ToggCanvasSettings(GameObject canvasLevel, bool IsActive);
 
+    void ToggCanvasLevel1(GameObject canvasGameLevel1, bool IsActive);
+
     void ToggButtonMenu(GameObject canvasMenu, bool IsActive);
 
-    void ToggCanvasResume(GameObject canvasPause, bool IsActive);
+    void ToggButtonResume(GameObject canvasPause, bool IsActive);
 
     void ToggButtonBack(GameObject canvasMain, bool IsActive);
 }

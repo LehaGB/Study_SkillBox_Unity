@@ -10,6 +10,12 @@ public class CanvasManager : IUICanvasManager
         SetUIVisibility(canvasGameLevel, IsActive);
     }
 
+
+    public void ToggCanvasLevel1(GameObject canvasGameLevel1, bool IsActive)
+    {
+        SetUIVisibility(canvasGameLevel1, IsActive);
+    }
+
     public void ToggCanvasMain(GameObject canvasMain, bool IsActive)
     {
         SetUIVisibility(canvasMain, IsActive);
@@ -30,7 +36,7 @@ public class CanvasManager : IUICanvasManager
         SetUIVisibility(canvasMenu, IsActive);
     }
 
-    public void ToggCanvasResume(GameObject canvasPause, bool IsActive)
+    public void ToggButtonResume(GameObject canvasPause, bool IsActive)
     {
         SetUIVisibility(canvasPause, IsActive);
     }

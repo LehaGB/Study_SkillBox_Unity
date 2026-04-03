@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
     public GameObject canvasMain;
     public GameObject canvasSettings;
     public GameObject canvasLevel;
+    public GameObject canvasLevel_1;
 
     public bool IsPausedActive { get { return _isPausedActive; } set { _isPausedActive = value; } }
 
@@ -49,13 +50,16 @@ public class UIManager : MonoBehaviour
     // Pause.
     public void ButtonPauseClicked()
     {
+        _canvasManager.ToggCanvasLevel1(canvasLevel_1, false);
         _canvasManager.ToggCanvasSettings(canvasSettings, true);
         _timerController.SetPauseOn();
     }
 
 
+    // Resume.
     public void ButtonResumeClicked()
     {
+        _canvasManager.ToggCanvasLevel1(canvasLevel_1, true);
         _canvasManager.ToggCanvasSettings(canvasSettings, false);
         _timerController.SetPauseOff();
     }
