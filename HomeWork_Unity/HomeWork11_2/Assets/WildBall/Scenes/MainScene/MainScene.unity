@@ -977,7 +977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  button: {fileID: 1694136318}
   mixer: {fileID: 1058598154}
 --- !u!95 &1694136322
 Animator:
@@ -1872,7 +1872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -59.000122, y: 0}
+  m_AnchoredPosition: {x: -59.000244, y: 0}
   m_SizeDelta: {x: 118, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2975008587259393815
@@ -2693,7 +2693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  button: {fileID: 1933372643573415173}
   mixer: {fileID: 1058598154}
 --- !u!82 &6974846887522226171
 AudioSource:
@@ -2844,7 +2844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
+  button: {fileID: 155890255763789234}
   mixer: {fileID: 1058598154}
 --- !u!82 &7184338934761283290
 AudioSource:
