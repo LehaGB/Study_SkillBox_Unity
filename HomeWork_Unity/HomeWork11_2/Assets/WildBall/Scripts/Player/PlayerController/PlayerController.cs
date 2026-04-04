@@ -25,11 +25,12 @@ public sealed class PlayerController : MonoBehaviour
     }
     private void Update()
     {
+        MovePlayer();
     }
 
     private void FixedUpdate()
     {
-        MovePlayer();
+       
     }
 
     public void MovePlayer()

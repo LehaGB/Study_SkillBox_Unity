@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: -5169803258966897821}
   - component: {fileID: -1593955397644408105}
   - component: {fileID: 2782090886004182316}
-  - component: {fileID: 2612883469274697467}
   - component: {fileID: 878107393257061286}
+  - component: {fileID: 1980283826561875071}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -141,7 +141,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.49247986
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -217,27 +217,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &2612883469274697467
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152929119122441561}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c676c8a7ff330824380a8584f53a47a4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &878107393257061286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +229,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e3b857cab81e44a9d4f8ebceaea7a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAnimator: {fileID: 2612883469274697467}
+  _playerAnimator: {fileID: 1980283826561875071}
+--- !u!95 &1980283826561875071
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152929119122441561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b56e56b52869bb4c863da43ad020450, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1976280400646769278
 GameObject:
   m_ObjectHideFlags: 0

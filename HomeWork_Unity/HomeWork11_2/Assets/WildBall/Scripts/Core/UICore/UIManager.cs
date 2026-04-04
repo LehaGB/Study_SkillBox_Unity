@@ -52,7 +52,7 @@ public class UIManager : MonoBehaviour
     {
         _canvasManager.ToggCanvasLevel1(canvasLevel_1, false);
         _canvasManager.ToggCanvasSettings(canvasSettings, true);
-        _timerController.SetPauseOn();
+        //_timerController.SetPauseOn();
     }
 
 
