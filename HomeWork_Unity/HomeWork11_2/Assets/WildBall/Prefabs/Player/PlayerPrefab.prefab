@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2782090886004182316}
   - component: {fileID: 878107393257061286}
   - component: {fileID: 1980283826561875071}
+  - component: {fileID: -7336861166122582034}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152929119122441561}
   serializedVersion: 4
-  m_Mass: 1.5
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -86,7 +87,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 2
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &-5169803258966897821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   verticalInput: 0
-  moveSpeed: 1.5
+  player: {fileID: 1152929119122441561}
+  ground: {fileID: 1997913432962979732, guid: 6be92bbc960ad0b46a781aad23220d66, type: 3}
+  buttonAgain: {fileID: 8746354588622984470, guid: 425dac2dce358fb4298560481446e345, type: 3}
+  moveSpeed: 2
 --- !u!114 &-1593955397644408105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDistanceGroundedCheck: 0.5
-  jumpImpuls: 4
+  jumpImpuls: 7
   IsGrounded: 1
   ground:
     serializedVersion: 2
@@ -251,6 +255,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7336861166122582034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152929119122441561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c37a51c0d1810c4c9d38b4bae9658e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976280400646769278
 GameObject:
   m_ObjectHideFlags: 0

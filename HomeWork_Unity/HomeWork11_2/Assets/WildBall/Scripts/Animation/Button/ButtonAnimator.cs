@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private Animator _animator;
-    private bool _isPointerInside = false;
 
     public Button button;
 
@@ -15,21 +14,22 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        button = GetComponent<Button>();
     }
 
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         _animator.SetTrigger("Highlighted");
-        _isPointerInside = true;
+        _animator.SetTrigger("Pressed");
+        
         mixer.PlayButtonClick();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         _animator.SetTrigger("Disabled");
-        _isPointerInside = false;
+        _animator.SetTrigger("Selected");
+        
         mixer.StopButtonClick();
     }
 
