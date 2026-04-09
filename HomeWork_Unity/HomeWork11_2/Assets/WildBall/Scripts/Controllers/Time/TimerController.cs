@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class TimerController : MonoBehaviour 
 {
+    private void OnEnable()
+    {
+        if(EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnPlayerDied += SetPauseOn;
+        }
+    }
+    private void OnDestroy()
+    {
+        if (EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnPlayerDied -= SetPauseOn;
+        }
+    }
+
     public void SetPauseOn()
     {
         Time.timeScale = 0;

@@ -36,6 +36,30 @@ public class AudioMixerManager : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
+
+    private void OnEnable()
+    {
+        if(EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnPlayerDied += HandleSliderGameChanged;
+        }
+    }
+
+
+    private void OnDestroy()
+    {
+        if (EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnPlayerDied -= HandleSliderGameChanged;
+        }
+    }
+
+    private void HandleSliderGameChanged()
+    {
+        HandleSliderGameChanged(-80f);
+    }
+
+
     public void HandleSliderVolumeChanged(float value)
     {
         float volumeValue = (float)Math.Log10(value) * MULTIPLIER;

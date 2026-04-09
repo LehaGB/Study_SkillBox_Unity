@@ -33,6 +33,24 @@ public class UIManager : MonoBehaviour
     }
 
 
+    private void OnEnable()
+    {
+        if(EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnPlayerDied += DeactivationCanvas;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnPlayerDied -= DeactivationCanvas;
+        }
+    }
+
+
+
     // Pplay.
     public void ButtonPlayClicked(string nameScene)
     {
@@ -106,5 +124,10 @@ public class UIManager : MonoBehaviour
             _timerController?.SetPauseOff();
         }
         _sceneLoader?.LoadLevelButtonClicked(indexScene);
+    }
+
+    public void DeactivationCanvas()
+    {
+        _canvasManager.ToggCanvasLevel1(canvasLevel_1, false);
     }
 }

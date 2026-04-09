@@ -1,27 +1,27 @@
 using System;
 using UnityEngine;
 
-public class PlayersDeath : MonoBehaviour, IPlayersDeath
+public class PlayersDeath : MonoBehaviour
 {
-
-    public GameObject playerPrefab;
-    public GameObject groundPrefab;
-    private void Update()
+    private void OnEnable()
     {
-        DeathPlayer(playerPrefab, groundPrefab);
-    }
-    public bool DeathPlayer(GameObject objectPlayer, GameObject objectGround)
-    {
-        if (objectPlayer.transform.position.y < objectGround.transform.position.y)
+        if (EventsBus.Instance != null)
         {
-            CheckCondition();
-            return true;
-        }
-       return false;
+            EventsBus.Instance.OnPlayerDied += HandlePlayerDeathEvent;
+        }           
     }
-    public void CheckCondition()
+
+    private void OnDisable()
     {
-        EventsBus.Instance.TriggerPlayerDied();
-        enabled = false;
+        // Отписка при отключении объекта
+        if (EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnPlayerDied -= HandlePlayerDeathEvent;
+        }
+    }
+
+    private void HandlePlayerDeathEvent()   
+    {
+        Destroy(this.gameObject);
     }
 }

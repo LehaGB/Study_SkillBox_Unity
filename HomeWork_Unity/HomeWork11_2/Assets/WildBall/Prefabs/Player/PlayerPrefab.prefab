@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2782090886004182316}
   - component: {fileID: 878107393257061286}
   - component: {fileID: 1980283826561875071}
-  - component: {fileID: -7336861166122582034}
+  - component: {fileID: 3072027199380059431}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -104,7 +104,6 @@ MonoBehaviour:
   verticalInput: 0
   player: {fileID: 1152929119122441561}
   ground: {fileID: 1997913432962979732, guid: 6be92bbc960ad0b46a781aad23220d66, type: 3}
-  buttonAgain: {fileID: 8746354588622984470, guid: 425dac2dce358fb4298560481446e345, type: 3}
   moveSpeed: 2
 --- !u!114 &-1593955397644408105
 MonoBehaviour:
@@ -255,7 +254,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-7336861166122582034
+--- !u!114 &3072027199380059431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

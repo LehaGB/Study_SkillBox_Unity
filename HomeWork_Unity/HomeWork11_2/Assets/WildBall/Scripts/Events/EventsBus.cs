@@ -24,5 +24,6 @@ public class EventsBus : MonoBehaviour
     public void TriggerPlayerDied()
     {
         OnPlayerDied?.Invoke();
+        Debug.Log("True");
     }
 }
