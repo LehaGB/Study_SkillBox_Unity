@@ -134,8 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 5403097445537409750}
-  mixer: {fileID: 1058598154}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 5403097445537409750}
+  _mixer: {fileID: 1058598154}
 --- !u!1 &126366084 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5634846868121789230, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
@@ -164,8 +165,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 3959340357234604027}
-  mixer: {fileID: 1058598154}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 3959340357234604027}
+  _mixer: {fileID: 1058598154}
 --- !u!114 &241446418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,8 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 6937025682089053291}
-  mixer: {fileID: 1058598154}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 6937025682089053291}
+  _mixer: {fileID: 1058598154}
 --- !u!1 &273082460
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +711,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1532268028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532268029}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1532268029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532268028}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 402.16986, y: 97.89432, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676399895
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,8 +934,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1694136318}
-  mixer: {fileID: 1058598154}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 1694136318}
+  _mixer: {fileID: 1058598154}
 --- !u!95 &1694136322
 Animator:
   serializedVersion: 5
@@ -1068,6 +1103,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767553685}
   m_CullTransparentMesh: 1
+--- !u!114 &1835893989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3511679298056551261, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
+  m_PrefabInstance: {fileID: 6940757953815624522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1866789462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,8 +1238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 3468850969712281965}
-  mixer: {fileID: 1058598154}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 3468850969712281965}
+  _mixer: {fileID: 1058598154}
 --- !u!223 &3712547880025743
 Canvas:
   m_ObjectHideFlags: 0
@@ -1519,6 +1566,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1670596845064028101, guid: cb7818454425c2f4ba81b6758cab27d5, type: 3}
+      propertyPath: canvasLost
+      value: 
+      objectReference: {fileID: 273082460}
     - target: {fileID: 1670596845064028101, guid: cb7818454425c2f4ba81b6758cab27d5, type: 3}
       propertyPath: canvasMain
       value: 
@@ -3547,6 +3598,18 @@ PrefabInstance:
       propertyPath: mixer
       value: 
       objectReference: {fileID: 1058598154}
+    - target: {fileID: 6761902546057369726, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
+      propertyPath: _mixer
+      value: 
+      objectReference: {fileID: 1058598154}
+    - target: {fileID: 6761902546057369726, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
+      propertyPath: _button
+      value: 
+      objectReference: {fileID: 1835893989}
+    - target: {fileID: 6761902546057369726, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
+      propertyPath: _menuData
+      value: 
+      objectReference: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
     - target: {fileID: 7929255381137446562, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3664,8 +3727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 1933372643573415173}
-  mixer: {fileID: 1058598154}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 1933372643573415173}
+  _mixer: {fileID: 1058598154}
 --- !u!95 &6974846887522226171
 Animator:
   serializedVersion: 5
@@ -3719,8 +3783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 155890255763789234}
-  mixer: {fileID: 1058598154}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 155890255763789234}
+  _mixer: {fileID: 1058598154}
 --- !u!95 &7184338934761283290
 Animator:
   serializedVersion: 5
@@ -3900,7 +3965,7 @@ Animator:
   m_GameObject: {fileID: 7664958094492295460}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab707f6fa5e7b35449c0dc5b14a4e987, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4270,8 +4335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 4963103191268202983}
-  mixer: {fileID: 1058598154}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 4963103191268202983}
+  _mixer: {fileID: 1058598154}
 --- !u!95 &8860194924463839780
 Animator:
   serializedVersion: 5
@@ -4397,3 +4463,4 @@ SceneRoots:
   - {fileID: 520065363}
   - {fileID: 273082461}
   - {fileID: 1866789464}
+  - {fileID: 1532268029}

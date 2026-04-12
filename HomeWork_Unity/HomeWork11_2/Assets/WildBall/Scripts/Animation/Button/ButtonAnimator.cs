@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    [SerializeField] private MenuData _menuData;
+    [SerializeField] private Button _button;
+    [SerializeField] private AudioMixerManager _mixer;
+
     private Animator _animator;
-
-    public Button button;
-
-    public AudioMixerManager mixer;
 
     private void Awake()
     {
@@ -17,20 +17,32 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
 
 
+    private void OnEnable()
+    {
+        if (_menuData.isAnimationFinished)
+        {
+            _animator.Play("Button_Idle_State", 0, 1f);
+            _animator.SetTrigger("Disabled");
+        }
+
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
+        _menuData.isAnimationFinished = true;
         _animator.SetTrigger("Highlighted");
-        _animator.SetTrigger("Pressed");
+        //_animator.SetTrigger("Pressed");
         
-        mixer.PlayButtonClick();
+        _mixer.PlayButtonClick();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
+        _menuData.isAnimationFinished = false;
         _animator.SetTrigger("Disabled");
-        _animator.SetTrigger("Selected");
+        //_animator.SetTrigger("Selected");
         
-        mixer.StopButtonClick();
+        //_mixer.StopButtonClick();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -40,6 +52,7 @@ public class ButtonAnimator : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private void ResetToDefaultState()
     {
-       button.transform.localScale = Vector3.one;
+      _button.transform.localScale = Vector3.one;
+        _menuData.isAnimationFinished = false;
     }
 }

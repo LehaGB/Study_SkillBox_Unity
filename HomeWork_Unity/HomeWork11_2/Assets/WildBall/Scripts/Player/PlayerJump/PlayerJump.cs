@@ -13,7 +13,7 @@ namespace WildBall.Inputs
         private Rigidbody _playerRb;
         private AudioSource _playerAudioSource;
 
-        [Header("Setting player jump")]
+        [Header("Setting _player jump")]
         public float isDistanceGroundedCheck = 0.1f;
         public float jumpImpuls = 2f;
         public bool IsGrounded;
@@ -39,7 +39,7 @@ namespace WildBall.Inputs
 
         public void Jump()
         {
-            //bool ground = CheckGrounded();
+            //bool _ground = CheckGrounded();
             if (CheckGrounded() && Input.GetButtonDown(GlobalStringVarieble.JUMP_BUTTON))
             {
                 _playerRb.AddForce(Vector3.up * jumpImpuls, ForceMode.Impulse);

@@ -19,8 +19,8 @@ public class PlayerAnimation : MonoBehaviour
 
     public void PlayerAnim()
     {
-        float horInput = _playerController.horizontalInput;
-        float vertInput = _playerController.verticalInput;
+        float horInput = _playerController._horizontalInput;
+        float vertInput = _playerController._verticalInput;
 
         bool IsMoving = Mathf.Abs(horInput) > 0.1f || Mathf.Abs(vertInput) > 0.1f;
 

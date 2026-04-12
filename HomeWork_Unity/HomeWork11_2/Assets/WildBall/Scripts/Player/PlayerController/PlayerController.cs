@@ -17,12 +17,14 @@ public sealed class PlayerController : MonoBehaviour
 
 
     [Header("Move")]
-    public float horizontalInput;
-    public float verticalInput;
+    public float _horizontalInput;
+    public float _verticalInput;
+    [SerializeField] private float yPos;
+    [SerializeField] private bool _hasDied = false;
 
     [Header("Objects")]
-    public GameObject player;
-    public GameObject ground;
+    [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _ground;
 
 
     [SerializeField] private float moveSpeed = 2.0f;
@@ -42,10 +44,10 @@ public sealed class PlayerController : MonoBehaviour
 
     public void MovePlayer()
     {
-        horizontalInput = Input.GetAxis(GlobalStringVarieble.HORIZONTAL_AXIS);
-        verticalInput = Input.GetAxis(GlobalStringVarieble.VERTICAL_AXIS);
+        _horizontalInput = Input.GetAxis(GlobalStringVarieble.HORIZONTAL_AXIS);
+        _verticalInput = Input.GetAxis(GlobalStringVarieble.VERTICAL_AXIS);
 
-        _moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
+        _moveDirection = new Vector3(_horizontalInput, 0, _verticalInput).normalized;
 
         _movementPlayer.Move(_rbPlayer, _moveDirection, moveSpeed);
 
@@ -54,9 +56,15 @@ public sealed class PlayerController : MonoBehaviour
 
     private void Death()
     {
-        if (player.transform.position.y < ground.transform.position.y)
+        if (_player.transform.position.y <= yPos)
         {
-            EventsBus.Instance.TriggerPlayerDied();
+            _hasDied = true;
+            if (_hasDied)
+            {
+                EventsBus.Instance.TriggerPlayerDied();
+                this.enabled = false;
+            }
+            _hasDied = false;     
         }
     }
 }

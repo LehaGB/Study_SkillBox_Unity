@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94a5037e7b1367488f802320989d159, type: 3}
-  m_Name: ScriptableObject
+  m_Script: {fileID: 11500000, guid: 711e3c66f1b4a8f4397f26312d615853, type: 3}
+  m_Name: GlobalMenuStatus
   m_EditorClassIdentifier: 
-  canvasLevel: {fileID: 3963296288626043332, guid: bf2bc6bc1df94e04387d45ddc7133ca8, type: 3}
+  isAnimationFinished: 0

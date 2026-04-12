@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour 
 {
+
     public event Action<int> OnLoadLevel;
 
     public void LoadScene(int indexScene)
@@ -19,6 +20,7 @@ public class SceneLoader : MonoBehaviour
     {
         LoadScene(levelIndex);
     }
+
 
     public void LoadNameScene(string name)
     {

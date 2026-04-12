@@ -217,6 +217,7 @@ MonoBehaviour:
   canvasSettings: {fileID: 3963296288634171199}
   canvasLevel: {fileID: 3398967205009302662, guid: 68d4ead0885472843b740861ebf11f96, type: 3}
   canvasLevel_1: {fileID: 1087704664}
+  canvasLost: {fileID: 342433400}
 --- !u!1 &82540007
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,8 +315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  mixer: {fileID: 987519633}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 140097443}
+  _mixer: {fileID: 987519633}
 --- !u!114 &140097443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,10 +1709,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 31353042}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ButtonPlayClicked
-        m_Mode: 5
+      - m_Target: {fileID: 317025016}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadLevelButtonClicked
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1769,8 +1771,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  mixer: {fileID: 987519633}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 1231343137}
+  _mixer: {fileID: 987519633}
 --- !u!95 &1231343141
 Animator:
   serializedVersion: 5
@@ -2212,8 +2215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  mixer: {fileID: 987519633}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 1494102862}
+  _mixer: {fileID: 987519633}
 --- !u!95 &1494102867
 Animator:
   serializedVersion: 5
@@ -2382,8 +2386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
-  mixer: {fileID: 987519633}
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 1617823814}
+  _mixer: {fileID: 987519633}
 --- !u!95 &1617823818
 Animator:
   serializedVersion: 5
@@ -3127,6 +3132,50 @@ PrefabInstance:
     - target: {fileID: 1985666977542209403, guid: 425dac2dce358fb4298560481446e345, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.09718761
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.09718761
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 317025016}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevelButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8746354588622984470, guid: 425dac2dce358fb4298560481446e345, type: 3}
       propertyPath: m_Name
@@ -3912,7 +3961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7345163968100432791, guid: 6be92bbc960ad0b46a781aad23220d66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7345163968100432791, guid: 6be92bbc960ad0b46a781aad23220d66, type: 3}
       propertyPath: m_LocalRotation.w

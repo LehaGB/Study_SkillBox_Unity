@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     public GameObject canvasSettings;
     public GameObject canvasLevel;
     public GameObject canvasLevel_1;
+    public GameObject canvasLost;
 
     public bool IsPausedActive { get { return _isPausedActive; } set { _isPausedActive = value; } }
 
@@ -38,7 +39,9 @@ public class UIManager : MonoBehaviour
         if(EventsBus.Instance != null)
         {
             EventsBus.Instance.OnPlayerDied += DeactivationCanvas;
+            EventsBus.Instance.OnPlayerDied += ButtonActive;
         }
+
     }
 
     private void OnDestroy()
@@ -46,7 +49,13 @@ public class UIManager : MonoBehaviour
         if (EventsBus.Instance != null)
         {
             EventsBus.Instance.OnPlayerDied -= DeactivationCanvas;
+            EventsBus.Instance.OnPlayerDied -= ButtonActive;
         }
+    }
+
+    public void ButtonActive()
+    {
+        canvasLost.SetActive(true);
     }
 
 

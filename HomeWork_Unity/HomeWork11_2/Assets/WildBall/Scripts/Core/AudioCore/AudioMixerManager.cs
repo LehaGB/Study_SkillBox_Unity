@@ -84,8 +84,8 @@ public class AudioMixerManager : MonoBehaviour
         _audioSource.PlayOneShot(buttonClip);
     }
 
-    public void StopButtonClick()
-    {
-        _audioSource.Stop();
-    }
+    //public void StopButtonClick()
+    //{
+    //    _audioSource.Stop();
+    //}
 }

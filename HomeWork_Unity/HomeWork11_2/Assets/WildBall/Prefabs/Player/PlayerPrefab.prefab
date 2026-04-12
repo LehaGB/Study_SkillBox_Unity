@@ -100,10 +100,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9769f0d08e3b64d44997eb3142b5b1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInput: 0
-  verticalInput: 0
-  player: {fileID: 1152929119122441561}
-  ground: {fileID: 1997913432962979732, guid: 6be92bbc960ad0b46a781aad23220d66, type: 3}
+  _horizontalInput: 0
+  _verticalInput: 0
+  yPos: -5
+  _hasDied: 0
+  _player: {fileID: 1152929119122441561}
+  _ground: {fileID: 1997913432962979732, guid: 6be92bbc960ad0b46a781aad23220d66, type: 3}
   moveSpeed: 2
 --- !u!114 &-1593955397644408105
 MonoBehaviour:
