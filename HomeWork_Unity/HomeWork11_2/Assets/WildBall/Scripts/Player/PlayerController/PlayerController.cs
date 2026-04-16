@@ -11,6 +11,7 @@ public sealed class PlayerController : MonoBehaviour
 {
     private IMovementPlayer _movementPlayer = new PlayerMovement();
     private PlayerAnimation _playerAnimation;
+    private CharacterController _characterController;
 
     private Rigidbody _rbPlayer;
     private Vector3 _moveDirection;
@@ -21,23 +22,28 @@ public sealed class PlayerController : MonoBehaviour
     public float _verticalInput;
     [SerializeField] private float yPos;
     [SerializeField] private bool _hasDied = false;
+    [SerializeField] private float moveSpeed = 2.0f;
 
     [Header("Objects")]
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _ground;
-
-
-    [SerializeField] private float moveSpeed = 2.0f;
+    
 
 
     private void Start()
     {
         _rbPlayer = GetComponent<Rigidbody>();
         _playerAnimation = GetComponent<PlayerAnimation>(); 
+        _characterController = GetComponent<CharacterController>();
     }
     private void Update()
     {
         MovePlayer();
+       
+    }
+
+    private void FixedUpdate()
+    {
         Death();
     }
 

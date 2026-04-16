@@ -71,6 +71,7 @@ public class UIManager : MonoBehaviour
         }
         _createPreyer.CreatePlayerPrefab();
         _sceneLoader?.LoadNameScene(nameScene);
+        _mixerManager.HandleSliderGameChanged(0);
     }
 
 
@@ -127,12 +128,14 @@ public class UIManager : MonoBehaviour
     public void LoadSceneButtonClicked(int indexScene)
     {
 
-        if (IsPausedActive)
-        {
-            IsPausedActive = false;
-            _timerController?.SetPauseOff();
-        }
+        //if (IsPausedActive)
+        //{
+        //    IsPausedActive = false;
+        //    _timerController?.SetPauseOff();
+        //}
         _sceneLoader?.LoadLevelButtonClicked(indexScene);
+        _mixerManager.HandleSliderGameChanged(0);
+        _timerController.SetPauseOn();
     }
 
     public void DeactivationCanvas()
