@@ -25,6 +25,7 @@ public class AudioMixerManager : MonoBehaviour
 
     [Header("Button clip")]
     public AudioClip buttonClip;
+    public AudioClip deathClip;
 
     private const float MULTIPLIER = 20f;
 
@@ -57,6 +58,7 @@ public class AudioMixerManager : MonoBehaviour
     private void HandleSliderGameChanged()
     {
         HandleSliderGameChanged(-80f);
+        DeathClip();
     }
 
 
@@ -84,8 +86,8 @@ public class AudioMixerManager : MonoBehaviour
         _audioSource.PlayOneShot(buttonClip);
     }
 
-    //public void StopButtonClick()
-    //{
-    //    _audioSource.Stop();
-    //}
+    public void DeathClip()
+    {
+        _audioSource.PlayOneShot(deathClip);
+    }
 }

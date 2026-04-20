@@ -1328,6 +1328,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007a7cb158543841ab567108c2ae1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1033085012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8746354588622984470, guid: 425dac2dce358fb4298560481446e345, type: 3}
+  m_PrefabInstance: {fileID: 1427319794091609788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1087704664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,6 +2231,32 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1985666977542209403, guid: 425dac2dce358fb4298560481446e345, type: 3}
   m_PrefabInstance: {fileID: 1427319794091609788}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1301579318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033085012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80e9845d384dea34fba9913379ffabbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuData: {fileID: 11400000, guid: be1ff2edca4e1154fad751740a3c7fe7, type: 2}
+  _button: {fileID: 1301579320}
+  _mixer: {fileID: 987519633}
+--- !u!114 &1301579320 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7385284360420056726, guid: 425dac2dce358fb4298560481446e345, type: 3}
+  m_PrefabInstance: {fileID: 1427319794091609788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033085012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1494102860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,7 +2704,7 @@ GameObject:
   - component: {fileID: 1882362224}
   - component: {fileID: 1882362223}
   m_Layer: 0
-  m_Name: ButtonManager
+  m_Name: ScreenOfDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2692,6 +2723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelLost: {fileID: 342433400}
+  canvasLevel1: {fileID: 1087704664}
 --- !u!4 &1882362224
 Transform:
   m_ObjectHideFlags: 0
@@ -2715,6 +2747,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3414110879667278900, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
+      propertyPath: deathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d9ba00d78998bef4896b393fe69d6a83, type: 3}
     - target: {fileID: 3414110879667278900, guid: ceafa8d95b7cff04b98dc60fd985582c, type: 3}
       propertyPath: buttonClip
       value: 
@@ -3371,7 +3407,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8746354588622984470, guid: 425dac2dce358fb4298560481446e345, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1301579318}
   m_SourcePrefab: {fileID: 100100000, guid: 425dac2dce358fb4298560481446e345, type: 3}
 --- !u!1 &1440542773154162390
 GameObject:
