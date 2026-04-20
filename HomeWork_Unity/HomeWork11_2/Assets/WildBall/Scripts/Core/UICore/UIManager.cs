@@ -39,7 +39,6 @@ public class UIManager : MonoBehaviour
         if(EventsBus.Instance != null)
         {
             EventsBus.Instance.OnPlayerDied += DeactivationCanvas;
-            EventsBus.Instance.OnPlayerDied += ButtonActive;
         }
 
     }
@@ -49,15 +48,8 @@ public class UIManager : MonoBehaviour
         if (EventsBus.Instance != null)
         {
             EventsBus.Instance.OnPlayerDied -= DeactivationCanvas;
-            EventsBus.Instance.OnPlayerDied -= ButtonActive;
         }
     }
-
-    public void ButtonActive()
-    {
-        canvasLost.SetActive(true);
-    }
-
 
 
     // Pplay.
@@ -127,15 +119,9 @@ public class UIManager : MonoBehaviour
     // Load Scene.
     public void LoadSceneButtonClicked(int indexScene)
     {
-
-        //if (IsPausedActive)
-        //{
-        //    IsPausedActive = false;
-        //    _timerController?.SetPauseOff();
-        //}
         _sceneLoader?.LoadLevelButtonClicked(indexScene);
         _mixerManager.HandleSliderGameChanged(0);
-        _timerController.SetPauseOn();
+        _timerController.SetPauseOff();
     }
 
     public void DeactivationCanvas()
