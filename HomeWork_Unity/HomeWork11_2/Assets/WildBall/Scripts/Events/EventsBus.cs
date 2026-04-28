@@ -9,6 +9,8 @@ public class EventsBus : MonoBehaviour
 
     public event Action OnPlayerDied;
 
+    public event Action OnCoinDestroy;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -25,5 +27,10 @@ public class EventsBus : MonoBehaviour
     {
         OnPlayerDied?.Invoke();
         Debug.Log("True");
+    }
+
+    public void TriggerCoinDestroy()
+    {
+        OnCoinDestroy?.Invoke();
     }
 }
