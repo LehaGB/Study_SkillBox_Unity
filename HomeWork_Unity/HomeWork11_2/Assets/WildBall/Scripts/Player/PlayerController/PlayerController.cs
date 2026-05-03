@@ -11,7 +11,6 @@ public sealed class PlayerController : MonoBehaviour
 {
     private IMovementPlayer _movementPlayer = new PlayerMovement();
     private PlayerAnimation _playerAnimation;
-    private CharacterController _characterController;
 
     private Rigidbody _rbPlayer;
     private Vector3 _moveDirection;
@@ -34,7 +33,6 @@ public sealed class PlayerController : MonoBehaviour
     {
         _rbPlayer = GetComponent<Rigidbody>();
         _playerAnimation = GetComponent<PlayerAnimation>(); 
-        _characterController = GetComponent<CharacterController>();
     }
     private void Update()
     {

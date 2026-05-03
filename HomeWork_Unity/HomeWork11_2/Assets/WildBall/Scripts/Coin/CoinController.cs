@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class CoinController : MonoBehaviour
 {
-    public GameObject coin;
+    public ParticalController particalController;
 
     private void OnEnable()
     {
-        EventsBus.Instance.OnCoinDestroy += CoinDestroy;
+        if(EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnCoinDestroy += CoinDestroy;
+        }
     }
 
 
     private void OnDestroy()
     {
-        EventsBus.Instance.OnCoinDestroy -= CoinDestroy;
+        if (EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnCoinDestroy -= CoinDestroy;
+        }
     }
 
 
@@ -23,11 +29,12 @@ public class CoinController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             CoinDestroy();
-        }    
+        }
     }
 
     private void CoinDestroy()
     {
-        Destroy(coin);
+        particalController.IsActiveExplosion();
+        Destroy(this.gameObject);
     }
 }

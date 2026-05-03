@@ -1,30 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ParticalController : MonoBehaviour
 {
-    public ParticleSystem _particleSystem;
+    public ParticleSystem exposion;
+
+    private void Awake()
+    {
+        exposion = GetComponent<ParticleSystem>();
+        exposion.Stop();
+    }
 
 
     private void OnEnable()
     {
-        EventsBus.Instance.OnCoinDestroy += IsActiveParticalCoinDestroy;
+        if(EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnCoinDestroy += IsActiveExplosion;        
+        }
     }
+
 
     private void OnDestroy()
     {
-        EventsBus.Instance.OnCoinDestroy -= IsActiveParticalCoinDestroy;
-    }
-    private void Start()
-    {
-        _particleSystem = GetComponent<ParticleSystem>();
-        _particleSystem.Stop();
+        if (EventsBus.Instance != null)
+        {
+            EventsBus.Instance.OnCoinDestroy -= IsActiveExplosion;           
+        }
     }
 
-    public void IsActiveParticalCoinDestroy()
+    public void IsActiveExplosion()
     {
-        _particleSystem.Play();
+        if (exposion != null)
+        {
+            exposion.Play();
+        }
     }
 }
 
