@@ -1,0 +1,209 @@
+[2026-07-15T08:32:00.062Z][INFO] Command-line: 'C:\\Program Files\\Unity\\Hub\\Editor\\6000.5.3f1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe' server -s 10508 --ipc-path Unity-Upm-10508 -l 2 --log-file D:\\Study_SkillBox_Unity\\Lecture_Unity\\Lecture14/Logs/upm.log
+[2026-07-15T08:32:00.120Z][INFO] IPC server started (IPC path=Unity-Upm-10508).
+[2026-07-15T08:32:00.121Z][INFO] Hint: To connect to this UPM instance, launch Unity with the command-line parameter -upmIpcPath Upm-10508.
+[2026-07-15T08:32:31.916Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:32:32.139Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:32:32.190Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-07-15T08:32:32.330Z][INFO] project:update-dependencies <-- Request received
+params: {}
+[2026-07-15T08:32:32.375Z][INFO] project:update-dependencies --> 200 (45 ms)
+[2026-07-15T08:32:32.411Z][INFO] project:resolve-packages <-- Request received
+params: {}
+[2026-07-15T08:32:32.908Z][INFO] config:project:get-registries --> 200 (718 ms)
+[2026-07-15T08:32:33.128Z][INFO] Downloading package [com.unity.package-manager.metadata-6000.5@0.0.54] from registry 'https://packages.unity.com'
+[2026-07-15T08:32:34.626Z][INFO] Finished downloading package [com.unity.package-manager.metadata-6000.5@0.0.54] from registry 'https://packages.unity.com' (size: 11.4 kB, time: 1.4s)
+[2026-07-15T08:32:41.345Z][INFO] project:list-packages --> 200 (9428 ms)
+[2026-07-15T08:32:41.355Z][INFO] project:list-packages --> 200 (9216 ms)
+[2026-07-15T08:33:46.708Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:33:46.731Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:34:58.060Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:36:08.779Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:37:19.507Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:38:30.233Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:40:54.253Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:40:54.255Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:40:54.283Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:40:54.291Z][WARN] Requested version [4.9.3] for package [com.unity.searcher] overridden by minimum version [4.9.4].
+[2026-07-15T08:40:54.291Z][WARN] Requested version [1.8.14] for package [com.unity.burst] overridden by minimum version [1.8.29].
+[2026-07-15T08:40:54.291Z][WARN] Requested version [3.2.0] for package [com.unity.test-framework.performance] overridden by minimum version [3.5.0].
+[2026-07-15T08:40:54.294Z][INFO] project:resolve-packages --> 200 (501883 ms)
+[2026-07-15T08:42:26.042Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:42:26.091Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:42:26.495Z][INFO] project:list-packages --> 200 (453 ms)
+[2026-07-15T08:42:26.497Z][INFO] project:list-packages --> 200 (406 ms)
+[2026-07-15T08:42:31.280Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:42:31.482Z][INFO] project:list-packages --> 200 (203 ms)
+[2026-07-15T08:42:32.035Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-07-15T08:42:32.041Z][INFO] config:project:get-registries --> 200 (6 ms)
+[2026-07-15T08:43:22.064Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:43:22.269Z][INFO] project:list-packages --> 200 (205 ms)
+[2026-07-15T08:43:37.775Z][INFO] packages:get-all-packageinfo <-- Request received
+params: {}
+[2026-07-15T08:43:37.791Z][INFO] packages:get-all-packageinfo <-- Request received
+params: {}
+[2026-07-15T08:43:48.720Z][INFO] packages:get-all-packageinfo --> 200 (10929 ms)
+[2026-07-15T08:44:03.405Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:03.407Z][INFO] packages:get-all-packageinfo --> 504 (25632 ms)
+[2026-07-15T08:44:03.437Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:21.486Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.collab-proxy"
+}
+[2026-07-15T08:44:50.811Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:51.094Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:51.107Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:51.435Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:51.466Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:51.469Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:52.032Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:44:52.417Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:45:08.473Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:45:08.679Z][INFO] project:list-packages --> 200 (206 ms)
+[2026-07-15T08:45:09.106Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:45:09.297Z][INFO] project:list-packages --> 200 (192 ms)
+[2026-07-15T08:45:09.386Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-07-15T08:45:09.392Z][INFO] config:project:get-registries --> 200 (6 ms)
+[2026-07-15T08:45:14.832Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:45:14.847Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:45:21.221Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.collab-proxy"
+}
+[2026-07-15T08:45:35.342Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:00.722Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:46:00.740Z][INFO] packages:get-all-packageinfo <-- Request received
+params: {}
+[2026-07-15T08:46:00.759Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:46:01.980Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:02.025Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:02.087Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:02.727Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:02.815Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:03.031Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:03.047Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:03.559Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:03.609Z][INFO] packages:get-all-packageinfo <-- Request received
+params: {}
+[2026-07-15T08:46:03.626Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:46:23.579Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:25.585Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:38.320Z][INFO] packages:get-all-packageinfo <-- Request received
+params: {}
+[2026-07-15T08:46:38.339Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:46:46.743Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:46:53.377Z][INFO] packages:get-packageinfo --> 200 (92156 ms)
+[2026-07-15T08:46:53.385Z][INFO] packages:get-packageinfo --> 200 (151900 ms)
+[2026-07-15T08:47:13.060Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:13.061Z][INFO] packages:get-all-packageinfo --> 504 (72321 ms)
+[2026-07-15T08:47:13.061Z][INFO] packages:get-all-packageinfo --> 504 (69452 ms)
+[2026-07-15T08:47:13.061Z][INFO] packages:get-all-packageinfo --> 504 (34741 ms)
+[2026-07-15T08:47:13.170Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:13.201Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:13.586Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:13.740Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:13.893Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:13.970Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:15.088Z][INFO] project:list-packages --> 200 (71462 ms)
+[2026-07-15T08:47:15.090Z][INFO] project:list-packages --> 200 (36751 ms)
+[2026-07-15T08:47:15.092Z][INFO] project:list-packages --> 200 (74333 ms)
+[2026-07-15T08:47:15.094Z][INFO] project:list-packages --> 200 (74372 ms)
+[2026-07-15T08:47:34.455Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:36.281Z][ERROR] Error: Cannot connect to 'packages.unity.com' (error code: ECONNRESET). Check your internet connection and verify that your environment firewall policies allow connection to this host name. If your system is behind a proxy, verify your proxy environment variables (HTTP_PROXY and HTTPS_PROXY) are properly set.
+[2026-07-15T08:47:39.575Z][INFO] project:add-remove-dependencies <-- Request received
+params: {}
+[2026-07-15T08:47:46.450Z][INFO] project:add-remove-dependencies --> 200 (6875 ms)
+[2026-07-15T08:47:46.513Z][INFO] project:add-remove-dependencies <-- Request received
+params: {}
+[2026-07-15T08:47:46.807Z][INFO] project:add-remove-dependencies --> 200 (294 ms)
+[2026-07-15T08:47:46.912Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:47:46.937Z][INFO] project:resolve-packages <-- Request received
+params: {}
+[2026-07-15T08:47:47.332Z][INFO] project:list-packages --> 200 (419 ms)
+[2026-07-15T08:47:47.401Z][WARN] Requested version [1.0.3] for package [com.unity.settings-manager] overridden by minimum version [2.1.1].
+[2026-07-15T08:47:47.402Z][WARN] Requested version [4.9.3] for package [com.unity.searcher] overridden by minimum version [4.9.4].
+[2026-07-15T08:47:47.402Z][WARN] Requested version [1.8.14] for package [com.unity.burst] overridden by minimum version [1.8.29].
+[2026-07-15T08:47:47.402Z][WARN] Requested version [3.2.0] for package [com.unity.test-framework.performance] overridden by minimum version [3.5.0].
+[2026-07-15T08:47:47.403Z][INFO] project:resolve-packages --> 200 (466 ms)
+[2026-07-15T08:47:47.490Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-07-15T08:47:47.496Z][INFO] config:project:get-registries --> 200 (6 ms)
+[2026-07-15T08:47:47.500Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:47:48.245Z][INFO] project:list-packages --> 200 (744 ms)
+[2026-07-15T08:48:31.104Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:48:31.160Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:48:31.490Z][INFO] project:list-packages --> 200 (386 ms)
+[2026-07-15T08:48:31.535Z][INFO] project:list-packages --> 200 (375 ms)
+[2026-07-15T08:48:31.779Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:48:31.999Z][INFO] project:list-packages --> 200 (220 ms)
+[2026-07-15T08:48:32.129Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-07-15T08:48:32.134Z][INFO] config:project:get-registries --> 200 (5 ms)
+[2026-07-15T08:48:32.809Z][INFO] packages:get-all-packageinfo <-- Request received
+params: {}
+[2026-07-15T08:48:32.823Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:48:37.191Z][INFO] packages:get-all-packageinfo --> 200 (4382 ms)
+[2026-07-15T08:48:37.828Z][INFO] project:list-packages --> 200 (5005 ms)
+[2026-07-15T08:48:40.032Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-07-15T08:48:40.285Z][INFO] project:list-packages --> 200 (253 ms)
+[2026-07-15T08:48:43.093Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.addressables@2.9.1"
+}
+[2026-07-15T08:48:43.110Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.ads.ios-support@1.0.1"
+}
+[2026-07-15T08:48:43.136Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.learn.iet-framework@5.0.4"
+}
+[2026-07-15T08:48:43.137Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.learn.iet-framework.authoring@1.5.4"
+}
+[2026-07-15T08:48:43.174Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.scriptablebuildpipeline@2.6.1"
+}
+[2026-07-15T08:48:43.175Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.xr.management@4.5.4"
+}
+[2026-07-15T08:48:43.176Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.services.friends@1.1.1"
+}
+[2026-07-15T08:48:43.233Z][INFO] packages:get-packageinfo <-- Request received
+params: {
+  "packageId": "com.unity.services.moderation@1.0.2"
+}
+[2026-07-15T08:48:43.371Z][INFO] packages:get-packageinfo --> 200 (196 ms)
+[2026-07-15T08:48:43.374Z][INFO] packages:get-packageinfo --> 200 (141 ms)
+[2026-07-15T08:48:43.378Z][INFO] packages:get-packageinfo --> 200 (241 ms)
+[2026-07-15T08:48:43.378Z][INFO] packages:get-packageinfo --> 200 (268 ms)
+[2026-07-15T08:48:43.382Z][INFO] packages:get-packageinfo --> 200 (246 ms)
+[2026-07-15T08:48:43.386Z][INFO] packages:get-packageinfo --> 200 (212 ms)
+[2026-07-15T08:48:43.392Z][INFO] packages:get-packageinfo --> 200 (299 ms)
+[2026-07-15T08:48:43.396Z][INFO] packages:get-packageinfo --> 200 (221 ms)
