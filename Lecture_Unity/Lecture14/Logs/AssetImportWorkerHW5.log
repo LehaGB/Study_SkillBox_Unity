@@ -1,0 +1,314 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.3f1 (c2eb47b3a2a9) revision 12774215'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-manay" at "2026-07-16T23:35:44.3464289Z"
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 32691 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-07-16T23:35:44Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorkerHW5
+-projectPath
+D:/Study_SkillBox_Unity/Lecture_Unity/Lecture14
+-logFile
+Logs/AssetImportWorkerHW5.log
+-srvPort
+52847
+-parentPid
+13424
+-analyticsCloudUserId
+10170604318720
+-analyticsCloudProjectId
+138996e7-cd8b-4e23-9567-bff28566770a
+-analyticsLocalProjectId
+0ef6d7e535a4dfb45b4b14f325025679
+-licensingIpc
+LicenseClient-manay
+-noDiagnosticSwitchPersistentStore
+-job-worker-count
+9
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+-force-d3d12
+-name
+AssetImport
+Successfully changed project path to: D:/Study_SkillBox_Unity/Lecture_Unity/Lecture14
+D:/Study_SkillBox_Unity/Lecture_Unity/Lecture14
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [14948]  Target information:
+
+Player connection [14948]  * "[IP] 192.168.3.2 [Port] 0 [Flags] 2 [Guid] 3208061190 [EditorId] 3208061190 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-555S5OC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [14948] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [14948] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 9
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 5.73 ms, found 4 plugins.
+Initialize engine version: 6000.5.3f1 (c2eb47b3a2a9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Study_SkillBox_Unity/Lecture_Unity/Lecture14/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.0]
+    Renderer:        Radeon RX550/550 Series (ID=0x699f)
+    Vendor:          ATI
+    VRAM:            2027 MB
+    App VRAM Budget: 1723 MB
+    Driver:          31.0.21925.1001
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56944
+CodeReloadManager initialized
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006312 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-manay"
+[Licensing::IpcConnector] LicenseClient-manay channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-manay-6000.5.3" at "2026-07-16T23:35:46.8286185Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 3384, path: "C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              5db2c100f9814f5e93fea92712133af4
+  Correlation Id:          761efa5b70ba62cc611e21e693e20ccc
+  External correlation Id: 8500739863073093873
+  Machine Id:              j+KDI9dr2v7fIk8nSuYMBFzlSrU=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-manay-6000.5.3" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-manay-6000.5.3-notifications" at "2026-07-16T23:35:46.8424695Z"
+[Licensing::Module] Licensing Background thread has ended after 2.50s
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.887 seconds
+Domain Reload Profiling: 2088ms
+	BeginReloadAssembly (292ms)
+	RebuildCommonClasses (10ms)
+	RebuildNativeTypeToScriptingClass (48ms)
+	initialDomainReloadingComplete (153ms)
+	LoadAllAssembliesAndSetupDomain (693ms)
+		LoadAssemblies (284ms)
+		AnalyzeDomain (493ms)
+			TypeCache.Refresh (491ms)
+				TypeCache.ScanAssembly (457ms)
+	FinalizeReload (891ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			BeforeProcessingInitializeOnLoad (225ms)
+			ProcessInitializeOnLoadAttributes (223ms)
+			ProcessInitializeOnLoadMethodAttributes (236ms)
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 10170604318720-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Curl error 3: URL rejected: Malformed input to a URL function
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 2.28 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 2.37 ms, found 4 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Lecture14
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.740 seconds
+Domain Reload Profiling: 3749ms
+	BeginReloadAssembly (429ms)
+		DisableScriptedObjects (13ms)
+		CreateAndSetChildDomain (71ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (47ms)
+	initialDomainReloadingComplete (127ms)
+	LoadAllAssembliesAndSetupDomain (1386ms)
+		LoadAssemblies (740ms)
+		AnalyzeDomain (598ms)
+			TypeCache.Refresh (420ms)
+				TypeCache.ScanAssembly (390ms)
+			BuildScriptInfoCaches (157ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1742ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (215ms)
+			ProcessInitializeOnLoadAttributes (663ms)
+			ProcessInitializeOnLoadMethodAttributes (335ms)
+			AfterProcessingInitializeOnLoad (16ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+AcceleratorClientConnectionCallback - disconnected - :0
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.38 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Curl error 3: URL rejected: Malformed input to a URL function
+Unloading 6801 unused Assets / (5.8 MB). Loaded Objects now: 7638.
+Memory consumption went from 326.8 MB to 321.0 MB.
+Total: 19.589600 ms (FindLiveObjects: 1.104000 ms CreateObjectMapping: 3.063400 ms MarkObjects: 11.779900 ms  DeleteObjects: 3.639300 ms)
+
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 2.96 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (2.7 MB). Loaded Objects now: 7638.
+Memory consumption went from 319.2 MB to 316.6 MB.
+Total: 14.947800 ms (FindLiveObjects: 0.690000 ms CreateObjectMapping: 1.142600 ms MarkObjects: 12.416800 ms  DeleteObjects: 0.696900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-16T23:36:13.8656804Z
+  Time since last request: 138669.37540580000496 seconds.
+  importAddress: GUID: c04f621cdda82d1458fb99389ac52297 - Path: Assets/Materials - Importer: PreviewImporter
+Importing 'GUID: c04f621cdda82d1458fb99389ac52297 - Path: Assets/Materials - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: c04f621cdda82d1458fb99389ac52297' -> (Import Result ID: '4ddc11e8cfe5db17c0bc9691ea9fbf35') in 0.007 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a7f1088b5db40f1b837ee684a469ab94 DependenciesID=3017b46e777ada4fcb01c8edaf1a7fcc StaticDependenciesID=b53573693aa2b1bb3c3883620c0a1ed4 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-16T23:51:00.5759767Z
+  Time since last request: 886.68460030000006 seconds.
+  importAddress: GUID: 6b62c09da35c8c542abe6127eed79131 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_preview.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 6b62c09da35c8c542abe6127eed79131 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_preview.jpg - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 6b62c09da35c8c542abe6127eed79131' -> (Import Result ID: '3ec29c600c109f012e9a6c639e3c06cc') in 0.255 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=edebba57c1184d1a3d0d88d50af70298 DependenciesID=a462774e2edfeae0c066535f1d1480df StaticDependenciesID=bef12eab14862fea720ee907a2b3f6bd 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-16T23:51:00.8493827Z
+  Time since last request: 0.0005124 seconds.
+  importAddress: GUID: 51a69502d6045ea45993db169a01e9d4 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_metallic.psd - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 51a69502d6045ea45993db169a01e9d4 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_metallic.psd - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 51a69502d6045ea45993db169a01e9d4' -> (Import Result ID: '0f5a88a2d4e4159f65ada6e49f0aa24f') in 0.024 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=815d1be2386edbef616792bc8c26ae5f DependenciesID=cbfb83a64a447abdcc75cfbfa19ae179 StaticDependenciesID=78ddd8066fa15af7fe596fe9f5431a8e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-16T23:51:00.8916484Z
+  Time since last request: 0.0004496 seconds.
+  importAddress: GUID: 95c835a8305aec84a90dcd0d8ee00413 - Path: Assets/Materials/Materials/lunar-rock2-unity/lunar_rock2_Metallic.psd - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 95c835a8305aec84a90dcd0d8ee00413 - Path: Assets/Materials/Materials/lunar-rock2-unity/lunar_rock2_Metallic.psd - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 95c835a8305aec84a90dcd0d8ee00413' -> (Import Result ID: '42b78d2014b35fc975455a22f030bd99') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=064d4d0a77328af245ae205eb6e481e4 DependenciesID=912486eaefe589ad31f77d941cd6fda4 StaticDependenciesID=bcbe1499b335b4d48060c41cdf6b16a1 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-16T23:51:00.9291274Z
+  Time since last request: 0.000457 seconds.
+  importAddress: GUID: c3c0a38bb3caf4245849ff433a5c3b67 - Path: Assets/Materials/Materials/older-wood-flooring-unity/older-wood-flooring_albedo.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: c3c0a38bb3caf4245849ff433a5c3b67 - Path: Assets/Materials/Materials/older-wood-flooring-unity/older-wood-flooring_albedo.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: c3c0a38bb3caf4245849ff433a5c3b67' -> (Import Result ID: 'ba4bd8c6365a2f7537c597c502f52106') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=de48058c4ce91106fa96e1a94323679a DependenciesID=b791fea27250863dd037b523f76152a0 StaticDependenciesID=7be1bac98b0aaf1331c54e21c18bbc91 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-16T23:51:00.9610512Z
+  Time since last request: 0.0004072 seconds.
+  importAddress: GUID: b36ccc55e1503b4448a3bfc5e9de79e0 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_ao.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: b36ccc55e1503b4448a3bfc5e9de79e0 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_ao.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: b36ccc55e1503b4448a3bfc5e9de79e0' -> (Import Result ID: '773598dd3ad25e11f9d8d934baf7f946') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2ced7fed0eda6fd9fe160f6000abe2d9 DependenciesID=aa3b8bf8b02763f620dfce086d4b7633 StaticDependenciesID=d97710b1bc8429b19c38dab08c906e21 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-16T23:51:00.998018Z
+  Time since last request: 0.0005385 seconds.
+  importAddress: GUID: dfb9976560c166647bd91b8ecce0ffb1 - Path: Assets/Materials/Materials/lunar-rock2-unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: dfb9976560c166647bd91b8ecce0ffb1 - Path: Assets/Materials/Materials/lunar-rock2-unity - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: dfb9976560c166647bd91b8ecce0ffb1' -> (Import Result ID: '278b6840820547a8a7bd773d97c88d10') in 0.006 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=99fc1474ff4472d11e7b6ea17a012b32 DependenciesID=ba0c08f6f212e78be6f7ab901e94a706 StaticDependenciesID=c3e76b0885a15a491a456d6a481150bc 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-16T23:51:01.024845Z
+  Time since last request: 0.0005065 seconds.
+  importAddress: GUID: f3a98b4459d8b0c4e8e26dfd105cbadb - Path: Assets/Materials/Materials/lunar-rock2-unity/lunar_rock2_albedo.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: f3a98b4459d8b0c4e8e26dfd105cbadb - Path: Assets/Materials/Materials/lunar-rock2-unity/lunar_rock2_albedo.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: f3a98b4459d8b0c4e8e26dfd105cbadb' -> (Import Result ID: '83892ed04601a702d76c45f7d9f04611') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=712cbbc837a756978d3edfbef571a1d2 DependenciesID=5545660eb12cb5e95022bb18a14bdfb7 StaticDependenciesID=f5ad7e9f050de0e58402148e43dbe277 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

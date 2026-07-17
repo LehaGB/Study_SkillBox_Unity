@@ -1,0 +1,882 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.3f1 (c2eb47b3a2a9) revision 12774215'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ru' Physical Memory: 32691 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-manay" at "2026-07-17T04:40:56.5574141Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-07-17T04:40:56Z
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.5.3f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorkerHW13
+-projectPath
+D:/Study_SkillBox_Unity/Lecture_Unity/Lecture14
+-logFile
+Logs/AssetImportWorkerHW13.log
+-srvPort
+52847
+-parentPid
+13424
+-analyticsCloudUserId
+10170604318720
+-analyticsCloudProjectId
+138996e7-cd8b-4e23-9567-bff28566770a
+-analyticsLocalProjectId
+0ef6d7e535a4dfb45b4b14f325025679
+-licensingIpc
+LicenseClient-manay
+-noDiagnosticSwitchPersistentStore
+-job-worker-count
+9
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+-force-d3d12
+-name
+AssetImport
+Successfully changed project path to: D:/Study_SkillBox_Unity/Lecture_Unity/Lecture14
+D:/Study_SkillBox_Unity/Lecture_Unity/Lecture14
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Player connection [16140]  Target information:
+
+Player connection [16140]  * "[IP] 192.168.3.2 [Port] 0 [Flags] 2 [Guid] 253263232 [EditorId] 253263232 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-555S5OC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [16140]  * "[IP] 172.17.37.61 [Port] 0 [Flags] 2 [Guid] 253263232 [EditorId] 253263232 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-555S5OC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [16140] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [16140] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 9
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 4.90 ms, found 4 plugins.
+Initialize engine version: 6000.5.3f1 (c2eb47b3a2a9)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Study_SkillBox_Unity/Lecture_Unity/Lecture14/Assets
+Forcing GfxDevice: Direct3D 12
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.0]
+    Renderer:        Radeon RX550/550 Series (ID=0x699f)
+    Vendor:          ATI
+    VRAM:            2027 MB
+    App VRAM Budget: 1723 MB
+    Driver:          31.0.21925.1001
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56324
+CodeReloadManager initialized
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004896 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-manay"
+[Licensing::IpcConnector] LicenseClient-manay channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-manay-6000.5.3" at "2026-07-17T04:40:58.6932567Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 3384, path: "C:/Program Files/Unity/Hub/Editor/6000.5.3f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              24409ecdeead42e3a0fff51441f378b2
+  Correlation Id:          761efa5b70ba62cc611e21e693e20ccc
+  External correlation Id: 7867577790824894611
+  Machine Id:              j+KDI9dr2v7fIk8nSuYMBFzlSrU=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-manay-6000.5.3" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-manay-6000.5.3-notifications" at "2026-07-17T04:40:58.7047611Z"
+[Licensing::Module] Licensing Background thread has ended after 2.15s
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.780 seconds
+Domain Reload Profiling: 1847ms
+	BeginReloadAssembly (274ms)
+	RebuildCommonClasses (10ms)
+	RebuildNativeTypeToScriptingClass (38ms)
+	initialDomainReloadingComplete (136ms)
+	LoadAllAssembliesAndSetupDomain (604ms)
+		LoadAssemblies (267ms)
+		AnalyzeDomain (428ms)
+			TypeCache.Refresh (426ms)
+				TypeCache.ScanAssembly (400ms)
+	FinalizeReload (784ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (194ms)
+			ProcessInitializeOnLoadAttributes (201ms)
+			ProcessInitializeOnLoadMethodAttributes (215ms)
+Initializing Unity extensions:
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 10170604318720-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Curl error 3: URL rejected: Malformed input to a URL function
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 2.27 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 2.41 ms, found 4 plugins.
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Lecture14
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.578 seconds
+Domain Reload Profiling: 3403ms
+	BeginReloadAssembly (389ms)
+		DisableScriptedObjects (12ms)
+		CreateAndSetChildDomain (54ms)
+	RebuildCommonClasses (16ms)
+	RebuildNativeTypeToScriptingClass (40ms)
+	initialDomainReloadingComplete (120ms)
+	LoadAllAssembliesAndSetupDomain (1259ms)
+		LoadAssemblies (696ms)
+		AnalyzeDomain (532ms)
+			TypeCache.Refresh (363ms)
+				TypeCache.ScanAssembly (336ms)
+			BuildScriptInfoCaches (148ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1580ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (195ms)
+			ProcessInitializeOnLoadAttributes (609ms)
+			ProcessInitializeOnLoadMethodAttributes (308ms)
+			AfterProcessingInitializeOnLoad (17ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+AcceleratorClientConnectionCallback - disconnected - :0
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 2.28 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Curl error 3: URL rejected: Malformed input to a URL function
+Unloading 6801 unused Assets / (5.7 MB). Loaded Objects now: 7638.
+Memory consumption went from 327.6 MB to 321.8 MB.
+Total: 20.045500 ms (FindLiveObjects: 1.208500 ms CreateObjectMapping: 3.469200 ms MarkObjects: 11.812700 ms  DeleteObjects: 3.550600 ms)
+
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:16.4183198Z
+  Time since last request: 156971.92804490000708 seconds.
+  importAddress: GUID: 0fd2da29303ebcb4cb50ad1cccf7f097 - Path: Assets/Cartoon_Texture_Pack/DIRT/Dirt_Path/Textures/Dirt_Path_AO.png - Importer: PreviewImporter
+Importing 'GUID: 0fd2da29303ebcb4cb50ad1cccf7f097 - Path: Assets/Cartoon_Texture_Pack/DIRT/Dirt_Path/Textures/Dirt_Path_AO.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 0fd2da29303ebcb4cb50ad1cccf7f097' -> (Import Result ID: 'dd245822c740d4c932bbf846a96ee8a0') in 0.104 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1be67358a1e07bb6b335b32063615da6 DependenciesID=9eca26993749167739d9502b4eee508d StaticDependenciesID=c1fcc63168bf748c0be4de2c2fdfe5b0 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:16.5424977Z
+  Time since last request: 0.0000847 seconds.
+  importAddress: GUID: 819311b7a66a8f740b104cf9f9ffadf5 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Base_Basecolor_A.png - Importer: PreviewImporter
+Importing 'GUID: 819311b7a66a8f740b104cf9f9ffadf5 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Base_Basecolor_A.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 819311b7a66a8f740b104cf9f9ffadf5' -> (Import Result ID: '55313a8899a72a1c8f0284fc7a528792') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eeba8fd0f9e2da0cd6e394995edc78f4 DependenciesID=39c771477dbfbe32d29fd8df8f149a98 StaticDependenciesID=ff959dbdd97fb1e8e331ea6d3898efcf 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:17.4697469Z
+  Time since last request: 0.8927465 seconds.
+  importAddress: GUID: 37c1e9a27bd81b34394f21e47a60898d - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Base_Height.png - Importer: PreviewImporter
+Importing 'GUID: 37c1e9a27bd81b34394f21e47a60898d - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Base_Height.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 37c1e9a27bd81b34394f21e47a60898d' -> (Import Result ID: 'f48d8fe70286cb06c09b58c7ccbb0cad') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f9c26b821cdea40ebded1d2fba45fd3b DependenciesID=1e4cbe72adf05ec7914af6d480f96365 StaticDependenciesID=adeabf81effebf959be903fe57d20f48 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:17.8206952Z
+  Time since last request: 0.3227593 seconds.
+  importAddress: GUID: 1f21d5ac8dad4734bb43db84411fe576 - Path: Assets/Materials/Materials/ancient-pot1-unity/ancient-pot1_normal-ogl.png - Importer: PreviewImporter
+Importing 'GUID: 1f21d5ac8dad4734bb43db84411fe576 - Path: Assets/Materials/Materials/ancient-pot1-unity/ancient-pot1_normal-ogl.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 1f21d5ac8dad4734bb43db84411fe576' -> (Import Result ID: '74090bd9be05407cf90c330eb22c1f92') in 0.039 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a7c16c73f1444529f16e7eb85d3a3371 DependenciesID=c5392bb11bd40f7075dc995062dc7517 StaticDependenciesID=3dc1f18e35829a7c70458dac7a837909 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:18.0524161Z
+  Time since last request: 0.1697946 seconds.
+  importAddress: GUID: 5c416ee0026ae4343b2f56f452baf765 - Path: Assets/Materials/Materials/ancient-pot1-unity/ancient-pot1_ao.png - Importer: PreviewImporter
+Importing 'GUID: 5c416ee0026ae4343b2f56f452baf765 - Path: Assets/Materials/Materials/ancient-pot1-unity/ancient-pot1_ao.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 5c416ee0026ae4343b2f56f452baf765' -> (Import Result ID: 'b440f57bf274d42617c9d8d7351c51fb') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6f4caec9c4481291c78ec82c35ff44e7 DependenciesID=8e2845e905169574347cce6c80c7a458 StaticDependenciesID=ff977e237a645b8e65783c44927f8714 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:18.0849118Z
+  Time since last request: 0.0013729 seconds.
+  importAddress: GUID: 6b62c09da35c8c542abe6127eed79131 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_preview.jpg - Importer: PreviewImporter
+Importing 'GUID: 6b62c09da35c8c542abe6127eed79131 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_preview.jpg - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 6b62c09da35c8c542abe6127eed79131' -> (Import Result ID: 'faba3d273e6c6488a7cbacf9c2dda9ba') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2c359bbb121b27bb5940f93d269b6dad DependenciesID=d0ffd87a505627054cce77e7d74459fd StaticDependenciesID=20dd10bad9abc8bd42b2f2c0dd804942 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:18.2928798Z
+  Time since last request: 0.1795896 seconds.
+  importAddress: GUID: 51a69502d6045ea45993db169a01e9d4 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_metallic.psd - Importer: PreviewImporter
+Importing 'GUID: 51a69502d6045ea45993db169a01e9d4 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_metallic.psd - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 51a69502d6045ea45993db169a01e9d4' -> (Import Result ID: '068bacdec41605b83e7a796dbd6c65b8') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4ed95e11f9d69044910d9d92ca7af44c DependenciesID=c99787cfb1d27045b9ac6be3b8744782 StaticDependenciesID=413b0ce8efaab81b9ecf77cb1c5b40d8 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:18.3624384Z
+  Time since last request: 0.0409717 seconds.
+  importAddress: GUID: b36ccc55e1503b4448a3bfc5e9de79e0 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_ao.png - Importer: PreviewImporter
+Importing 'GUID: b36ccc55e1503b4448a3bfc5e9de79e0 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_ao.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: b36ccc55e1503b4448a3bfc5e9de79e0' -> (Import Result ID: '2d518e1d086dafc25ee869330d7adc73') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fc0d53a8ef1fbbb5b720b7925596e954 DependenciesID=859b308541cd1ed0b3d5578efde47afe StaticDependenciesID=2573788becdad6a013f5e66d34d3f0c7 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:18.7091833Z
+  Time since last request: 0.3189339 seconds.
+  importAddress: GUID: 4ebbe6b0af9f02b4583c3b6f4085a041 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_albedo.png - Importer: PreviewImporter
+Importing 'GUID: 4ebbe6b0af9f02b4583c3b6f4085a041 - Path: Assets/Materials/Materials/alley-brick-wall-unity/alley-brick-wall_albedo.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 4ebbe6b0af9f02b4583c3b6f4085a041' -> (Import Result ID: '28af5a5b990c7163a73444e350c7e066') in 0.011 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=189577c1f063aa6a5fcb2cc3f5ad13e9 DependenciesID=cd68c134cd07a1e9090d23c9cf0509f1 StaticDependenciesID=bb027feecc3a53000a8f4649a9c57490 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:21.6171107Z
+  Time since last request: 2.880685 seconds.
+  importAddress: GUID: 8b6ec8cd3adbc7a45a52309309dff911 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Base_Normal.png - Importer: PreviewImporter
+Importing 'GUID: 8b6ec8cd3adbc7a45a52309309dff911 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Base_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 8b6ec8cd3adbc7a45a52309309dff911' -> (Import Result ID: '43f7c1ca359508df0f4c9797f85e2915') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b636317e673219032e0a76d992acee0b DependenciesID=0946c9455366487bf8ba390d9123e0dc StaticDependenciesID=ad52e5cefdf2d60c42c88b66f0893652 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:29.858594Z
+  Time since last request: 8.2079592 seconds.
+  importAddress: GUID: e65e8c6f286469944a22f2777d8e870c - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_A_Basecolor.png - Importer: PreviewImporter
+Importing 'GUID: e65e8c6f286469944a22f2777d8e870c - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_A_Basecolor.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: e65e8c6f286469944a22f2777d8e870c' -> (Import Result ID: 'c1410031efcc095954c0b2983623323c') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8e1c5fbbac3719b2275a490d6c227c1c DependenciesID=324cbef3280c1b04ef42ebe6a4c76f5c StaticDependenciesID=ff686273ef2666e321b9fb9541bfdeae 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:41:49.1104927Z
+  Time since last request: 19.2236365 seconds.
+  importAddress: GUID: 485579f8413f7004f9dca23cd867a1c6 - Path: Assets/Materials/Materials/pebbled-asphalt1-unity - Importer: PreviewImporter
+Importing 'GUID: 485579f8413f7004f9dca23cd867a1c6 - Path: Assets/Materials/Materials/pebbled-asphalt1-unity - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 485579f8413f7004f9dca23cd867a1c6' -> (Import Result ID: '839c09feec5e256632dc9889762bff85') in 0.001 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=edd2589b8a1ca1f6c633c98645afa407 DependenciesID=5516f8664ce872f34abd3706366fb204 StaticDependenciesID=e22d2a345f2e2b8975003a0ec5dd3eb7 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:42:13.1561553Z
+  Time since last request: 24.0282663 seconds.
+  importAddress: GUID: 2ee673fb1604abe4aa784768c736cead - Path: Assets/Materials/Materials/pebbled-asphalt1-unity/pebbled_asphalt_Normal-ogl.png - Importer: PreviewImporter
+Importing 'GUID: 2ee673fb1604abe4aa784768c736cead - Path: Assets/Materials/Materials/pebbled-asphalt1-unity/pebbled_asphalt_Normal-ogl.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 2ee673fb1604abe4aa784768c736cead' -> (Import Result ID: 'd1aedb22c92ed4944009547d70a7158c') in 0.023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b628dcee4547d17568c47e30107c245 DependenciesID=aa261bd9aadda8bdfc1b1db8f643d493 StaticDependenciesID=d2ab35d393345a5ef53df38c296fd99f 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 2.59 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (2.7 MB). Loaded Objects now: 7645.
+Memory consumption went from 322.2 MB to 319.5 MB.
+Total: 15.147300 ms (FindLiveObjects: 0.651200 ms CreateObjectMapping: 1.088400 ms MarkObjects: 12.740000 ms  DeleteObjects: 0.666300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T04:42:20.6812643Z
+  Time since last request: 7.4864072 seconds.
+  importAddress: GUID: 2ee673fb1604abe4aa784768c736cead - Path: Assets/Materials/Materials/pebbled-asphalt1-unity/pebbled_asphalt_Normal-ogl.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 2ee673fb1604abe4aa784768c736cead - Path: Assets/Materials/Materials/pebbled-asphalt1-unity/pebbled_asphalt_Normal-ogl.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 2ee673fb1604abe4aa784768c736cead' -> (Import Result ID: 'a40a9924ed6402d92fb857d036e0ffa1') in 0.207 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=561d0a4c8ce1994c362b09e3dc2f0231 DependenciesID=51ec0c70b38e03df5b84e7861cbbfcef StaticDependenciesID=beae5c9a2bf5f3c926a88ed26f99c923 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:04:16.4932662Z
+  Time since last request: 1315.58918319999998 seconds.
+  importAddress: GUID: 28978f28093cc594fadf948eac254615 - Path: Assets/Materials/Wall3.mat - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 28978f28093cc594fadf948eac254615 - Path: Assets/Materials/Wall3.mat - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 28978f28093cc594fadf948eac254615' -> (Import Result ID: '2ada9f7b0754ed6a7fe843685132bb64') in 0.037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4539db9a36b0749cb77e385e0254c5f6 DependenciesID=1c1301016d9eabdb74c0619268347b50 StaticDependenciesID=ded9cf68d50b67538335b04234949441 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:04:50.0888089Z
+  Time since last request: 33.5409663 seconds.
+  importAddress: GUID: 6e706bebd015e8f4c9639b62f744ca77 - Path: Assets/Materials/Materials/pine-tree-bark-unity/pine-tree-bark_normal-ogl.png - Importer: PreviewImporter
+Importing 'GUID: 6e706bebd015e8f4c9639b62f744ca77 - Path: Assets/Materials/Materials/pine-tree-bark-unity/pine-tree-bark_normal-ogl.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 6e706bebd015e8f4c9639b62f744ca77' -> (Import Result ID: '1e3cf3e0d86191a15dfb88a8ebcdaaab') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=91ee35508640d212d0baa3a66abcd521 DependenciesID=270302f6dc8755c6fddf21bc34bce4eb StaticDependenciesID=5b6bc83a23bb226492161100f798956f 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 2.56 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (2.7 MB). Loaded Objects now: 7645.
+Memory consumption went from 324.2 MB to 321.6 MB.
+Total: 16.701500 ms (FindLiveObjects: 0.694600 ms CreateObjectMapping: 1.114800 ms MarkObjects: 14.196900 ms  DeleteObjects: 0.693400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:04:55.716066Z
+  Time since last request: 5.5962507 seconds.
+  importAddress: GUID: 6e706bebd015e8f4c9639b62f744ca77 - Path: Assets/Materials/Materials/pine-tree-bark-unity/pine-tree-bark_normal-ogl.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 6e706bebd015e8f4c9639b62f744ca77 - Path: Assets/Materials/Materials/pine-tree-bark-unity/pine-tree-bark_normal-ogl.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 6e706bebd015e8f4c9639b62f744ca77' -> (Import Result ID: '713a22f6f84341aefbc49d2edacf28d1') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6fa6ede043ad7320899902463d2ce9b5 DependenciesID=3e0332a2004ae127433b72c30c9b7822 StaticDependenciesID=3cc707f22161e8bd2f5c3c2b8d4bb298 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:11:46.3658863Z
+  Time since last request: 410.61744270000003 seconds.
+  importAddress: GUID: 037883eeb0af4244d9d795338efeb9c0 - Path: Assets/Materials/Partical.mat - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: 037883eeb0af4244d9d795338efeb9c0 - Path: Assets/Materials/Partical.mat - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: 037883eeb0af4244d9d795338efeb9c0' -> (Import Result ID: 'b8e30df05a794c00aee333067c382950') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=93428c187f99b7a1a205def64168227c DependenciesID=d9dc38952e3b7267251c404ab21aed29 StaticDependenciesID=8ec3eec25eb0acd05efbe59d62d9d161 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:13.7297918Z
+  Time since last request: 147.3276328 seconds.
+  importAddress: GUID: 2391acbc368b2784f8b045f39a947221 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_A_Metallic.png - Importer: PreviewImporter
+Importing 'GUID: 2391acbc368b2784f8b045f39a947221 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_A_Metallic.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 2391acbc368b2784f8b045f39a947221' -> (Import Result ID: '76a2b4723e56c76d6c8bda4104d9f95a') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ec4ecf35ba7c64eea4011e1ba3044a4b DependenciesID=ad0d50fabb1ee2f83e1a8640006883f2 StaticDependenciesID=bdacad8aefbeec4543659dcd217f24af 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:14.0821847Z
+  Time since last request: 0.3202286 seconds.
+  importAddress: GUID: f7f1d2a9ada49584d83fd0238d35adb1 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_B_AO.png - Importer: PreviewImporter
+Importing 'GUID: f7f1d2a9ada49584d83fd0238d35adb1 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_B_AO.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: f7f1d2a9ada49584d83fd0238d35adb1' -> (Import Result ID: '5e260a083bdf70488231549c5f833447') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e524b4824602c7d6cffe6bc9cebc4723 DependenciesID=f93cc58cc643ec68a4929e071c5725a3 StaticDependenciesID=5965a68e71866a518182df3a91c6434b 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:14.3455772Z
+  Time since last request: 0.2323299 seconds.
+  importAddress: GUID: 8342664333482734c81dc32fe1b316f0 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_B_Height.png - Importer: PreviewImporter
+Importing 'GUID: 8342664333482734c81dc32fe1b316f0 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_B_Height.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 8342664333482734c81dc32fe1b316f0' -> (Import Result ID: '0a954a206d7e25812862163badf977c9') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dec1b94cf2df36ee841da7962307a9f5 DependenciesID=ff99b20afa2fc67e1e8166e544ff0a33 StaticDependenciesID=894a4a907c9c07da532edafd28a58cd6 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:14.6263589Z
+  Time since last request: 0.2487048 seconds.
+  importAddress: GUID: 0f84519bcde78484388818cad0da1439 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_B_Normal.png - Importer: PreviewImporter
+Importing 'GUID: 0f84519bcde78484388818cad0da1439 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_B_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 0f84519bcde78484388818cad0da1439' -> (Import Result ID: '7df1072baa6f79135d2e26e97ebf9d7e') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eca08bf9e69a26d069396aca8e7b596b DependenciesID=024f6dca93454e59ff215c0057080c72 StaticDependenciesID=ad733ab9fa38de1dc126c529b14445d0 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:14.6736162Z
+  Time since last request: 0.0142253 seconds.
+  importAddress: GUID: 2f9b52419a7aab04aa2a67b1d5433369 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Base_Basecolor_A.png - Importer: PreviewImporter
+Importing 'GUID: 2f9b52419a7aab04aa2a67b1d5433369 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Base_Basecolor_A.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 2f9b52419a7aab04aa2a67b1d5433369' -> (Import Result ID: '700a210e8981ae46278b8b6f74d787e6') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bded51d03c8de775ec24dae662e5eb05 DependenciesID=cd72704c0989705c2ecbb4498c335a6f StaticDependenciesID=2c0d04612758cf77be64164dd499dbb7 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:14.9383958Z
+  Time since last request: 0.2330151 seconds.
+  importAddress: GUID: fddb796191afb2947993970b4084592b - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Base_Basecolor_C.png - Importer: PreviewImporter
+Importing 'GUID: fddb796191afb2947993970b4084592b - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Base_Basecolor_C.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: fddb796191afb2947993970b4084592b' -> (Import Result ID: 'a204e566e92143779de8a7ecd0004a50') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=de888824cac51a98ae58ae79b2438ee0 DependenciesID=0b89a0d64e5f5e94fa2667031a517b1d StaticDependenciesID=47a0b3ce1fb76a66c73c1c0c528fbf06 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:15.1782922Z
+  Time since last request: 0.2093026 seconds.
+  importAddress: GUID: 145fe03e449ee0046a4821ab51dcaabc - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Base_Metallic.png - Importer: PreviewImporter
+Importing 'GUID: 145fe03e449ee0046a4821ab51dcaabc - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Base_Metallic.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 145fe03e449ee0046a4821ab51dcaabc' -> (Import Result ID: '7e9e78702556620116ec741dcc4931ee') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=736a46073224db3621174e43f87506b7 DependenciesID=db741ded52cf1e270eeda47af3d3538b StaticDependenciesID=c9a477c9eed3ed52c7a80430f6649c26 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:15.4342971Z
+  Time since last request: 0.2247941 seconds.
+  importAddress: GUID: 59957d2caafe37040ab4e99191f9c6cf - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_A_AO.png - Importer: PreviewImporter
+Importing 'GUID: 59957d2caafe37040ab4e99191f9c6cf - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_A_AO.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 59957d2caafe37040ab4e99191f9c6cf' -> (Import Result ID: 'bcc0512d8fa5e6d1d849a471444a36c1') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d39c263b653689f97906a9f666ebc62d DependenciesID=ac3a063f30dc6e6535946862614d5fcd StaticDependenciesID=8861f75d4d7adb411826bfde156ebafa 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:15.467592Z
+  Time since last request: 0.0022065 seconds.
+  importAddress: GUID: ddabfb676c2439e46b7d0908befa50eb - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_A_Height.png - Importer: PreviewImporter
+Importing 'GUID: ddabfb676c2439e46b7d0908befa50eb - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_A_Height.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: ddabfb676c2439e46b7d0908befa50eb' -> (Import Result ID: 'f9f2def02eed21b67a7b0d18f25ccb98') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e4a6758d3871ffe7b031cbe0febc5525 DependenciesID=94830686c736987d5f4ddedef7a3d8de StaticDependenciesID=c832ffb2028fe93540bff54a54d9e17f 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:15.7138044Z
+  Time since last request: 0.2132742 seconds.
+  importAddress: GUID: 9ae13c909d9484e4eb0aa286d6774fd8 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_A_Normal.png - Importer: PreviewImporter
+Importing 'GUID: 9ae13c909d9484e4eb0aa286d6774fd8 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_A_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 9ae13c909d9484e4eb0aa286d6774fd8' -> (Import Result ID: '7476dbdfb79a274d8908026115d886b8') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=60978762498f9a8b6d809a6407af28b5 DependenciesID=c3ff8c2f7498b39bbcdbf063771f3d6f StaticDependenciesID=196102693c85a5ea38395baec58b2732 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:15.7470492Z
+  Time since last request: 0.0003922 seconds.
+  importAddress: GUID: 7f08d8b457f190e44ab8f5fa4687ec18 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_B_Height.png - Importer: PreviewImporter
+Importing 'GUID: 7f08d8b457f190e44ab8f5fa4687ec18 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_B_Height.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 7f08d8b457f190e44ab8f5fa4687ec18' -> (Import Result ID: '07011d4797cba724072d637d03c471a0') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6ca5d3865bdeea969a3b24ffb1650e13 DependenciesID=894ac90ef4dbcd05015fd0f776b30c06 StaticDependenciesID=d96f48b2a6316cabb0b1dc63ef23a889 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:15.9867969Z
+  Time since last request: 0.2070467 seconds.
+  importAddress: GUID: 3eda16ad9eab1d94ea43e180d519be5f - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_B_Metallic.png - Importer: PreviewImporter
+Importing 'GUID: 3eda16ad9eab1d94ea43e180d519be5f - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_02/Textures/Grass_Dense_Tint_02_Leaves_B_Metallic.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 3eda16ad9eab1d94ea43e180d519be5f' -> (Import Result ID: '7e2f9e92c0f2924bf8afc9407a0c4570') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=60c39adccac816c9d268cb5e75b4aa7f DependenciesID=e0c706d41f4a476b948d229c68e43cfe StaticDependenciesID=2da703930f31d17d2cc9727e12e607aa 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:16.0358246Z
+  Time since last request: 0.0161511 seconds.
+  importAddress: GUID: d44b96bea76dbd8449f8a75a6be91383 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Base_AO.png - Importer: PreviewImporter
+Importing 'GUID: d44b96bea76dbd8449f8a75a6be91383 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Base_AO.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: d44b96bea76dbd8449f8a75a6be91383' -> (Import Result ID: '3abf9430b1a09458b0868af468431ff5') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0dc9a94f4538e074b50153d4bb5b232b DependenciesID=3881c4233f0379993428a630ec781d86 StaticDependenciesID=f4cbc010b79950119bb22da1fa259ee1 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:16.2815345Z
+  Time since last request: 0.2136477 seconds.
+  importAddress: GUID: 1eca799978b1f9d40bab4f7b58f05538 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Base_Height.png - Importer: PreviewImporter
+Importing 'GUID: 1eca799978b1f9d40bab4f7b58f05538 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Base_Height.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 1eca799978b1f9d40bab4f7b58f05538' -> (Import Result ID: '7e494204e15a49a2cd2824dd8d684931') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fe287e38a54f9205c2bc2a5de40e2313 DependenciesID=3d941386fcd484bee44875e446b986bc StaticDependenciesID=d16969eab3dd881e0b3027778e68abc1 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:16.3305615Z
+  Time since last request: 0.0164104 seconds.
+  importAddress: GUID: 83f04189368ddb343b6e3eca6f1de874 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Base_Normal.png - Importer: PreviewImporter
+Importing 'GUID: 83f04189368ddb343b6e3eca6f1de874 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Base_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 83f04189368ddb343b6e3eca6f1de874' -> (Import Result ID: '9f473583c47e0eddbea15afb6da5165f') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=838e25d6ec4bdd96ca40cc19ff682d72 DependenciesID=b2d772c950524f8399ed0aae1631d311 StaticDependenciesID=b306334674e09430eac20042382af3f4 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:16.553267Z
+  Time since last request: 0.1894759 seconds.
+  importAddress: GUID: 8254f5ff1e3225c4a8c34c3054086ad3 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_A_Basecolor.png - Importer: PreviewImporter
+Importing 'GUID: 8254f5ff1e3225c4a8c34c3054086ad3 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_A_Basecolor.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 8254f5ff1e3225c4a8c34c3054086ad3' -> (Import Result ID: 'ee7bc1e817fbc9b217e012f78bc90073') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9710f03cefa9e76be08fa05c71a65928 DependenciesID=25df8fd2e9c683174a8f57423a7a8759 StaticDependenciesID=c9badb287f544c4c70818a43f000fbff 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:16.6027059Z
+  Time since last request: 0.0169123 seconds.
+  importAddress: GUID: 5fe9e9892e9bbb5438a3e55738d659ab - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_A_Metallic.png - Importer: PreviewImporter
+Importing 'GUID: 5fe9e9892e9bbb5438a3e55738d659ab - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_A_Metallic.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 5fe9e9892e9bbb5438a3e55738d659ab' -> (Import Result ID: 'dd600c461eb026a6ac2e4bd664a90927') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=09bae79c19cb1f527dff5458c33bfe02 DependenciesID=43ec5497432fc83329fce7805e5ab117 StaticDependenciesID=7c3e7cce88afb86d1834065c878839c3 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:16.8263923Z
+  Time since last request: 0.192973 seconds.
+  importAddress: GUID: c4f9b58164d9960459d4a81486d4cab0 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_B_AO.png - Importer: PreviewImporter
+Importing 'GUID: c4f9b58164d9960459d4a81486d4cab0 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_B_AO.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: c4f9b58164d9960459d4a81486d4cab0' -> (Import Result ID: '6be22c01ba236d9e5a03df74e5c0ae91') in 0.014 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cac459c3079fb9b9eb44cf9f978b829b DependenciesID=00f20f2e301c5c679c72f910e7a7ae61 StaticDependenciesID=a6e41db0853923e06aa92a132c81b320 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:17.1147745Z
+  Time since last request: 0.2573882 seconds.
+  importAddress: GUID: 65e87bde6a5b63e44a01bdaf491c461f - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_B_Height.png - Importer: PreviewImporter
+Importing 'GUID: 65e87bde6a5b63e44a01bdaf491c461f - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_B_Height.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 65e87bde6a5b63e44a01bdaf491c461f' -> (Import Result ID: '6ae92698bf8adb57c1a90dc57811c9ea') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d85a2db5f459971272e1df19a9bf14cd DependenciesID=e01eb7f098ab0ea61d2810d84ede0130 StaticDependenciesID=0c52c741dc5b8b6e8f28cc2ca08eac02 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:17.1459462Z
+  Time since last request: 0.0017835 seconds.
+  importAddress: GUID: 05c68aaa4f0b31d45ad28e84c8ff590e - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_B_Normal.png - Importer: PreviewImporter
+Importing 'GUID: 05c68aaa4f0b31d45ad28e84c8ff590e - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerBlue_B_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 05c68aaa4f0b31d45ad28e84c8ff590e' -> (Import Result ID: 'c1e319c689c28806415fda3905ad834e') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5531244c324c5139d4148c2e4c14637a DependenciesID=8409ae21820389de5a1ab907adb50d11 StaticDependenciesID=9ab71b383742e9671aab70be9c2c6bac 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:17.3861585Z
+  Time since last request: 0.2038142 seconds.
+  importAddress: GUID: ac83f026f611fb248850f7e282af4037 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_A_Basecolor.png - Importer: PreviewImporter
+Importing 'GUID: ac83f026f611fb248850f7e282af4037 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_A_Basecolor.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: ac83f026f611fb248850f7e282af4037' -> (Import Result ID: '76c62556f1fca1fe538c288dac3124d7') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c699c6fd6a15fc3ea27c21aadf1d05e7 DependenciesID=a63dae2ba8833cbea9ed0f402d5fba31 StaticDependenciesID=f3a0857a2b83fb32cb06676d008024a3 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:17.6264433Z
+  Time since last request: 0.2079738 seconds.
+  importAddress: GUID: 09fece92a00d3ae4e9844f829145d525 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_A_Metallic.png - Importer: PreviewImporter
+Importing 'GUID: 09fece92a00d3ae4e9844f829145d525 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_A_Metallic.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 09fece92a00d3ae4e9844f829145d525' -> (Import Result ID: 'ab2a15e9001b6b06719caa1e1df3104d') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=39acd91eece5b4ae11349f298a2003a6 DependenciesID=d6ca676451d0256b083ea4f390f21222 StaticDependenciesID=5dab04740595dd9bec6ba6fd5e4e0789 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:17.6578033Z
+  Time since last request: 0.0003688 seconds.
+  importAddress: GUID: b65a30d45c64b1f44abd337123d7ec01 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_B_AO.png - Importer: PreviewImporter
+Importing 'GUID: b65a30d45c64b1f44abd337123d7ec01 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_B_AO.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: b65a30d45c64b1f44abd337123d7ec01' -> (Import Result ID: '6c0e7d3994c1fed2c8fa316ed8e269f3') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1415e3883dad02ea5d0800bd55b84108 DependenciesID=bd707a58ed3cf58bcba56c41326b9744 StaticDependenciesID=6b104c4ea7b5f0a647c6258e4f6ada98 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:17.8979997Z
+  Time since last request: 0.2066854 seconds.
+  importAddress: GUID: f958997086056944fb04037728a2b2b9 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_B_Height.png - Importer: PreviewImporter
+Importing 'GUID: f958997086056944fb04037728a2b2b9 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_B_Height.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: f958997086056944fb04037728a2b2b9' -> (Import Result ID: 'bd78bd902169e5a0400f3f7fd5b0756e') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8cb8924d1055eafdc5c4926197b34bb7 DependenciesID=74b18530fbe2a93eef7ff77573c3e193 StaticDependenciesID=b9b50b85ba9bc109e0c5434375117a1e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:18.1223866Z
+  Time since last request: 0.1913845 seconds.
+  importAddress: GUID: 60825a4423c40224e8c76c63d13bd352 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_B_Normal.png - Importer: PreviewImporter
+Importing 'GUID: 60825a4423c40224e8c76c63d13bd352 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerPurple_B_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 60825a4423c40224e8c76c63d13bd352' -> (Import Result ID: '86f98f0ab973c767af7adfb246ede408') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a37f9685891d6c83e85b80a1521c7acb DependenciesID=25f260a1ee141a60b795eae4cf2cd7e1 StaticDependenciesID=67b4524cc9ce001474ba7e69eca775c0 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.0028602Z
+  Time since last request: 0.8466768 seconds.
+  importAddress: GUID: 07f44d4cc88d7a14e9ef3821380ae9c6 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerRed_A_Basecolor.png - Importer: PreviewImporter
+Importing 'GUID: 07f44d4cc88d7a14e9ef3821380ae9c6 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerRed_A_Basecolor.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 07f44d4cc88d7a14e9ef3821380ae9c6' -> (Import Result ID: 'a6178d5602313ea762ccf5bb752d0cff') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=668abdb12aacd2260ae546e7ba2b475d DependenciesID=562d9266b49521089702823fba159ba7 StaticDependenciesID=83b72e667136d896ed1138fa2f945acf 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.0325123Z
+  Time since last request: 0.0004017 seconds.
+  importAddress: GUID: c0ceaffafa12d864fb1dd96c89cdfd95 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerRed_A_Normal.png - Importer: PreviewImporter
+Importing 'GUID: c0ceaffafa12d864fb1dd96c89cdfd95 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerRed_A_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: c0ceaffafa12d864fb1dd96c89cdfd95' -> (Import Result ID: '408fc00825766a1d20a26d14a587ec54') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=05c1ec91c2e8afde187a0fd27b30e429 DependenciesID=3b1ebdde2772dc29bf7e51e3dd190181 StaticDependenciesID=825db5dd97598e39d72a3feb0e8656eb 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.0657991Z
+  Time since last request: 0.0003897 seconds.
+  importAddress: GUID: 12cea0f5278c1c746afbb0e00f333cd2 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Rocks_AO.png - Importer: PreviewImporter
+Importing 'GUID: 12cea0f5278c1c746afbb0e00f333cd2 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Rocks_AO.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 12cea0f5278c1c746afbb0e00f333cd2' -> (Import Result ID: '250d6cf313f92af5c5ed275d1775a346') in 0.013 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=23181622e27f0d82b43ea3054904ef65 DependenciesID=0fd1ace4554f48176f50aeb3dcdbe806 StaticDependenciesID=b298046a4f55180a5feb95014841711e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.0954702Z
+  Time since last request: 0.0004669 seconds.
+  importAddress: GUID: 4e9643cda443ec44592498060f03354f - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Rocks_Metallic.png - Importer: PreviewImporter
+Importing 'GUID: 4e9643cda443ec44592498060f03354f - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_Rocks_Metallic.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 4e9643cda443ec44592498060f03354f' -> (Import Result ID: '8158a8f94b3671816f01a4e613a7ac3a') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7cc591f4e9f3b6ffafd93cda37fbfacd DependenciesID=a5f1fa5306664792d60808c945782279 StaticDependenciesID=1906c0bc6e8899c9960d13867d9a4049 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.1927833Z
+  Time since last request: 0.0659785 seconds.
+  importAddress: GUID: b6e958058e84ea540a4e6d7946673f53 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_02/Texture/Grass_Flower_Tint_02_Base_Basecolor.png - Importer: PreviewImporter
+Importing 'GUID: b6e958058e84ea540a4e6d7946673f53 - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_02/Texture/Grass_Flower_Tint_02_Base_Basecolor.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: b6e958058e84ea540a4e6d7946673f53' -> (Import Result ID: '38bca757f6aeab9a527d0eaa826ccfef') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b0ba979909bdbff81bb7495064b93a52 DependenciesID=bb81c00fde571476a166d9598b8fbf43 StaticDependenciesID=4bb6beb46e29c69e3766b72751b5f7df 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.2305603Z
+  Time since last request: 0.0003105 seconds.
+  importAddress: GUID: dabc0949a9d53ac489a6a38ebef3dd8d - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Flat/Textures/Roof_SquareTile_Flat_Metallic.png - Importer: PreviewImporter
+Importing 'GUID: dabc0949a9d53ac489a6a38ebef3dd8d - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Flat/Textures/Roof_SquareTile_Flat_Metallic.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: dabc0949a9d53ac489a6a38ebef3dd8d' -> (Import Result ID: '26d2c0c51098199c55a15d081879206b') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a2835a8a743143a2dff95df300e25164 DependenciesID=6c722d9a0d24e953418daa3e1fc5b651 StaticDependenciesID=862f440bbb65f4a8d50e68dd5b6838a4 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.2646982Z
+  Time since last request: 0.0003283 seconds.
+  importAddress: GUID: c8493d80146b01f4f9d23367b40e5fb3 - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Flat/Textures/Roof_SquareTile_Flat_AO.png - Importer: PreviewImporter
+Importing 'GUID: c8493d80146b01f4f9d23367b40e5fb3 - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Flat/Textures/Roof_SquareTile_Flat_AO.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: c8493d80146b01f4f9d23367b40e5fb3' -> (Import Result ID: '620f715da7cc78f3f14cf24fd225bad1') in 0.010 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=602825f29932d60b644ae0fc758be817 DependenciesID=aec1df7fdc17b815771a11d8c4590de1 StaticDependenciesID=a5213c59de5b22827eba49258215658e 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.2918837Z
+  Time since last request: 0.0008374 seconds.
+  importAddress: GUID: 927891f532be5e649a183d6d0bdb4f3f - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Flat/Textures/Roof_SquareTile_Flat_Basecolor_D.png - Importer: PreviewImporter
+Importing 'GUID: 927891f532be5e649a183d6d0bdb4f3f - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Flat/Textures/Roof_SquareTile_Flat_Basecolor_D.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 927891f532be5e649a183d6d0bdb4f3f' -> (Import Result ID: '2e9cd25e0e39de1defe100b84ee81f1a') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=77cbc371d66634983e84609e4955041b DependenciesID=7b3d2dcf1af26fa5b1f79c0655815b4a StaticDependenciesID=2742dbd154348365f7d8bef5166855bf 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.3231253Z
+  Time since last request: 0.0004241 seconds.
+  importAddress: GUID: 726b6fd69f82f764296bb474b49239da - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Bump/Textures/Roof_SquareTile_Bump_Normal.png - Importer: PreviewImporter
+Importing 'GUID: 726b6fd69f82f764296bb474b49239da - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Bump/Textures/Roof_SquareTile_Bump_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 726b6fd69f82f764296bb474b49239da' -> (Import Result ID: 'aa0fb0e7ff4e4aea37624270cbc7055b') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c0a4b3163a78460a0088f2eca06b450c DependenciesID=7ff89e7d579cbb5d277397d78a07bb14 StaticDependenciesID=4d07d9feb0b8099618f535716372be84 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.3600079Z
+  Time since last request: 0.000467 seconds.
+  importAddress: GUID: deb4b1be1cede2f4289842a491ef0a4f - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerYellow_B_Normal.png - Importer: PreviewImporter
+Importing 'GUID: deb4b1be1cede2f4289842a491ef0a4f - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Flower/GRASS_Flower_Tint_01/Texture/Grass_Flower_Tint_01_FlowerYellow_B_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: deb4b1be1cede2f4289842a491ef0a4f' -> (Import Result ID: '08198af9c6c6a8ad776150f0a8e191da') in 0.015 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cf0c395ab7209c08f138c175ef7cf79e DependenciesID=1e08c4be3cf44fb36a94393047357715 StaticDependenciesID=4f1be76d51d23e5340d79755db518813 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:19.3936937Z
+  Time since last request: 0.0004318 seconds.
+  importAddress: GUID: 165c768eb22cbd04baecc245b89d3121 - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Flat/Textures/Roof_SquareTile_Flat_Basecolor_A.png - Importer: PreviewImporter
+Importing 'GUID: 165c768eb22cbd04baecc245b89d3121 - Path: Assets/Cartoon_Texture_Pack/ROOF/ROOF_SquareTile_Flat/Textures/Roof_SquareTile_Flat_Basecolor_A.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 165c768eb22cbd04baecc245b89d3121' -> (Import Result ID: '73077ce92f98c16e4d517337b5b70e6d') in 0.012 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=eadc37a2ad60ff02eb8749268daabf66 DependenciesID=d7ad396de6a6ae782691229f3d0ed132 StaticDependenciesID=8c676b45a3cf018ca73992e80d154f26 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:22.3190962Z
+  Time since last request: 2.8942961 seconds.
+  importAddress: GUID: 2212317a132eedc4dae6627a41197b65 - Path: Assets/Cartoon_Texture_Pack/WOOD/WOOD_Planks/Textures/Wood_Planks_B_Normal.png - Importer: PreviewImporter
+Importing 'GUID: 2212317a132eedc4dae6627a41197b65 - Path: Assets/Cartoon_Texture_Pack/WOOD/WOOD_Planks/Textures/Wood_Planks_B_Normal.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: 2212317a132eedc4dae6627a41197b65' -> (Import Result ID: '7c4f4d8739e36b0225a31523ec6d838b') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1d34f48a3f73e95b983a5f11f04099d2 DependenciesID=3ea66b8228477a24977f2aec7a630796 StaticDependenciesID=91d5d8c5d0c72d5d7d523f7347f0a3f0 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:40.6338342Z
+  Time since last request: 18.2800119 seconds.
+  importAddress: GUID: e65e8c6f286469944a22f2777d8e870c - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_A_Basecolor.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B
+Importing 'GUID: e65e8c6f286469944a22f2777d8e870c - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_A_Basecolor.png - Importer: ScriptedImporter/UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B' with importer (ScriptedImporter : UnityEditor.QuickSearchModule:UnityEditor.Search:ASIAI0B)
+Imported 'GUID: e65e8c6f286469944a22f2777d8e870c' -> (Import Result ID: 'fd2c47865db0f90b93981b99d2bde745') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=99f1244a216cabb45a2c538b46cbe9ab DependenciesID=e205e8fe9c6d0fcf330088dbb442a8f1 StaticDependenciesID=cb00c6396f174856ebc268cf0c34a1dc 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:14:49.3313973Z
+  Time since last request: 8.6621082 seconds.
+  importAddress: GUID: e823cd5b5d27c0f4b8256e7c12ee3e6d - Path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat - Importer: PreviewImporter
+Importing 'GUID: e823cd5b5d27c0f4b8256e7c12ee3e6d - Path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/ParticlesUnlit.mat - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: e823cd5b5d27c0f4b8256e7c12ee3e6d' -> (Import Result ID: 'd593fb11d3321f07815b94b1ba22d907') in 1.750 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c5e8089817e4f07c1bd7b38e8f425115 DependenciesID=93ec26d1187a00484bce5fa09ba9bb14 StaticDependenciesID=df439e8c0a9c386a410bbd4b3814d108 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time of request: 2026-07-17T05:15:25.1155187Z
+  Time since last request: 34.0146893 seconds.
+  importAddress: GUID: e65e8c6f286469944a22f2777d8e870c - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_A_Basecolor.png - Importer: PreviewImporter
+Importing 'GUID: e65e8c6f286469944a22f2777d8e870c - Path: Assets/Cartoon_Texture_Pack/GRASS/GRASS_Dense/GRASS_Dense_Tint_01/Textures/Grass_Dense_Tint_01_Leaves_A_Basecolor.png - Importer: PreviewImporter' with importer (PreviewImporter)
+Imported 'GUID: e65e8c6f286469944a22f2777d8e870c' -> (Import Result ID: 'a3c05ac39dee7b7c313f2b608c27d20e') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=28fd551363274b549d3054746f6f4bb8 DependenciesID=0a72d0b450191846f74018cd7774d390 StaticDependenciesID=35c480dbc2de361f0915cd7d29fe771c 
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 2.20 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.731 seconds
+Domain Reload Profiling: 3139ms
+	BeginReloadAssembly (488ms)
+		DisableScriptedObjects (43ms)
+		CreateAndSetChildDomain (109ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (40ms)
+	initialDomainReloadingComplete (121ms)
+	LoadAllAssembliesAndSetupDomain (740ms)
+		LoadAssemblies (663ms)
+		AnalyzeDomain (37ms)
+			TypeCache.Refresh (13ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1733ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (195ms)
+			ProcessInitializeOnLoadAttributes (575ms)
+			ProcessInitializeOnLoadMethodAttributes (302ms)
+			AfterProcessingInitializeOnLoad (18ms)
+		AwakeInstancesAfterBackupRestoration (33ms)
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 2.62 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6797 unused Assets / (5.8 MB). Loaded Objects now: 7754.
+Memory consumption went from 346.9 MB to 341.1 MB.
+Total: 20.393200 ms (FindLiveObjects: 1.210600 ms CreateObjectMapping: 3.172000 ms MarkObjects: 12.109400 ms  DeleteObjects: 3.899900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+[Licensing::Client] Successfully resolved entitlement details
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 2.48 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.609 seconds
+Domain Reload Profiling: 2977ms
+	BeginReloadAssembly (440ms)
+		DisableScriptedObjects (13ms)
+		CreateAndSetChildDomain (88ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (40ms)
+	initialDomainReloadingComplete (130ms)
+	LoadAllAssembliesAndSetupDomain (738ms)
+		LoadAssemblies (651ms)
+		AnalyzeDomain (38ms)
+			TypeCache.Refresh (13ms)
+			ResolveRequiredComponents (17ms)
+	FinalizeReload (1612ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (198ms)
+			ProcessInitializeOnLoadAttributes (592ms)
+			ProcessInitializeOnLoadMethodAttributes (335ms)
+			AfterProcessingInitializeOnLoad (19ms)
+		AwakeInstancesAfterBackupRestoration (45ms)
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 2.54 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6797 unused Assets / (5.6 MB). Loaded Objects now: 7757.
+Memory consumption went from 349.3 MB to 343.6 MB.
+Total: 20.847600 ms (FindLiveObjects: 1.245700 ms CreateObjectMapping: 3.213600 ms MarkObjects: 12.304700 ms  DeleteObjects: 4.082100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+AcceleratorClientConnectionCallback - disconnected - :0
+Shader Hidden/ChartRasterizerHardware is not supported: GPU does not support conservative rasterization
+Refreshing native plugins compatible for Editor in 2.47 ms, found 4 plugins.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (2.7 MB). Loaded Objects now: 7757.
+Memory consumption went from 347.1 MB to 344.4 MB.
+Total: 16.262700 ms (FindLiveObjects: 0.746900 ms CreateObjectMapping: 1.162300 ms MarkObjects: 13.618600 ms  DeleteObjects: 0.733000 ms)
+
+Prepare: number of updated asset objects reloaded= 1
+Editor requested this worker to shutdown with reason: Editor is closing down
+AcceleratorClientConnectionCallback - disconnected - :0
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
