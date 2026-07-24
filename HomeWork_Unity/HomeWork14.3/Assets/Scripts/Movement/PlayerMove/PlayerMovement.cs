@@ -7,6 +7,8 @@ using UnityEngine.InputSystem;
 //[AddComponentMenu("Control Script/Player Movement")]
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerAnimation _playerAnimation;
+
     private Rigidbody _rbPlayer;
     private Vector3 _moveDirection;
 
@@ -20,12 +22,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpImpulse = 2f;
     [SerializeField] private bool IsGrounded;
 
+
+    public float HorizontalInput {  get { return horizontalInput; } set { horizontalInput  = value; } }
+    public float VerticalInput {  get { return verticalInput; } set { verticalInput = value; } }
+
+
     [Header("LayerMask")]
     public LayerMask ground;
 
     private void Start()
     {
         _rbPlayer = GetComponent<Rigidbody>();
+        _playerAnimation = GetComponent<PlayerAnimation>();
     }
 
     private void Update()
@@ -36,12 +44,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovementPlayer()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        HorizontalInput = Input.GetAxis("Horizontal");
+        VerticalInput = Input.GetAxis("Vertical");
 
-        _moveDirection = new Vector3(-verticalInput, 0, horizontalInput).normalized;
+        _moveDirection = new Vector3(-VerticalInput, 0, HorizontalInput).normalized;
         _rbPlayer.MovePosition(_rbPlayer.position + _moveDirection * 
             moveSpeed * Time.deltaTime);
+
+        _playerAnimation.PlayerAnim();
     }
 
     private void PlayerJump()
