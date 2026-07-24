@@ -3,8 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 
-[RequireComponent(typeof(Rigidbody))]
-[AddComponentMenu("Control Script/Player Movement")]
+//[RequireComponent(typeof(Rigidbody))]
+//[AddComponentMenu("Control Script/Player Movement")]
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody _rbPlayer;
