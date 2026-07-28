@@ -65,6 +65,4 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics.CheckSphere(transform.position, isDistanceGroundedCheck, ground);
     }
-
-
 }

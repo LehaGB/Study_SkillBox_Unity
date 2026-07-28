@@ -396,7 +396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   horizontalInput: 0
   verticalInput: 0
-  moveSpeed: 2
+  moveSpeed: 4
   isDistanceGroundedCheck: 0.5
   jumpImpulse: 3
   IsGrounded: 0
