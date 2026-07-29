@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 //[AddComponentMenu("Control Script/Player Movement")]
 public class PlayerMovement : MonoBehaviour
 {
+
     private PlayerAnimation _playerAnimation;
 
     private Rigidbody _rbPlayer;
@@ -22,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpImpulse = 2f;
     [SerializeField] private bool IsGrounded;
 
+    [Header("Partical Effect")]
+    [SerializeField] private ParticleSystem fireEffect;
+
 
     public float HorizontalInput {  get { return horizontalInput; } set { horizontalInput  = value; } }
     public float VerticalInput {  get { return verticalInput; } set { verticalInput = value; } }
@@ -36,33 +40,66 @@ public class PlayerMovement : MonoBehaviour
         _playerAnimation = GetComponent<PlayerAnimation>();
     }
 
+
     private void Update()
     {
-        MovementPlayer();
+        InputMovePlayer();
         PlayerJump();
     }
 
-    private void MovementPlayer()
+
+    private void FixedUpdate()
+    {
+        MovementPlayer();
+    }
+
+
+    private void InputMovePlayer()
     {
         HorizontalInput = Input.GetAxis("Horizontal");
         VerticalInput = Input.GetAxis("Vertical");
 
-        _moveDirection = new Vector3(-VerticalInput, 0, HorizontalInput).normalized;
-        _rbPlayer.MovePosition(_rbPlayer.position + _moveDirection * 
-            moveSpeed * Time.deltaTime);
-
-        _playerAnimation.PlayerAnim();
+        //_playerAnimation.PlayerAnim(HorizontalInput, VerticalInput);
     }
+
+
+    private void MovementPlayer()
+    {
+        _moveDirection = new Vector3(-VerticalInput, 0, HorizontalInput).normalized;
+        _rbPlayer.MovePosition(_rbPlayer.position + (_moveDirection * 
+            moveSpeed * Time.deltaTime));  
+
+        if(_moveDirection != Vector3.zero)
+        {
+            if (!fireEffect.isPlaying)
+            {
+                fireEffect.Play();
+            }
+        }
+        else
+        {
+            if (fireEffect.isPlaying)
+            {
+                fireEffect.Stop();
+            }
+        }
+    }
+
 
     private void PlayerJump()
     {
-        if(CheckGrounded() && Input.GetButtonDown("Jump"))
+        if(!CheckGrounded()) return;
+
+        if(Input.GetButtonDown("Jump"))
         {
             _rbPlayer.AddForce(Vector3.up * jumpImpulse, ForceMode.Impulse);
         }
     }
+
+
     private bool CheckGrounded()
     {
+        Vector2 checkPos = transform.position + Vector3.down * 0.9f;
         return Physics.CheckSphere(transform.position, isDistanceGroundedCheck, ground);
     }
 }
