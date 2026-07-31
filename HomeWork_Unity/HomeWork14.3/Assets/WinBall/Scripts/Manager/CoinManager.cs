@@ -12,8 +12,10 @@ public class CoinManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null && instance != this)
+        Debug.Log("CoinManager Awake");
+        if (instance != null && instance != this)
         {
+            Debug.Log("Второй CoinManager уничтожен");
             Destroy(gameObject);
             return;
         }

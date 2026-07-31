@@ -10,6 +10,8 @@ public class CoinPickup : MonoBehaviour
 
         CoinManager.instance.AddCoin(1);
 
+        AudioManager.Instance.PlayCoin();
+
         Destroy(gameObject);
     }
 }
