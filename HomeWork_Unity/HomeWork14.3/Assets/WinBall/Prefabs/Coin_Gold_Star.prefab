@@ -10,11 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -85,7 +93,7 @@ PrefabInstance:
       addedObject: {fileID: 5016843917138092914}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -7612574327117856909}
+      addedObject: {fileID: -6263218919003641368}
   m_SourcePrefab: {fileID: 100100000, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
 --- !u!1 &1917693791992218167 stripped
 GameObject:
@@ -114,7 +122,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1931347974714207590, guid: 7fa93266725d152428ae93262ef20bcf, type: 3}
---- !u!114 &-7612574327117856909
+--- !u!114 &-6263218919003641368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,6 +131,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1917693791992218167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d26f46543e98bc46a98646e737e0d1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5031c81c00e5abf4288500ca74bf29cc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CollectedCoins
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyObject
