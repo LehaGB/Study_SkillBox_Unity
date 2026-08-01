@@ -234,7 +234,7 @@ Transform:
   m_GameObject: {fileID: 227798153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.26061, y: 5.3, z: 3.09359}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1299,6 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   coinClip: {fileID: 8300000, guid: 08437ec1f0b016046b321d8ef5001b64, type: 3}
+  jumpClip: {fileID: 8300000, guid: b5f14c33de02c5547a0099a5f368c03c, type: 3}
   sfxSource: {fileID: 545095649}
 --- !u!82 &545095649
 AudioSource:
@@ -1311,11 +1312,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 007e3893541a69049a0c3c1a2a5e9bfd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

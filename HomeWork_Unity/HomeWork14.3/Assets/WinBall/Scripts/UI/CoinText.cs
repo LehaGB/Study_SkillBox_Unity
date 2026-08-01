@@ -5,9 +5,17 @@ public class CoinText : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI coinText;
 
-    private void OnEnable()
+    private void Start()
     {
-        CoinManager.instance.CoinCountChanged += UpdateText;
+        if(CoinManager.instance != null)
+        {
+            Debug.Log("Подписались");
+            CoinManager.instance.CoinCountChanged += UpdateText;
+        }
+        else
+        {
+            Debug.Log("CoinManager.instance == null");
+        }
     }
 
 
@@ -16,8 +24,9 @@ public class CoinText : MonoBehaviour
         CoinManager.instance.CoinCountChanged -= UpdateText;
     }
 
-    public void UpdateText(int amout)
+    public void UpdateText(int amount)
     {
-        coinText.text = $"Coin: {amout}";
+        Debug.Log($"UpdateText: {amount}");
+        coinText.text = $"Coin: {amount}";
     }
 }

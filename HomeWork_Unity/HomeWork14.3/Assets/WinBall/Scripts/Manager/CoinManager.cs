@@ -6,7 +6,7 @@ public class CoinManager : MonoBehaviour
     public static CoinManager instance {  get; private set; }
     private int countCoin = 0;
 
-    public int CoinCount => countCoin;
+    public int CoinCount { get => countCoin; set => countCoin = value; }
     public event Action<int> CoinCountChanged;
 
 
@@ -22,11 +22,12 @@ public class CoinManager : MonoBehaviour
         instance = this;
     }
 
-    public void AddCoin(int amout)
+    public void AddCoin(int amount)
     {
-        countCoin = countCoin + amout;
+        countCoin = countCoin + amount;
         Debug.Log($"Coin = {countCoin}");
 
         CoinCountChanged?.Invoke(countCoin);
+        Debug.Log($"{amount} {CoinCount}");
     }
 }

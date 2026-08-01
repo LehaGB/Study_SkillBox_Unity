@@ -24,6 +24,7 @@ public class PlayerJump : MonoBehaviour
         {
             _rigidbody.AddForce(Vector3.up * jumpImpulse, ForceMode.Impulse);
             _input.ConsumeJump();
+            AudioManager.Instance.PlayJump();
         }
     }
 }
