@@ -60,14 +60,14 @@ public class AudioManager : MonoBehaviour
         jumpMusicSource.PlayOneShot(clip);
     }
 
-    public void PlayMusic(SoundType sound)
-    {
-        if (!clips.TryGetValue(sound, out var clip)) return;
+    //public void PlayMusic(SoundType sound)
+    //{
+    //    if (!clips.TryGetValue(sound, out var clip)) return;
 
-        backgrounMusicSource.clip = clip;
-        backgrounMusicSource.loop = true;
-        backgrounMusicSource.Play();
-    }
+    //    backgrounMusicSource.clip = clip;
+    //    backgrounMusicSource.loop = true;
+    //    backgrounMusicSource.Play();
+    //}
 
     public void SetMusicVolume(float volume)
     {
