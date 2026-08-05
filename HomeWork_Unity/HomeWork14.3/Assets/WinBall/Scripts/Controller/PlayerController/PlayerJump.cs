@@ -5,6 +5,8 @@ public class PlayerJump : MonoBehaviour
     [Header("Jump power")]
     [SerializeField] private float jumpImpulse = 2f;
 
+    [Header("Jump clip")]
+
     private Rigidbody _rigidbody;
     private PlayerInput _input;
     private PlayerGroundCheck _check;
@@ -24,7 +26,7 @@ public class PlayerJump : MonoBehaviour
         {
             _rigidbody.AddForce(Vector3.up * jumpImpulse, ForceMode.Impulse);
             _input.ConsumeJump();
-            AudioManager.Instance.PlayJump();
+            AudioManager.Instance.PlayJump(SoundType.Jump);
         }
     }
 }
