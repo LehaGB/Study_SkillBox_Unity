@@ -6,5 +6,6 @@ public enum SoundType
     Jump,
     Button,
     Explosion,
-    MainTheme
+    MainTheme,
+    Win
 }

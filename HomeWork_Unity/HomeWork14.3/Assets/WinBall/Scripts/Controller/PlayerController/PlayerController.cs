@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
         isWin = true;
 
         GameEvents.RaisePlayerWin();
+        AudioManager.Instance.PlayWin(SoundType.Win);
         Debug.Log("Win");
     }
 }

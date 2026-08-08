@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource backgrounMusicSource;
     [SerializeField] private AudioSource jumpMusicSource;
+    [SerializeField] private AudioSource winMusicSource;
 
     [Header("Audio Mixer")]
     [SerializeField] private AudioMixer audioMixer;
@@ -60,14 +61,12 @@ public class AudioManager : MonoBehaviour
         jumpMusicSource.PlayOneShot(clip);
     }
 
-    //public void PlayMusic(SoundType sound)
-    //{
-    //    if (!clips.TryGetValue(sound, out var clip)) return;
+    public void PlayWin(SoundType sound)
+    {
+        if (!clips.TryGetValue(sound, out var clip)) return;
 
-    //    backgrounMusicSource.clip = clip;
-    //    backgrounMusicSource.loop = true;
-    //    backgrounMusicSource.Play();
-    //}
+        winMusicSource.PlayOneShot(clip);
+    }
 
     public void SetMusicVolume(float volume)
     {
