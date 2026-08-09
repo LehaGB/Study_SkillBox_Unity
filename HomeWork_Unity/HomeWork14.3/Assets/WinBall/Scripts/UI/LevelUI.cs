@@ -1,9 +1,31 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelUI : MonoBehaviour
 {
-    public void OpenStteings()
+    [SerializeField] private GameObject canvasSettings;
+
+    private void Start()
     {
-        GameSceneManager.instance.LoadLevelSelection();
+        canvasSettings.gameObject.SetActive(false);
+    }
+
+    public void BackToMenu()
+    {
+        GameSceneManager.instance.LoadMainMenu();
+    }
+
+
+    public void OpenSettingsCanvas()
+    {
+        canvasSettings.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+
+    public void BackToGame()
+    {
+        canvasSettings.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 }
