@@ -11,5 +11,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/WinBall/Scenes/Level1.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/WinBall/Scenes/Level2.unity
+    guid: f5f868fc4a9d71d4ebc14ea593354df1
+  - enabled: 1
+    path: Assets/WinBall/Scenes/Level3.unity
+    guid: 9390afc7049da71458d90feaee1e33c2
+  - enabled: 1
+    path: Assets/WinBall/Scenes/LevelSelection.unity
+    guid: 3dfe59b56dc42c34698fbd773ee24737
+  - enabled: 1
+    path: Assets/WinBall/Scenes/Settings.unity
+    guid: 5a9baa24c26c9af4981e99a668400d9f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

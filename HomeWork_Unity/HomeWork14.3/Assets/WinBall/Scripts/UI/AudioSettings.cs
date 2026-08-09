@@ -10,6 +10,10 @@ public class AudioSettings : MonoBehaviour
 
     private void Start()
     {
+        musicSlider.value = AudioManager.Instance.MusicVolume;
+        sfxSlider.value = AudioManager.Instance.SFXVolume;
+        jumpSlider.value = AudioManager.Instance.JumpVolume;
+
         musicSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(AudioManager.Instance.SetSFXVolume);
         jumpSlider.onValueChanged.AddListener(AudioManager.Instance.SetJumpVolume);

@@ -18,6 +18,10 @@ public class AudioManager : MonoBehaviour
     [Header("Sounds")]
     [SerializeField] private AudioData[] sounds;
 
+    public float MusicVolume { get; private set; } = 1f;
+    public float SFXVolume { get; private set; } = 1f;
+    public float JumpVolume { get; private set; } = 1f;
+
     private Dictionary<SoundType, AudioClip> clips;
 
     private void Awake()
@@ -25,9 +29,12 @@ public class AudioManager : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
-            return;
         }
-        Instance = this;
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
         clips = new Dictionary<SoundType, AudioClip>();
 
@@ -70,16 +77,19 @@ public class AudioManager : MonoBehaviour
 
     public void SetMusicVolume(float volume)
     {
+        MusicVolume = volume;
         audioMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
     }
 
     public void SetSFXVolume(float volume)
     {
+        SFXVolume = volume;
         audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
     }
 
     public void SetJumpVolume(float volume)
     {
+        JumpVolume = volume;
         audioMixer.SetFloat("JumpVolume", Mathf.Log10(volume) * 20);
     }
 }

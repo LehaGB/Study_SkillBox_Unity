@@ -26,6 +26,13 @@ public class GameSceneManager : MonoBehaviour
     }
 
 
+    // Сцена выбора уровня.
+    public void LoadLevelSelection()
+    {
+        SceneManager.LoadScene("LevelSelection");
+    }
+
+
     // Начать игру.
     public void PlayGame()
     {
