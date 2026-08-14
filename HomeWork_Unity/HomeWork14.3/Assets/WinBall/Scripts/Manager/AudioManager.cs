@@ -73,19 +73,19 @@ public class AudioManager : MonoBehaviour
         winMusicSource.PlayOneShot(clip);
     }
 
-    public void SetMusicVolume(float volume)
+    public void SetMusicVolume(float volume = 0.001f)
     {
         MusicVolume = volume;
         audioMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
     }
 
-    public void SetSFXVolume(float volume)
+    public void SetSFXVolume(float volume = 0.001f)
     {
         SFXVolume = volume;
         audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
     }
 
-    public void SetJumpVolume(float volume)
+    public void SetJumpVolume(float volume = 0.001f)
     {
         JumpVolume = volume;
         audioMixer.SetFloat("JumpVolume", Mathf.Log10(volume) * 20);

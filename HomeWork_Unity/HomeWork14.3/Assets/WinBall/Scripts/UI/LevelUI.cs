@@ -10,22 +10,22 @@ public class LevelUI : MonoBehaviour
         canvasSettings.gameObject.SetActive(false);
     }
 
-    public void BackToMenu()
+    public void BackToMenu(string name)
     {
-        GameSceneManager.instance.LoadMainMenu();
+        GameSceneManager.instance.LoadSceneName(name);
     }
 
 
     public void OpenSettingsCanvas()
     {
         canvasSettings.gameObject.SetActive(true);
-        Time.timeScale = 0;
+        TimeController.Pause();
     }
 
 
     public void BackToGame()
     {
         canvasSettings.gameObject.SetActive(false);
-        Time.timeScale = 1;
+        TimeController.OnPause();
     }
 }

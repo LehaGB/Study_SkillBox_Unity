@@ -18,14 +18,6 @@ public class GameSceneManager : MonoBehaviour
         }
     }
 
-
-    // Глвное меню.
-    public void LoadMainMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-
-
     // Сцена выбора уровня.
     public void LoadLevelSelection()
     {
@@ -34,9 +26,9 @@ public class GameSceneManager : MonoBehaviour
 
 
     // Начать игру.
-    public void PlayGame()
+    public void LoadSceneName(string name)
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(name);
     }
 
 
@@ -47,23 +39,13 @@ public class GameSceneManager : MonoBehaviour
     }
 
 
-    // Настройки.
-    public void LoadSettings()
-    {
-        SceneManager.LoadScene("Settings");
-    }
-
-
-    // Автор.
-    public void LoadAuthor()
-    {
-        SceneManager.LoadScene("Author");
-    }
-
-
     // Выйти из игры.
     public void QuitGame()
     {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
     }
 }
