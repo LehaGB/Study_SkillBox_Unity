@@ -50,6 +50,9 @@ TagManager:
   - name: Object
     uniqueID: 703591227
     locked: 0
+  - name: House
+    uniqueID: 3371055987
+    locked: 0
   - name: Ground
     uniqueID: 3758290737
     locked: 0

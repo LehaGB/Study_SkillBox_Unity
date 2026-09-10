@@ -192,19 +192,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_0
       rect:
         serializedVersion: 2
-        x: 54
-        y: 19
-        width: 26
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 35
+        y: 12
+        width: 17
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e4a399a3e103255b0800000000000000
+      spriteID: d7f31c6fd91d17343af9d1744ac3f7c8
       internalID: -5381185698364048818
       vertices: []
       indices: 
@@ -214,19 +214,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_1
       rect:
         serializedVersion: 2
-        x: 198
-        y: 19
-        width: 26
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 12
+        width: 17
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 55fe88edd728992f0800000000000000
+      spriteID: 86b8ebbc4622d37459c7badcc9111ed3
       internalID: -965597167978221739
       vertices: []
       indices: 
@@ -236,19 +236,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_2
       rect:
         serializedVersion: 2
-        x: 342
-        y: 19
-        width: 26
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 221
+        y: 12
+        width: 17
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 82b7c2b36ad680330800000000000000
+      spriteID: 1065bd6e21f2b1041a2ed2a61b9fcec9
       internalID: 3677309656472779560
       vertices: []
       indices: 
@@ -258,19 +258,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_3
       rect:
         serializedVersion: 2
-        x: 486
-        y: 19
-        width: 23
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 314
+        y: 12
+        width: 15
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b79aac198e90dc40800000000000000
+      spriteID: 44f6c353663513e4ba5de1fd3b8bcb7c
       internalID: 5535098253766989748
       vertices: []
       indices: 
@@ -280,19 +280,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_4
       rect:
         serializedVersion: 2
-        x: 630
-        y: 19
-        width: 23
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 407
+        y: 12
+        width: 15
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 56ab34145bdf880f0800000000000000
+      spriteID: e48c71a471c7e014aa702589699ceb2a
       internalID: -1114361952848332187
       vertices: []
       indices: 
@@ -302,19 +302,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_5
       rect:
         serializedVersion: 2
-        x: 774
-        y: 19
-        width: 43
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 500
+        y: 12
+        width: 28
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cdc57e8ccd5538df0800000000000000
+      spriteID: db201ca6f684a70479e108aabdab1537
       internalID: -179205153412916004
       vertices: []
       indices: 
@@ -324,19 +324,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_6
       rect:
         serializedVersion: 2
-        x: 918
-        y: 19
-        width: 39
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 12
+        width: 26
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 05b482af6d1c11800800000000000000
+      spriteID: d9ba4e003c93ef44685bb8b9ac9cc4b8
       internalID: 581458955971611472
       vertices: []
       indices: 
@@ -346,19 +346,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_7
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 19
-        width: 39
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 686
+        y: 12
+        width: 26
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: abea3e046cf9da060800000000000000
+      spriteID: f51895d15babeaf43bd52b5e17ee8068
       internalID: 6966399872453029562
       vertices: []
       indices: 
@@ -368,19 +368,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_8
       rect:
         serializedVersion: 2
-        x: 1206
-        y: 19
-        width: 35
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 780
+        y: 12
+        width: 22
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ee6f42c432c0126c0800000000000000
+      spriteID: a7a4c378e11e98246bb3362b445b4abd
       internalID: -4170038434227489042
       vertices: []
       indices: 
@@ -390,19 +390,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_9
       rect:
         serializedVersion: 2
-        x: 1339
-        y: 19
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 866
+        y: 12
+        width: 20
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8aef8a23f793d8770800000000000000
+      spriteID: f2e9d32153ce93746929cc5d4bd38591
       internalID: 8614604880703192744
       vertices: []
       indices: 
@@ -412,19 +412,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_10
       rect:
         serializedVersion: 2
-        x: 1486
-        y: 19
-        width: 50
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 960
+        y: 12
+        width: 33
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d51ecc341e45913f0800000000000000
+      spriteID: ed299490f7ee10245973a1d7f2e15bdd
       internalID: -929618521593421475
       vertices: []
       indices: 
@@ -434,19 +434,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_11
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 19
-        width: 41
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1059
+        y: 12
+        width: 27
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 21ab1060f9a381870800000000000000
+      spriteID: 0849ba01795797c4480cd605da584a6e
       internalID: 8653731138667395602
       vertices: []
       indices: 
@@ -456,19 +456,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_12
       rect:
         serializedVersion: 2
-        x: 1782
-        y: 19
-        width: 41
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1152
+        y: 12
+        width: 27
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c3425305902374b30800000000000000
+      spriteID: a95abfd60b9c0df41a5253c53c49082f
       internalID: 4271437787165959228
       vertices: []
       indices: 
@@ -478,19 +478,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_13
       rect:
         serializedVersion: 2
-        x: 1930
-        y: 19
-        width: 32
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1248
+        y: 12
+        width: 20
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9e7b438da8a435e30800000000000000
+      spriteID: 435980ef6fa9bb0468770c23eb0d90f7
       internalID: 4491015213611792361
       vertices: []
       indices: 
@@ -500,19 +500,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_14
       rect:
         serializedVersion: 2
-        x: 2081
-        y: 19
-        width: 29
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1345
+        y: 12
+        width: 19
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e04304b6b8e592a70800000000000000
+      spriteID: b24eae16879303147890308ef2717a32
       internalID: 8802670899565179918
       vertices: []
       indices: 
@@ -522,19 +522,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_15
       rect:
         serializedVersion: 2
-        x: 2225
-        y: 19
-        width: 23
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1438
+        y: 12
+        width: 15
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fc9a9181fab9b5e70800000000000000
+      spriteID: 6443d4ceaa7710647840f9b71eb566b2
       internalID: 9105042247985506767
       vertices: []
       indices: 
@@ -544,19 +544,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_16
       rect:
         serializedVersion: 2
-        x: 2374
-        y: 19
-        width: 20
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1535
+        y: 12
+        width: 13
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 32f075ceb2fc302f0800000000000000
+      spriteID: b3abbb3cea07f7b44b1d0e68f0a285d4
       internalID: -1007734104045187293
       vertices: []
       indices: 
@@ -566,19 +566,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_17
       rect:
         serializedVersion: 2
-        x: 2530
-        y: 19
-        width: 53
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1635
+        y: 12
+        width: 35
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8499e62e45deb50b0800000000000000
+      spriteID: 47aeb82d754487745aff31255c82aaf0
       internalID: -5738732351321630392
       vertices: []
       indices: 
@@ -588,19 +588,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_18
       rect:
         serializedVersion: 2
-        x: 2674
-        y: 19
-        width: 42
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1729
+        y: 12
+        width: 27
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6f7a5765078d18990800000000000000
+      spriteID: 03b8f15f63c476843afd3d4b82204dec
       internalID: -7385383936912414730
       vertices: []
       indices: 
@@ -610,19 +610,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_19
       rect:
         serializedVersion: 2
-        x: 2818
-        y: 19
-        width: 24
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1822
+        y: 12
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7297e51b8388e71a0800000000000000
+      spriteID: b41cedcbea83470409a763daaf590f7c
       internalID: -6809855809462306521
       vertices: []
       indices: 
@@ -632,19 +632,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_20
       rect:
         serializedVersion: 2
-        x: 2962
-        y: 19
-        width: 24
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1915
+        y: 12
+        width: 15
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: eefd48105374d3430800000000000000
+      spriteID: 7fc40d553cbd99f42b679afb8bf59b32
       internalID: 3764243156535926766
       vertices: []
       indices: 
@@ -654,19 +654,19 @@ TextureImporter:
       name: noBKG_KnightAttack_strip_21
       rect:
         serializedVersion: 2
-        x: 3106
-        y: 19
-        width: 24
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2008
+        y: 12
+        width: 16
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b231bf9d9e0c2ac20800000000000000
+      spriteID: 9698490eb37e72b4d8a46e16dd88ca6f
       internalID: 3216345194512978731
       vertices: []
       indices: 
@@ -676,7 +676,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2c1aa6c8442c00648a4d9761c0263ea8
     internalID: 0
     vertices: []
     indices: 
@@ -684,7 +684,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":true,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: True
     nameFileIdTable:
       noBKG_KnightAttack_strip_0: -5381185698364048818
       noBKG_KnightAttack_strip_1: -965597167978221739
